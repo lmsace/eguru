@@ -1,0 +1,148 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_eguru/footer.
+    Eguru footer layout template.
+}}
+<footer id="footer">
+{{#blockarrange}}
+	<div class="footer-main">
+    	<div class="container">
+	    	<div class="row">
+                {{#block1}}
+            	<div class="{{colclass}}">
+                	<div class="footer-desc">
+                        {{#footerlogo}}
+                    	<div class="logo-footer">
+                        	<a href="{{{ config.wwwroot }}}/?redirect=0">
+                            	<img src="{{logourl}}" width="183" height="67" alt="Eguru">
+                            </a>
+                        </div>
+                        {{/footerlogo}}
+                        <p>{{footnote}}</p>
+                    </div>
+                </div>
+                {{/block1}}
+                {{#block2}}
+            	<div class="{{colclass}}">
+                	<div class="footer-nav">
+                    	<h4>{{footerbtitle2}}</h4>
+                        <ul>
+                           {{{footerlinks}}}
+                        </ul>
+                    </div>
+                </div>
+                {{/block2}}
+                {{# block3}}
+            	<div class="{{colclass}}">
+                	<div class="social-media">
+                    	<h4>{{footerbtitle3}}</h4>
+                    	<ul>
+                        	{{# fburl}}
+                        	<li class="smedia-01">
+                            	<a href="{{fburl}}" target="_blank">
+                                	<span class="media-icon">
+                                    <i class="fa {{fb}}"></i>
+                                    </span>
+                                    <span class="media-name">{{fbn}}</span>
+                                </a>
+                            </li>
+                            {{/ fburl}}
+
+						  	{{# twurl}}
+                        	<li class="smedia-02">
+	                            <a href="{{twurl}}" target="_blank">
+                                	<span class="media-icon">
+                                    <i class="fa {{tw}}"></i>
+                                    </span>
+                                    <span class="media-name">{{twn}}</span>
+                                </a>
+                            </li>
+                            {{/ twurl}}
+
+                            {{# gpurl}}
+                        	<li class="smedia-03">
+    	                        <a href="{{gpurl}}" target="_blank">
+                                	<span class="media-icon">
+                                    <i class="fa {{gp}}"></i>
+                                    </span>
+                                    <span class="media-name">{{gpn}}</span>
+                                </a>
+                            </li>
+                            {{/ gpurl}}
+
+                            {{# pinurl}}
+                        	<li class="smedia-04">
+        	                    <a href="{{pinurl}}" target="_blank">
+                                   <span class="media-icon">
+                                   <i class="fa {{pi}}"></i>
+                                   </span>
+                                   <span class="media-name">{{pin}}</span>
+                                </a>
+                            </li>
+                            {{/ pinurl}}
+                        </ul>
+                    </div>
+                </div>
+                {{/ block3}}
+                {{#block4}}
+            	<div class="{{colclass}}">
+                	<div class="footer-contact">
+                    	<h4>{{footerbtitle4}}</h4>
+						<p>{{address}}</p>
+                        {{# phoneno}}
+                        	<p><i class="fa fa-phone-square"></i>{{phone}}: {{phoneno}}</p>
+						{{/ phoneno}}
+
+                        {{# emailid}}
+                        	<p><i class="fa fa-envelope"></i>
+                        	{{mail}} <a class="mail-link" href="mailto:{{emailid}}">{{emailid}}</a>
+                        	</p>
+						{{/ emailid}}
+
+                    </div>
+                </div>
+                {{/block4}}
+            </div>
+        </div>
+    </div>
+{{/blockarrange}}
+{{#copyright}}
+<div class="footer-foot">
+	<div class="container">{{{copyright}}}</div>
+</div>
+{{/copyright}}
+
+</footer>
+
+<footer>
+{{{output.standard_footer_html}}}
+
+{{# output.page_doc_link }}
+    <p class="helplink">{{{ output.page_doc_link }}}</p>
+{{/ output.page_doc_link }}
+
+{{{ output.standard_end_of_body_html }}}
+
+</footer>
+
+{{#js}}
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+{{/js}}
