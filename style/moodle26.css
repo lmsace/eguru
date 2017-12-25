@@ -1,0 +1,3 @@
+.block_navigation .block_tree .tree_item.emptybranch {
+	background-position: 0 10px !important;
+}

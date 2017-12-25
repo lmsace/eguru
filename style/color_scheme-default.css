@@ -1,0 +1,400 @@
+/*Core*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #8e558e
+}
+
+a {
+    color: #8e558e
+}
+a:hover,
+a:focus {
+    color: #8e558e
+}
+	/*Core > dropdown*/
+.dropdown-menu {
+    background: #a55ba5
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+    background: #8e558e
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background: #8e558e
+}
+	/*Core > moodle-actionmenu*/
+.jsenabled .usermenu .moodle-actionmenu.show {
+    background: #382738
+}
+.usermenu .moodle-actionmenu:hover .toggle-display,
+.usermenu .moodle-actionmenu:focus .toggle-display {
+    background: #382738
+}
+.moodle-actionmenu.show[data-enhanced] .menu {
+    background: #382738;
+    background: rgba(56, 39, 56, .9)
+}
+.moodle-actionmenu.show[data-enhanced] .menu a:hover,
+.moodle-actionmenu.show[data-enhanced] .menu a:focus,
+.jsenabled .usermenu .moodle-actionmenu.show .menu a:hover {
+    background: #a55ba5
+}
+.jsenabled .usermenu .moodle-actionmenu > .menu .filler {
+    background: #382738
+}
+	/*Core > bootstrap*/
+.btn-primary {
+    background: #a55ba5
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #8e558e
+}
+
+
+/*Header*/
+#header .header-main {
+    background: #a55ba5
+}
+#header .custom-menu > ul > li {
+    background-image: url([[pix:theme|cs00/bg-menu-divider]])
+}
+#header .custom-menu > ul > li > a:hover,
+#header .custom-menu > ul > li > a:focus {
+	background: #382738
+}
+#header .header-menubar {
+    background: #8e558e
+}
+#header .header-menubar .navbar .nav > li > a:focus,
+#header .header-menubar .navbar .nav > li > a:hover {
+    background-color: #382738
+}
+#header .header-menubar .navbar .nav > .active > a,
+#header .header-menubar .navbar .nav > .active > a:hover,
+#header .header-menubar .navbar .nav > .active > a:focus {
+    background: #382738
+}
+#header .header-menubar .navbar .nav li.dropdown.open > .dropdown-toggle,
+#header .header-menubar .navbar .nav li.dropdown.active > .dropdown-toggle,
+#header .header-menubar .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background: #382738
+}
+#header .header-menubar .dropdown-menu {
+    background: #382738
+}
+#header .header-menubar .dropdown-menu > li > a:hover,
+#header .header-menubar .dropdown-menu > li > a:focus,
+#header .header-menubar .dropdown-submenu:hover > a,
+#header .header-menubar .dropdown-submenu:focus > a {
+    background: #a55ba5
+}
+#header .header-menubar .dropdown-menu > .active > a,
+#header .header-menubar .dropdown-menu > .active > a:hover,
+#header .header-menubar .dropdown-menu > .active > a:focus {
+    background: #a55ba5
+}
+
+#header .header-menubar .navbar .btn-navbar {
+    background: #a55ba5
+}
+#header .header-menubar .navbar .btn-navbar:hover,
+#header .header-menubar .navbar .btn-navbar:focus,
+#header .header-menubar .navbar .btn-navbar:active,
+#header .header-menubar .navbar .btn-navbar.active,
+#header .header-menubar .navbar .btn-navbar.disabled,
+#header .header-menubar .navbar .btn-navbar[disabled] {
+	background: #a55ba5
+}
+#header .header-menubar .navbar .btn-navbar:active,
+#header .header-menubar .navbar .btn-navbar.active {
+	background: #a55ba5 \9
+}
+#header .header-menubar .custom-nav-search .fields-wrap {
+    background: #764076
+}
+@media (max-width: 979px) {
+    #header .header-menubar .collapse.in,
+    #header .header-menubar .navbar .nav-collapse.active {
+        border-top-color: #a55ba5
+	}
+}
+
+
+/*Footer*/
+#footer .footer-main {
+    background: #a55ba5
+}
+#footer .social-media > ul > li > a:hover,
+#footer .social-media > ul > li > a:focus {
+    color: #382738
+}
+#footer .social-media > ul > li > a:hover .media-icon,
+#footer .social-media > ul > li > a:focus .media-icon {
+    background: #382738
+}
+#footer .footer-foot {
+    background: #8e558e
+}
+
+
+/*Frontpage*/
+	/*Frontpage > Home Page Carousel*/
+.homepage-carousel .carousel-inner > .item .carousel-content .carousel-btn > a {
+    background: #a55ba5;
+    border-bottom-color: #382738;
+    border-bottom-color: rgba(56, 39, 56, .9)
+}
+.homepage-carousel .carousel-inner > .item .carousel-content .carousel-btn > a:hover,
+.homepage-carousel .carousel-inner > .item .carousel-content .carousel-btn > a:focus {
+    background: #a55ba5;
+    border-bottom-color: #382738;
+    border-bottom-color: rgba(56, 39, 56, .9)
+}
+.homepage-carousel .carousel-control {
+    background: #8e558e
+}
+	/*Frontpage > New/Featured Custom Course List Slider*/
+.titlebar .slidenav .nav-item {
+    color: #8e558e;
+    border-color: #8e558e
+}
+.titlebar .slidenav .nav-item:hover,
+.titlebar .slidenav .nav-item:focus {
+    background: #8e558e
+}
+.custom-courses-list .course-box .thumb {
+    border-color: #ead1ea
+}
+.custom-courses-list .course-box .info h5 a {
+    color: #8e558e
+}
+	/*Frontpage > Available Courses*/
+#frontpage-course-list {
+    border-color: #edd3ed
+}
+#frontpage-course-list h2 {
+    background: #ffeeff;
+    border-bottom-color: #edd3ed
+}
+#frontpage-course-list .courses.frontpage-course-list-all .fp-coursebox .fp-courseinfo h5 > a {
+    color: #8e558e
+}
+	/*Frontpage > Category Listing*/
+#frontpage-category-names {
+    border-color: #edd3ed
+}
+#frontpage-category-names h2 {
+    background: #ffeeff;
+    border-bottom-color: #edd3ed
+}
+.course_category_tree.frontpage-category-names .category.with_children > .info > .categoryname:before {
+    color: #8e558e
+}
+	/*Frontpage > Site News Forum*/
+#site-news-forum {
+    border-color: #edd3ed
+}
+#site-news-forum h2 {
+    background: #ffeeff;
+    border-bottom-color: #edd3ed
+}
+#site-news-forum .forumpost .subject {
+    color: #8e558e
+}
+
+
+/*Moodle Core*/
+#page-header .breadcrumb > li > .divider {
+    color: #382738
+}
+#page-header .breadcrumb > li > .divider:before {
+    color: #382738
+}
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: #a55ba5
+}
+input.form-submit,
+input#id_submitbutton,
+input#id_submitbutton2,
+.path-admin .buttons input[type="submit"],
+td.submit input {
+	background: #a55ba5
+}
+input.form-submit:hover,
+input#id_submitbutton:hover,
+input#id_submitbutton2:hover,
+.path-admin .buttons input[type="submit"]:hover,
+td.submit input:hover,
+input.form-submit:focus,
+input#id_submitbutton:focus,
+input#id_submitbutton2:focus,
+.path-admin .buttons input[type="submit"]:focus,
+td.submit input:focus,
+input.form-submit:active,
+input#id_submitbutton:active,
+input#id_submitbutton2:active,
+.path-admin .buttons input[type="submit"]:active,
+td.submit input:active,
+input.form-submit.active,
+input#id_submitbutton.active,
+input#id_submitbutton2.active,
+.path-admin .buttons input.active[type="submit"],
+td.submit input.active,
+input.form-submit.disabled,
+input#id_submitbutton.disabled,
+input#id_submitbutton2.disabled,
+.path-admin .buttons input.disabled[type="submit"],
+td.submit input.disabled,
+input.form-submit[disabled],
+input#id_submitbutton[disabled],
+input#id_submitbutton2[disabled],
+.path-admin .buttons input[type="submit"][disabled],
+td.submit input[disabled] {
+    background: #8e558e
+}
+
+
+	/*Moodle Core > Add Blog Link*/
+.addbloglink a {
+    background: #a55ba5
+}
+.addbloglink a:hover,
+.addbloglink a:focus {
+    background: #8e558e
+}
+
+
+/*Blocks*/
+.block {
+	border-color: #edd3ed
+}
+.block .header {
+    background: #ffeeff;
+    border-bottom-color: #edd3ed
+}
+.block .header h2 {
+    color: #8e558e
+}
+	/*Blocks > block navigation*/
+.block_navigation .block_tree .active_tree_node > a,
+.block_navigation .block_tree .tree_item > a:hover,
+.block_navigation .block_tree .tree_item > a:focus {
+    color: #8e558e
+}
+	/*Blocks > block settings*/
+.block_settings .block_tree .active_tree_node > a,
+.block_settings .block_tree .tree_item > a:hover,
+.block_settings .block_tree .tree_item > a:focus {
+    color: #8e558e
+}
+	/*Blocks > calender*/
+.block .minicalendar td.day.today,
+.block .minicalendar td.day:hover {
+    background: #8e558e
+}
+
+
+/*Tables*/
+			/*Tables > general & flexible tables*/
+table.flexible th,
+.generaltable th {}
+table.flexible thead th,
+.generaltable thead th {
+    background: #a55ba5
+}
+table.flexible tbody th,
+.generaltable tbody th {
+    color: #a55ba5
+}
+			/*Tables > forumheaderlist*/
+.path-mod-forum .forumheaderlist thead .header {
+    background: #a55ba5
+}
+
+
+/*Course*/
+.course_category_tree .category > .info > .categoryname {
+    background-image: url([[pix:theme|cs00/t/collapsed_empty]])
+}
+.dir-rtl .course_category_tree .category > .info > .categoryname {
+    background-image: url([[pix:theme|cs00/t/collapsed_empty_rtl]])
+}
+.course_category_tree .category.with_children >.info >.categoryname {
+    background-image: url([[pix:theme|cs00/t/expanded]])
+}
+.course_category_tree .category.with_children.collapsed > .info > .categoryname {
+    background-image: url([[pix:theme|cs00/t/collapsed]])
+}
+.dir-rtl .course_category_tree .category.with_children.collapsed > .info > .categoryname {
+    background-image: url([[pix:theme|cs00/t/collapsed_rtl]])
+}
+.coursebox > .info > .coursename a {
+    color: #8e558e
+}
+.coursebox > .info > .coursename a:hover,
+.coursebox > .info > .coursename a:focus {
+    color: #382738
+}
+
+
+    /*Modules: Forum & Blog*/
+.forumpost .options .commands > a:hover,
+.forumpost .options .commands > a:focus,
+.forumpost .options .footer > a:hover,
+.forumpost .options .footer > a:focus {
+    color: #8e558e
+}
+.blog_entry .audience {
+    color: #8e558e
+}
+.blog_entry .content .commands > a:hover,
+.blog_entry .content .commands > a:focus {
+    color: #8e558e
+}
+.comment-area .fd > a {
+    background: #8e558e
+}
+.comment-area .fd > a:hover,
+.comment-area .fd > a:focus {
+    background: #7a437a
+}
+
+
+/*Custom Login Page*/
+.custom-login-page .loginbox {
+    background: #8e558e
+}
+.custom-login-page .loginbox .formwrap .form-fields .textbox-wrap .fa {
+    color: #8e558e
+}
+
+/*Custom Site Expo*/
+.custom-site-expo .ebox .ebox-head .rcthumb {
+    background: #a55ba5
+}
