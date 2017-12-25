@@ -1,0 +1,869 @@
+//colors
+$color_secondary: #4ba89c;
+$color_primary: #20897b;
+$color_gable_green_approx: #103430;
+$color_gable_green_90_approx: rgba(16, 52, 48, .9);
+$color_genoa_approx: #17786b;
+$jagged_ice: #c2e8e5;
+$color_ziggurat_approx: #c0dcdb;
+$color_polar_approx: #e4f7f6;
+$color_plum_approx: #7a437a;
+$white: #fff;
+$color_mountain_mist_approx: #999;
+
+//urls
+$url_0: url([[pix:theme|cs04/bg-menu-divider]]);
+$url_1: url([[pix:theme|cs04/t/collapsed_empty]]);
+$url_2: url([[pix:theme|cs04/t/collapsed_empty_rtl]]);
+$url_3: url([[pix:theme|cs04/t/expanded]]);
+$url_4: url([[pix:theme|cs04/t/collapsed]]);
+$url_5: url([[pix:theme|cs04/t/collapsed_rtl]]);
+
+h1 {
+    color: $color_primary;
+}
+h2 {
+    color: $color_primary;
+}
+h3 {
+    color: $color_primary;
+}
+h4 {
+    color: $color_primary;
+}
+h5 {
+    color: $color_primary;
+}
+h6 {
+    color: $color_primary;
+}
+a {
+    color: $color_primary;
+    &:hover {
+        color: $color_primary;
+    }
+    &:focus {
+        color: $color_primary;
+    }
+}
+.dropdown-menu {
+    background: $color_secondary;
+    > li > a {
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+    }
+    > .active > a {
+        background: $color_primary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+    }
+}
+.dropdown-submenu {
+    &:hover > a {
+        background: $color_primary;
+    }
+    &:focus > a {
+        background: $color_primary;
+    }
+}
+.custom-select {
+    &:focus {
+        border-color: $color_primary;
+    }
+}
+.btn-primary {
+    background: $color_secondary;
+    &:hover {
+        background: $color_primary;
+    }
+    &:focus {
+        &:active {
+            color: $white;
+            background-color: $color_primary;
+        }
+    }
+    &:focus {
+        background: $color_primary;
+    }
+    &:active {
+        background: $color_primary;
+    }
+}
+#header {
+    .header-menubar {
+        background: $color_primary;
+        .navbar {
+            .nav {
+                > li > a {
+                    &:focus {
+                        background-color: $color_gable_green_approx;
+                    }
+                    &:hover {
+                        background-color: $color_gable_green_approx;
+                    }
+                }
+                > .active > a {
+                    background: $color_gable_green_approx;
+                    &:hover {
+                        background: $color_gable_green_approx;
+                    }
+                    &:focus {
+                        background: $color_gable_green_approx;
+                    }
+                }
+                li.dropdown {
+                    &.open {
+                        > .dropdown-toggle {
+                            background: $color_gable_green_approx;
+                        }
+                        &.active > .dropdown-toggle {
+                            background: $color_gable_green_approx;
+                        }
+                    }
+                    &.active > .dropdown-toggle {
+                        background: $color_gable_green_approx;
+                    }
+                }
+            }
+            .btn-navbar {
+                background: $color_secondary;
+                &:hover {
+                    background: $color_secondary;
+                }
+                &:focus {
+                    background: $color_secondary;
+                }
+                &:active {
+                    background: $color_secondary;
+                }
+                &.active {
+                    background: $color_secondary;
+                }
+                &.disabled {
+                    background: $color_secondary;
+                }
+            }
+            .btn-navbar[disabled] {
+                background: $color_secondary;
+            }
+        }
+        .dropdown-menu {
+            background: $color_gable_green_approx;
+            > li > a {
+                &:hover {
+                    background: $color_secondary;
+                }
+                &:focus {
+                    background: $color_secondary;
+                }
+            }
+            > .active > a {
+                background: $color_secondary;
+                &:hover {
+                    background: $color_secondary;
+                }
+                &:focus {
+                    background: $color_secondary;
+                }
+            }
+        }
+        .dropdown-submenu {
+            &:hover > a {
+                background: $color_secondary;
+            }
+            &:focus > a {
+                background: $color_secondary;
+            }
+        }
+        .custom-nav-search .fields-wrap {
+            background: $color_genoa_approx;
+        }
+    }
+    .custom-menu > ul > li {
+        background-image: $url_0;
+        > a {
+            &:hover {
+                background: $color_gable_green_approx;
+            }
+            &:focus {
+                background: $color_gable_green_approx;
+            }
+        }
+    }
+}
+.header-main {
+    background: $color_secondary;
+}
+
+@media (max-width: 979px) {
+    #header .header-menubar {
+        .collapse.in {
+            border-top-color: $color_secondary;
+        }
+        .navbar .nav-collapse.active {
+            border-top-color: $color_secondary;
+        }
+    }
+}
+#footer {
+    .footer-main {
+        background: $color_secondary;
+    }
+    .footer-foot {
+        background: $color_primary;
+    }
+    .social-media > ul > li > a {
+        &:hover {
+            color: $color_gable_green_approx;
+            .media-icon {
+                background: $color_gable_green_approx;
+            }
+        }
+        &:focus {
+            color: $color_gable_green_approx;
+            .media-icon {
+                background: $color_gable_green_approx;
+            }
+        }
+    }
+}
+.homepage-carousel {
+    .carousel-control {
+        background: $color_primary;
+    }
+    .carousel-inner > .carousel-item .carousel-content .carousel-btn > a {
+        background: $color_secondary;
+        border-bottom-color: $color_gable_green_90_approx;
+        &:hover {
+            background: $color_secondary;
+            border-bottom-color: $color_gable_green_90_approx;
+        }
+        &:focus {
+            background: $color_secondary;
+            border-bottom-color: $color_gable_green_90_approx;
+        }
+    }
+}
+#frontpage-course-list {
+    border-color: $color_ziggurat_approx;
+    h2 {
+        background: $color_polar_approx;
+        border-bottom-color: $color_ziggurat_approx;
+    }
+    .courses.frontpage-course-list-all .fp-coursebox .fp-courseinfo h5 > a {
+        color: $color_primary;
+    }
+}
+#frontpage-category-names {
+    border-color: $color_ziggurat_approx;
+    h2 {
+        background: $color_polar_approx;
+        border-bottom-color: $color_ziggurat_approx;
+    }
+}
+.course_category_tree {
+    .category {
+        &.with_children {
+            > .info > .categoryname {
+                background-image: $url_3;
+            }
+            &.collapsed > .info > .categoryname {
+                background-image: $url_4;
+            }
+        }
+        > .info > .categoryname {
+            background-image: $url_1;
+        }
+    }
+    &.frontpage-category-names .category.with_children > .info > .categoryname:before {
+        color: $color_primary;
+    }
+}
+#site-news-forum {
+    border-color: $color_ziggurat_approx;
+    h2 {
+        background: $color_polar_approx;
+        border-bottom-color: $color_ziggurat_approx;
+    }
+    .forumpost .subject {
+        color: $color_primary;
+    }
+}
+input {
+    &.form-submit {
+        background: $color_secondary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+        &:active {
+            background: $color_primary;
+        }
+        &.active {
+            background: $color_primary;
+        }
+        &.disabled {
+            background: $color_primary;
+        }
+    }
+    &#id_submitbutton {
+        background: $color_secondary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+        &:active {
+            background: $color_primary;
+        }
+        &.active {
+            background: $color_primary;
+        }
+        &.disabled {
+            background: $color_primary;
+        }
+    }
+    &#id_submitbutton2 {
+        background: $color_secondary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+        &:active {
+            background: $color_primary;
+        }
+        &.active {
+            background: $color_primary;
+        }
+        &.disabled {
+            background: $color_primary;
+        }
+    }
+    &.form-submit[disabled] {
+        background: $color_primary;
+    }
+    &#id_submitbutton[disabled] {
+        background: $color_primary;
+    }
+    &#id_submitbutton2[disabled] {
+        background: $color_primary;
+    }
+}
+.block {
+    border-color: $color_ziggurat_approx;
+    .header {
+        background: $color_polar_approx;
+        border-bottom-color: $color_ziggurat_approx;
+        h2 {
+            color: $color_primary;
+        }
+    }
+    .minicalendar td.day {
+        &.today {
+            background: $color_primary;
+        }
+        &:hover {
+            background: $color_primary;
+        }
+    }
+}
+.generaltable {
+    thead th {
+        background: $color_secondary;
+    }
+    tbody th {
+        color: $color_secondary;
+    }
+}
+.rolecap {
+    thead th {
+        background: $color_secondary;
+    }
+    tbody th {
+        color: $color_secondary;
+    }
+}
+.blog_entry {
+    .audience {
+        color: $color_primary;
+    }
+    .content .commands > a {
+        &:hover {
+            color: $color_primary;
+        }
+        &:focus {
+            color: $color_primary;
+        }
+    }
+}
+.jsenabled .usermenu .moodle-actionmenu {
+    &.show {
+        background: $color_gable_green_approx;
+        .menu a:hover {
+            background: $color_secondary;
+        }
+    }
+    > .menu .filler {
+        background: $color_gable_green_approx;
+    }
+}
+.usermenu .moodle-actionmenu {
+    &:hover .toggle-display {
+        background: $color_gable_green_approx;
+    }
+    &:focus .toggle-display {
+        background: $color_gable_green_approx;
+    }
+    .dropdown-menu {
+        a.dropdown-item {
+            background: $color_secondary;
+            &:hover {
+                background: $color_primary;
+            }
+            &:focus {
+                background: $color_primary;
+            }
+        }
+    }
+}
+.moodle-actionmenu.show[data-enhanced] .menu {
+    background: $color_gable_green_90_approx;
+    a {
+        &:hover {
+            background: $color_secondary;
+        }
+        &:focus {
+            background: $color_secondary;
+        }
+    }
+}
+.titlebar .slidenav .nav-item {
+    color: $color_primary;
+    border-color: $color_primary;
+    &:hover {
+        background: $color_primary;
+    }
+    &:focus {
+        background: $color_primary;
+    }
+}
+.custom-courses-list .course-box {
+    .thumb {
+        border-color: $jagged_ice;
+    }
+    .info h5 a {
+        color: $color_primary;
+    }
+}
+#page-header .breadcrumb > li > .divider {
+    color: $color_gable_green_approx;
+    &:before {
+        color: $color_gable_green_approx;
+    }
+}
+select:focus {
+    border-color: $color_secondary;
+}
+textarea:focus {
+    border-color: $color_secondary;
+}
+input[type="text"]:focus {
+    border-color: $color_secondary;
+}
+input[type="password"]:focus {
+    border-color: $color_secondary;
+}
+input[type="datetime"]:focus {
+    border-color: $color_secondary;
+}
+input[type="datetime-local"]:focus {
+    border-color: $color_secondary;
+}
+input[type="date"]:focus {
+    border-color: $color_secondary;
+}
+input[type="month"]:focus {
+    border-color: $color_secondary;
+}
+input[type="time"]:focus {
+    border-color: $color_secondary;
+}
+input[type="week"]:focus {
+    border-color: $color_secondary;
+}
+input[type="number"]:focus {
+    border-color: $color_secondary;
+}
+input[type="email"]:focus {
+    border-color: $color_secondary;
+}
+input[type="url"]:focus {
+    border-color: $color_secondary;
+}
+input[type="search"]:focus {
+    border-color: $color_secondary;
+}
+input[type="tel"]:focus {
+    border-color: $color_secondary;
+}
+input[type="color"]:focus {
+    border-color: $color_secondary;
+}
+.uneditable-input:focus {
+    border-color: $color_secondary;
+}
+input[type="submit"] {
+    background-color: $color_secondary;
+    &:hover {
+        background-color: $color_primary;
+    }
+    &:active {
+        background-color: $color_primary;
+    }
+    &:focus {
+        background-color: $color_primary;
+        &:active {
+            background-color: $color_primary;
+        }
+    }
+}
+.path-admin .buttons {
+    input[type="submit"] {
+        background: $color_secondary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+        &:active {
+            background: $color_primary;
+        }
+    }
+    input {
+        &.active[type="submit"] {
+            background: $color_primary;
+        }
+        &.disabled[type="submit"] {
+            background: $color_primary;
+        }
+    }
+    input[type="submit"][disabled] {
+        background: $color_primary;
+    }
+}
+td.submit {
+    input {
+        background: $color_secondary;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+        &:active {
+            background: $color_primary;
+        }
+        &.active {
+            background: $color_primary;
+        }
+        &.disabled {
+            background: $color_primary;
+        }
+    }
+    input[disabled] {
+        background: $color_primary;
+    }
+}
+.addbloglink a {
+    background: $color_secondary;
+    &:hover {
+        background: $color_primary;
+    }
+    &:focus {
+        background: $color_primary;
+    }
+}
+.block_navigation .block_tree {
+    .active_tree_node > a {
+        color: $color_primary;
+    }
+    .tree_item > a {
+        &:hover {
+            color: $color_primary;
+        }
+        &:focus {
+            color: $color_primary;
+        }
+    }
+}
+.block_settings .block_tree {
+    .active_tree_node > a {
+        color: $color_primary;
+    }
+    .tree_item > a {
+        &:hover {
+            color: $color_primary;
+        }
+        &:focus {
+            color: $color_primary;
+        }
+    }
+}
+table.flexible {
+    thead th {
+        background: $color_secondary;
+    }
+    tbody th {
+        color: $color_secondary;
+    }
+}
+.path-mod-forum .forumheaderlist thead .header {
+    background: $color_secondary;
+}
+.dir-rtl .course_category_tree .category {
+    > .info > .categoryname {
+        background-image: $url_2;
+    }
+    &.with_children {
+        > .info > .categoryname {
+            background-image: $url_3;
+        }
+        &.collapsed > .info > .categoryname {
+            background-image: $url_5;
+        }
+    }
+}
+.coursebox > .info > .coursename a {
+    color: $color_primary;
+    &:hover {
+        color: $color_gable_green_approx;
+    }
+    &:focus {
+        color: $color_gable_green_approx;
+    }
+}
+.forumpost .options {
+    .commands > a {
+        &:hover {
+            color: $color_primary;
+        }
+        &:focus {
+            color: $color_primary;
+        }
+    }
+    .footer > a {
+        &:hover {
+            color: $color_primary;
+        }
+        &:focus {
+            color: $color_primary;
+        }
+    }
+}
+.comment-area .fd > a {
+    background: $color_primary;
+    &:hover {
+        background: $color_plum_approx;
+    }
+    &:focus {
+        background: $color_plum_approx;
+    }
+}
+.custom-login-page .loginbox {
+    background: $color_primary;
+    .formwrap .form-fields .textbox-wrap .fa {
+        color: $color_primary;
+    }
+}
+.custom-site-expo .ebox .ebox-head .rcthumb {
+    background: $color_primary;
+}
+
+
+/*M-32*/
+.block-region .block .card-block {
+    border-color: $color_ziggurat_approx;
+    .card-title {
+        background-color: $color_polar_approx;
+        border-color: $color_ziggurat_approx;
+    }
+}
+
+#page {
+    .action-menu {
+        .menubar .dropdown .dropdown-menu .dropdown-item {
+            a {
+                color: $white;
+                padding: 7px 20px;
+                background-color: $color_secondary;
+                &:hover {
+                    color: $white;
+                    background-color: $color_primary;
+                }
+            }
+        }
+    }
+    .card {
+        .card-block {
+            .block-controls .action-menu .menubar .dropdown {
+                .dropdown-menu a.dropdown-item {
+                    color: $white;
+                    background-color: $color_secondary;
+                    &:hover {
+                        color: $white;
+                        background-color: $color_primary;
+                    }
+                }
+            }
+        }
+        &.card-block {
+            .action-menu .menubar .dropdown {
+                a {
+                    color: $white;
+                    background-color: $color_secondary;
+                    &:hover {
+                        color: $white;
+                        background-color: $color_primary;
+                    }
+                }
+                a.dropdown-toggle {
+                    background: none;
+                }
+            }
+            .course-content .section .action-menu .menubar .dropdown {
+                a.dropdown-toggle {
+                    color: inherit;
+                }
+                .dropdown-menu a.dropdown-item {
+                    background-color: $color_secondary;
+                    &:hover {
+                        background-color: $color_primary;
+                    }
+                    &:focus {
+                        background-color: $color_primary;
+                    }
+                }
+            }
+        }
+    }
+    .card .action-menu .menubar .dropdown a.dropdown-toggle:after {
+        color: $color_mountain_mist_approx;
+    }
+}
+.header-main .custom-menu ul {
+    .dropdown {
+        &:hover {
+            color: $white;
+            background-color: $color_primary;
+        }
+        &.nav-item a.nav-link {
+            &:hover {
+                background-color: $color_primary;
+            }
+            &:focus {
+                background-color: $color_primary;
+            }
+        }
+        .dropdown-menu a {
+            color: $white;
+            background-color: $color_secondary;
+            &:hover {
+                color: $white;
+                background-color: $color_primary;
+            }
+        }
+    }
+    a.nav-link {
+        &:hover {
+            background-color: $color_primary;
+        }
+        &:focus {
+            background-color: $color_primary;
+        }
+    }
+    .dropdown.nav-item a.nav-link {
+        &:hover {
+            background-color: $color_primary;
+        }
+        &:focus {
+            background-color: $color_primary;
+        }
+    }
+}
+.list-group-item-action {
+    color: $color_primary;
+}
+#page-login-index .card {
+    background-color: $color_primary;
+}
+#page-course-management {
+    #page .card.card-block .action-menu .menubar .dropdown a.dropdown-toggle {
+        color: $color_primary;
+    }
+}
+#course-category-listings {
+    .course-listing {
+        .listing-pagination {
+            a {
+                color: $white;
+                background: $color_secondary;
+                &:hover {
+                    background: $color_primary;
+                }
+                &:focus {
+                    background: $color_primary;
+                }
+                &.active-page {
+                    background: $color_primary;
+                }
+            }
+        }
+    }
+}
+.userenrolment thead th {
+    background: $color_secondary;
+}
+.userlist .initialbar {
+    .initialbarall.letter.active {
+        border: $color_secondary;
+        background: $color_secondary;
+    }
+    .initialbargroups .initialbargroup li a {
+        color: $color_primary;
+        &:hover {
+            color: $color_secondary;
+            text-decoration: none;
+            background: none;
+        }
+        &:focus {
+            color: $color_secondary;
+            background: none;
+        }
+    }
+}
+.form-autocomplete-suggestions li:hover {
+    background: $color_secondary;
+}
+
+#page .card.card-block .box .generaltable tbody .action-menu .menubar .dropdown a.dropdown-toggle {
+    &:hover {
+        color: $color_secondary;
+    }
+    &:focus {
+        color: $color_secondary;
+    }
+}

@@ -1,0 +1,5713 @@
+//colors
+$white: #fff;
+$color_blackcurrant_approx: #382738;
+$white_20: rgba(255, 255, 255, .2);
+$color_fuscous_gray_approx: #545251;
+$color_primary: #8e558e;
+$color_chicago_approx: #585858;
+$color_celeste_approx: #cdcdcd;
+$color_nobel_approx: #b5b5b5;
+$color_secondary: #a55ba5;
+$color_plum_approx: #764076;
+$white_53: rgba(255, 255, 255, .53);
+$black: #000;
+$color_blackcurrant_90_approx: rgba(56, 39, 56, 0.9);
+$color_san_marino_approx: #4a6ea9;
+$color_picton_blue_approx: #55acee;
+$color_valencia_approx: #d44132;
+$color_monza_approx: #bd081c;
+$color_gallery_approx: #eee;
+$color_iron_approx: #d6d6d6;
+$color_tapa_approx: #757575;
+$color_romantic_approx: #ffd3bd;
+$color_zanah_approx: #d6f8cd;
+$color_cape_honey_approx: #fee7ae;
+$color_mystic_approx: #dce7ec;
+$color_black_haze_approx: #f7f7f7;
+$color_concrete_approx: #f3f3f3;
+$mercury: #e5e5e5;
+$color_mine_shaft_approx: #313131;
+$color_pumice_approx: #c7c7c7;
+$color_alto_approx: #ddd;
+$gray: #808080;
+$color_alabaster_approx: #fbfbfb;
+$color_gray_nurse_approx: #e8e8e8;
+$color_quill_gray_approx: #d4d4d4;
+$color_gray_approx: #818181;
+$color_boston_blue_approx: #3a87ad;
+$color_link_water_approx: #d9edf7;
+$color_charlotte_approx: #bce8f1;
+$black_50: rgba(0, 0, 0, 0.5);
+$color_silver_86_approx: rgba(189, 189, 189, 0.86);
+$gallery: #efefef;
+$color_snuff_approx: #edd3ed;
+$color_tutu_approx: #fef;
+$color_mountain_mist_approx: #999;
+
+//fonts
+$font_0: Arial;
+$font_1: Helvetica;
+$font_2: sans-serif;
+$font_3: fontawesome;
+$font_4: FontAwesome;
+$fontwww: '/fonts/' !default;
+
+//urls
+$url_0: url([[pix:theme|bg-menu-divider]]);
+$url_1: url([[pix:theme|homecarousel-transbg]]);
+$url_2: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjZmJmYmZiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+
+//@extend-elements
+//original selectors
+//.dropdown-menu >li >a:hover, .dropdown-menu >li >a:focus, .dropdown-submenu:hover >a, .dropdown-submenu:focus >a
+%extend_1 {
+    color: $white;
+    background: inherit;
+    filter: none;
+}
+
+//original selectors
+//.dropdown-menu >.active >a, .dropdown-menu >.active >a:hover, .dropdown-menu >.active >a:focus
+%extend_2 {
+    color: $white;
+    text-decoration: none;
+    background: inherit;
+    filter: none;
+}
+
+* {
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+}
+body {
+    font-size: 16px;
+    font-family: $font_0, $font_1, $font_2;
+    color: $color_fuscous_gray_approx;
+    padding-top: 0;
+    background: $white;
+}
+.container {
+    max-width: 1240px;
+}
+.navbar-light .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+h1 {
+    font-weight: normal;
+    font-size: 42px;
+}
+h2 {
+    font-weight: normal;
+    font-size: 34px;
+}
+h3 {
+    font-weight: normal;
+    font-size: 26px;
+}
+h4 {
+    font-weight: normal;
+    font-size: 23px;
+}
+h5 {
+    font-weight: normal;
+    font-size: 21px;
+}
+h6 {
+    font-weight: normal;
+    font-size: 18px;
+}
+a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+    &:focus {
+        color: inherit;
+        outline: 0 none;
+    }
+}
+img {
+    border: 0 none;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.dropdown-menu {
+    padding: 0;
+    background: inherit;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    margin: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    > li > a {
+        font-size: 16px;
+        color: $white;
+        line-height: 22px;
+        &:hover {
+            @extend %extend_1;
+        }
+        &:focus {
+            @extend %extend_1;
+        }
+    }
+    > .active > a {
+        @extend %extend_2;
+        &:hover {
+            @extend %extend_2;
+        }
+        &:focus {
+            @extend %extend_2;
+        }
+    }
+}
+.dropdown-submenu {
+    &:hover > a {
+        @extend %extend_1;
+    }
+    &:focus > a {
+        @extend %extend_1;
+    }
+    > a:after {
+        border-left-color: $white;
+        margin-top: 6.5px;
+    }
+    > .dropdown-menu {
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        margin: 0;
+    }
+}
+.dir-rtl {
+    .homepage-carousel .carousel-control {
+        &.left i:before {
+            content: '\f0da';
+            font-family: $font_3;
+        }
+        &.right i:before {
+            content: '\f0d9';
+            font-family: $font_3;
+        }
+    }
+    .block .content .userpicture {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .dropdown-submenu {
+        > a:after {
+            border-right-color: $white;
+        }
+        > .dropdown-menu {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0;
+            margin: 0;
+        }
+    }
+    .titlebar {
+        .slidenav {
+            .nav-prev {
+                float: right;
+                i {
+                    right: -1px;
+                }
+                .fa-chevron-left {
+                    display: none;
+                }
+                .fa-chevron-right {
+                    display: block;
+                }
+            }
+            .nav-next {
+                float: left;
+                i {
+                    left: -1px;
+                }
+                .fa-chevron-left {
+                    display: block;
+                }
+                .fa-chevron-right {
+                    display: none;
+                }
+            }
+        }
+        &.with-felements {
+            h2 {
+                float: right;
+            }
+            .slidenav {
+                float: left;
+            }
+        }
+    }
+    .header-logo {
+        float: right;
+    }
+    .mform {
+        fieldset.collapsible legend a.fheader {
+            margin-right: 0;
+        }
+        .fpassword .unmask {
+            padding: 0 25px 0 0;
+            margin-left: 0;
+            margin-right: 15px;
+            > input {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    button {
+        margin: 0 5px 10px 0;
+    }
+    input[type="button"] {
+        margin: 0 5px 10px 0;
+    }
+    input[type="submit"] {
+        margin: 0 5px 10px 0;
+    }
+    input[type="reset"] {
+        margin: 0 5px 10px 0;
+    }
+    .form-buttons {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    #fitem_id_submitbutton {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    #fgroup_id_buttonar {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    input[type="text"] {
+        + input[type="button"] {
+            margin: 0 5px 10px 0;
+        }
+        + button {
+            margin: 0 5px 10px 0;
+        }
+        + input[type="submit"] {
+            margin: 0 5px 10px 0;
+        }
+    }
+    .block_settings {
+        .block_tree {
+            > li {
+                padding-right: 10px;
+                padding-left: 15px;
+            }
+            .tree_item.branch {
+                background-position: right center;
+            }
+        }
+        .footer .adminsearchform div > input[type="submit"] {
+            margin-right: 0;
+        }
+    }
+    .forumpost {
+        .options {
+            .commands {
+                text-align: left;
+            }
+            .footer {
+                text-align: left;
+            }
+            .link {
+                text-align: left;
+            }
+        }
+        .picture img.userpicture {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .content .attachments {
+            text-align: left;
+        }
+    }
+    .blog_entry {
+        .content {
+            margin-right: 43px;
+            margin-left: 0;
+        }
+        .audience {
+            text-align: left;
+        }
+    }
+    .comment-delete {
+        position: absolute;
+        right: auto;
+        left: 7px;
+        margin: 0;
+    }
+    .addbloglink {
+        text-align: left;
+    }
+    .loginbox {
+        .signupform {
+            text-align: right;
+        }
+        .signuppanel .subcontent ol {
+            padding: 25px 25px 10px 0;
+            li {
+                padding-right: 10px;
+            }
+        }
+    }
+    .coursebox {
+        .content {
+            .teachers {
+                float: none;
+                width: auto;
+                margin: 0;
+                clear: none;
+            }
+            .courseimage {
+                float: none;
+                width: auto;
+                margin: 0;
+                clear: none;
+                position: absolute;
+                top: 0;
+            }
+            .coursefile {
+                float: none;
+                width: auto;
+                margin: 0;
+                clear: none;
+                position: absolute;
+                top: 0;
+            }
+        }
+        > .info > .coursename a {
+            padding-left: 0;
+            padding-right: 27px;
+            background-position: right center;
+        }
+    }
+    .btn .caret {
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    #header .custom-menu {
+        float: left;
+        > ul {
+            > li {
+                float: right;
+                background-position: left center;
+                padding: 0 0 0 2px;
+            }
+        }
+    }
+    .header-menubar .custom-nav-search .fields-wrap {
+        padding: 5px 15px 5px 42px;
+        .btn-search {
+            right: auto;
+            left: 0;
+            input[type="submit"] {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+    .homepage-carousel .carousel-inner > .carousel-item .carousel-content .carousel-btn > a > {
+        .fa {
+            margin-right: 10px;
+        }
+        .fa-arrow-left {
+            display: inline-block;
+        }
+    }
+    #footer .footer-contact p i {
+        margin-right: 0;
+        margin-left: 4px;
+    }
+    #page-header .breadcrumb > li > .divider:before {
+        content: "\f100";
+        padding: 0 3px 0 6px;
+    }
+    input.form-submit {
+        margin: 0 5px 10px 0;
+    }
+    table#form td.submit {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    .path-admin .buttons {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    .fp-content-center form + div {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    div.backup-section + form {
+        background: none;
+        padding: 0;
+        border-top: 0;
+    }
+    input[name="searchwikicontent"] + input[type="submit"] {
+        margin: 0 5px 10px 0;
+    }
+    select + input[type="submit"] {
+        margin: 0 5px 10px 0;
+    }
+    input[type="password"] + input[type="submit"] {
+        margin: 0 5px 10px 0;
+    }
+    .form-password .unmask {
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .block_navigation .block_tree {
+        .tree_item.branch {
+            background-position: right center;
+            &.navigation_node {
+                padding: 8px 15px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        li.contains_branch ul > li {
+            padding: 0;
+            padding-right: 10px;
+            padding-left: 15px;
+        }
+        .depth_1 > ul {
+            margin-right: 0;
+        }
+    }
+    .comment-list li .comment-message > .comment-message-meta {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+    .comment-message .picture {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+    .comment-area .fd {
+        text-align: right;
+    }
+    .course_category_tree.frontpage-category-names .category {
+        > .info > .categoryname {
+            background: none;
+            &:before {
+                float: right;
+                content: "\f137";
+                margin: 0 0 0 10px;
+            }
+        }
+        &.with_children.collapsed > .info > .categoryname {
+            background: none;
+            &:before {
+                content: "\f137";
+            }
+        }
+    }
+    #frontpage-category-names .course_category_tree .category.with_children > .info > .categoryname {
+        background-image: none;
+    }
+    #site-news-forum .forumpost .picture img.userpicture {
+        margin: 0;
+    }
+    #frontpage-course-list .courses.frontpage-course-list-all .fp-coursebox .fp-courseinfo .readmore > a > .fa {
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .custom-login-page .loginbox .formwrap {
+        .form-fields {
+            .textbox-wrap {
+                padding-right: 0;
+                padding-left: 48px;
+                .fa-user {
+                    right: auto;
+                    left: 21px;
+                }
+                .fa-lock {
+                    right: auto;
+                    left: 22px;
+                }
+            }
+            input {
+                padding-left: 0;
+            }
+        }
+        .support-fields p > label.checkbox {
+            padding-left: 0;
+            > input[type="checkbox"] {
+                float: right;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+    &#page-mod-quiz-mod.dir-rtl.dir-rtl.dir-rtl #id_reviewoptionshdr fieldset.fgroup > span {
+        text-align: right;
+    }
+}
+
+@media (min-width: 992px) {
+    .dir-rtl {
+        .dropdown-menu > li > a {
+            padding: 9px 20px;
+        }
+        .header-menubar .custom-nav-search {
+            float: left;
+        }
+        .course_category_tree .category > .info > .categoryname {
+            padding-left: 18px;
+            padding-right: 27px;
+        }
+    }
+    .header-menubar {
+        .custom-nav-search {
+            float: right;
+            .fields-wrap {
+                max-width: 200px;
+            }
+        }
+        .navbar .nav > li > a {
+            padding: 11px 15px;
+        }
+    }
+    .dropdown-menu > li > a {
+        padding: 9px 20px;
+    }
+    .course_category_tree .category > .info > .categoryname {
+        padding-left: 27px;
+    }
+    .custom-login-page .loginbox {
+        .formwrap {
+            .support-fields p {
+                width: 277px;
+            }
+        }
+    }
+}
+
+.usermenu {
+    .moodle-actionmenu {
+        .dropdown-menu a.dropdown-item i {
+            color: $white;
+        }
+        a.dropdown-toggle {
+            color: $white;
+        }
+        .toggle-display {
+            height: auto;
+            font-size: 18px;
+            color: $white;
+            line-height: 35px;
+            display: block;
+            &.textmenu {
+                padding: 9px 18px 8px;
+            }
+            .userbutton {
+                height: auto;
+                line-height: 35px;
+            }
+            &:hover {
+                color: $white;
+            }
+        }
+        &:hover .toggle-display {
+            background: inherit;
+        }
+        &:focus .toggle-display {
+            background: inherit;
+        }
+    }
+    .login {
+        color: $white;
+        a {
+            color: $white;
+            &:hover {
+                color: $white;
+                text-decoration: underline;
+            }
+            &:focus {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.jsenabled {
+    .usermenu .moodle-actionmenu {
+        &.show {
+            background: inherit;
+            .menu {
+                margin: 0;
+                &:before {
+                    border: 0;
+                }
+                &:after {
+                    border: 0;
+                }
+                &.align-tr-br {
+                    margin-top: 0;
+                }
+                a:hover {
+                    background: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+        > {
+            .menubar {
+                margin: 0;
+            }
+            .menu {
+                min-width: 200px;
+                .filler {
+                    height: 1px;
+                    background: inherit;
+                    border: 0;
+                    margin: 0;
+                }
+            }
+        }
+        .toggle-display.textmenu {
+            padding: 9px 18px 8px;
+        }
+    }
+    .moodle-actionmenu[data-enhance] .toggle-display.textmenu {
+        margin-left: 0;
+    }
+    &.dir-rtl .moodle-actionmenu[data-enhance] .toggle-display.textmenu {
+        margin-right: 0;
+    }
+    .header-main .moodle-actionmenu[data-enhance] .toggle-display.textmenu .caret {
+        border-top-color: $white;
+        &:hover {
+            border-top-color: $white;
+        }
+        &:active {
+            border-top-color: $white;
+        }
+    }
+    .form-group {
+        a.visibleifjs {
+            vertical-align: text-bottom;
+        }
+    }
+}
+#header {
+    max-height: none;
+    padding: 0;
+    .usermenu .dropdown .dropdown-menu {
+        width: auto;
+        min-width: 150px;
+        margin-top: 10px;
+        top: auto;
+        left: 0;
+        right: auto;
+        overflow: hidden;
+    }
+    nav.nav {
+        a.nav-link {
+            color: $color_primary;
+            margin-top: 5px;
+        }
+        .dropdown .dropdown-menu {
+            margin-top: 15px;
+        }
+    }
+}
+.header-main {
+    background: $color_secondary;
+    margin-top: 51px;
+    .navbar-toggleable-md {
+        max-height: none;
+        text-align: right;
+        padding: 0;
+        .custom-menu {
+            float: right;
+            margin: 14px 0;
+            > ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                .usermenu {
+                    .menubar .dropdown {
+                        a {
+                            &:last-child {
+                                border-top: 0;
+                            }
+                        }
+                        .dropdown-menu a {
+                            padding: 10px;
+                        }
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    color: $white;
+                    padding: 15px 18px;
+                    display: inline-block;
+                    &:hover {
+                        background: inherit;
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        background: inherit;
+                        text-decoration: none;
+                    }
+                }
+                > .no-divider {
+                    background: none;
+                }
+                .dropdown.nav-item {
+                    display: inline-block;
+                    margin: 5px 0;
+                    &:hover {
+                        background: none;
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                    .dropdown-menu {
+                        border: 1px solid $color_iron_approx;
+                        a {
+                            padding: 10px;
+                        }
+                    }
+                }
+                &:last-child {
+                    .dropdown.nav-item {
+                        margin: 0;
+                    }
+                }
+                a.nav-item.nav-link {
+                    margin: 0;
+                }
+            }
+            .dropdown-menu a {
+                display: block;
+            }
+        }
+        .header-logo {
+            a.navbar-brand {
+                padding: 0;
+                margin: 0;
+                background: none;
+                &:hover {
+                    background: none;
+                }
+                &:focus {
+                    background: none;
+                }
+            }
+        }
+        a {
+            color: $white;
+            font-size: 16px;
+            padding: 15px 20px;
+            /* l */
+            &:hover {
+                background: $color_blackcurrant_approx;
+            }
+            &:focus {
+                background: $color_blackcurrant_approx;
+            }
+        }
+    }
+    .moodle-actionmenu.show[data-enhanced] .menu a {
+        font-size: 16px;
+    }
+    button.navbar-toggler {
+        padding: 10px 20px;
+        margin: 27px 0;
+        &:hover {
+            background: transparent;
+        }
+        &:focus {
+            background: transparent;
+        }
+        &:before {
+            content: '\f0c9';
+            font-family: $font_3;
+            color: $white;
+            font-size: 26px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #header {
+        padding-left: 0;
+        padding-right: 0;
+        .usermenu .dropdown .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+        .navbar .popover-region .popover-region-container {
+            right: 0;
+        }
+    }
+    .homepage-carousel {
+        .carousel-inner {
+            > .carousel-item {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+            > .carousel-item .item-inner-wrap {
+                padding: 350px 0 0;
+            }
+        }
+        .carousel-control {
+            display: none;
+        }
+    }
+    #footer {
+        .footer-main {
+            padding-right: 20px;
+            padding-left: 20px;
+            text-align: center;
+        }
+        .footer-foot {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .footer-desc .logo-footer a {
+            margin: 0 auto;
+        }
+        .social-media > ul > li {
+            display: inline-block;
+            + li {
+                margin-left: 5px;
+            }
+            > a .media-name {
+                display: none;
+            }
+        }
+    }
+    legend {
+        margin-bottom: 20px;
+    }
+    .form-item {
+        margin-bottom: 10px;
+    }
+    .mform {
+        .fitem {
+            margin-bottom: 10px;
+        }
+        .fcheckbox input {
+            vertical-align: middle;
+        }
+    }
+    .dir-rtl .header-logo {
+        float: right;
+    }
+    .header-logo > a {
+        display: inline-block;
+    }
+    #page-header #page-navbar {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    body #region-main .mform:not(.unresponsive) {
+        .fitem {
+            .fitemtitle {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .fcheckbox > span {
+                margin-top: 0;
+            }
+            .fradio > span {
+                margin-top: 0;
+            }
+            .fgroup > span {
+                margin-top: 0;
+            }
+        }
+        .fitem_fcheckbox .felement {
+            padding-top: 0;
+        }
+    }
+    .custom-login-page .loginbox .formwrap .form-action {
+        text-align: center;
+    }
+    #page-admin-user-profile-index #region-main .profileeditor {
+        text-align: center;
+        div {
+            &.singleselect {
+                display: block;
+            }
+            &.singlebutton {
+                display: block;
+                margin: 10px 0 20px;
+            }
+        }
+    }
+    .theme-color-schemes .thumbnail {
+        margin: 0 auto;
+    }
+    #page-mod-quiz-mod #id_reviewoptionshdr .fitemtitle {
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    #header .navbar .popover-region .popover-region-container {
+        min-width: 200px;
+        max-width: 200px;
+        height: 450px;
+        position: absolute;
+        left: auto;
+    }
+}
+
+.btn {
+    padding: 10px 18px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    .caret {
+        margin-left: 5px;
+    }
+}
+.btn-large {
+    font-size: 17.5px;
+    padding: 11px 19px;
+}
+.btn-small {
+    font-size: 11.9px;
+    padding: 2px 10px;
+}
+.btn-mini {
+    font-size: 10.5px;
+    padding: 0 6px;
+}
+.btn-default {
+    color: $color_chicago_approx;
+    background: $color_celeste_approx;
+    border: 0;
+    &:hover {
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+    &:focus {
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+    &:active {
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+.btn-primary {
+    background: inherit;
+    border: 0;
+    &:hover {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: none;
+        &:active {
+            color: $white;
+            background-color: $color_primary;
+        }
+    }
+    &:focus {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: none;
+    }
+    &:active {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: none;
+        &:focus {
+            color: $color_chicago_approx;
+            background: $color_nobel_approx;
+            outline: none;
+        }
+    }
+    &:focus {
+        &:active {
+            color: $white;
+            background-color: $color_primary;
+        }
+    }
+    &.active:hover {
+        background: $color_secondary;
+        outline: none;
+    }
+    &.focus:active {
+        background: $color_secondary;
+        outline: none;
+    }
+}
+.btn-secondary {
+    outline: none;
+    &:focus {
+        outline: none;
+        &:active {
+            outline: none;
+        }
+    }
+    &:active {
+        outline: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.titlebar {
+    .slidenav {
+        width: 82px;
+        overflow: hidden;
+        .nav-item {
+            width: 37px;
+            height: 37px;
+            font-size: 16px;
+            color: inherit;
+            line-height: 36px;
+            background: $white;
+            padding: 0;
+            border: 1px solid;
+            margin: 1px 0 0;
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 19px;
+            text-align: center;
+            &:hover {
+                color: $white;
+                background: inherit;
+            }
+            &:focus {
+                color: $white;
+                background: inherit;
+            }
+            i {
+                position: relative;
+            }
+        }
+        .nav-prev {
+            float: left;
+        }
+        .nav-next {
+            float: right;
+        }
+    }
+    &.with-felements {
+        padding: 0 0 18px;
+        h2 {
+            float: left;
+            margin: 10px 0 0;
+        }
+        .slidenav {
+            float: right;
+            margin: 10px 0 0;
+        }
+    }
+}
+.dir-ltr {
+    .addbloglink {
+        text-align: right;
+    }
+    .loginbox {
+        .signupform {
+            text-align: left;
+        }
+        .signuppanel .subcontent ol li {
+            padding-left: 10px;
+        }
+    }
+    .titlebar .slidenav {
+        .nav-prev {
+            i {
+                left: -1px;
+            }
+            .fa-chevron-left {
+                display: block;
+            }
+            .fa-chevron-right {
+                display: none;
+            }
+        }
+        .nav-next {
+            i {
+                right: -1px;
+            }
+            .fa-chevron-left {
+                display: none;
+            }
+            .fa-chevron-right {
+                display: block;
+            }
+        }
+    }
+    .homepage-carousel .carousel-inner > .carousel-item .carousel-content .carousel-btn > a > {
+        .fa {
+            margin-left: 10px;
+        }
+        .fa-arrow-right {
+            display: inline-block;
+        }
+    }
+    .mform fieldset.collapsible legend a.fheader {
+        margin-left: 0;
+    }
+    .block_navigation .block_tree .tree_item.branch {
+        background-position: 0 10px;
+    }
+    .jsenabled .block_navigation .block_tree .tree_item.emptybranch {
+        background-position: 0 10px;
+    }
+    .custom-login-page .loginbox .formwrap .form-fields input {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .dropdown-menu-right {
+        left: 0;
+        right: auto;
+    }
+}
+
+.header-logo {
+    float: left;
+    margin: 10px 0;
+    a.navbar-brand {
+        display: block;
+        max-width: 170px;
+        padding: 0;
+        margin: 0;
+        &:hover {
+            background: none;
+        }
+        &:focus {
+            background: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.header-bottom {
+    background: $color_primary;
+}
+.header-menubar {
+    height: 50px;
+    background: inherit;
+    .navbar {
+        max-height: none;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        .nav {
+            > li {
+                > a {
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 22px;
+                    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                    text-shadow: none;
+                    &:focus {
+                        color: $white;
+                        background-color: inherit;
+                        outline: 0;
+                    }
+                    &:hover {
+                        color: $white;
+                        background-color: inherit;
+                        outline: 0;
+                    }
+                }
+                > .dropdown-menu {
+                    &:before {
+                        border: 0;
+                    }
+                    &:after {
+                        border: 0;
+                    }
+                }
+            }
+            > .active > a {
+                color: $white;
+                background: inherit;
+                outline: 0;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: none;
+                &:hover {
+                    color: $white;
+                    background: inherit;
+                    outline: 0;
+                    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                    box-shadow: none;
+                }
+                &:focus {
+                    color: $white;
+                    background: inherit;
+                    outline: 0;
+                    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                    box-shadow: none;
+                }
+            }
+            li.dropdown {
+                &.open {
+                    > .dropdown-toggle {
+                        color: $white;
+                        background: inherit;
+                        outline: 0;
+                        .caret {
+                            border-top-color: $white;
+                            border-bottom-color: $white;
+                        }
+                    }
+                    &.active > .dropdown-toggle {
+                        color: $white;
+                        background: inherit;
+                        outline: 0;
+                        .caret {
+                            border-top-color: $white;
+                            border-bottom-color: $white;
+                        }
+                    }
+                }
+                &.active > .dropdown-toggle {
+                    color: $white;
+                    background: inherit;
+                    outline: 0;
+                    .caret {
+                        border-top-color: $white;
+                        border-bottom-color: $white;
+                    }
+                }
+                > .dropdown-toggle .caret {
+                    border-top-color: $white;
+                    border-bottom-color: $white;
+                }
+            }
+        }
+        .btn-navbar {
+            padding: 11px;
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: none;
+            background: inherit;
+            border: 0;
+            margin: 0;
+            filter: none;
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            &:hover {
+                background: inherit;
+            }
+            &:focus {
+                background: inherit;
+            }
+            &:active {
+                background: inherit;
+            }
+            &.active {
+                background: inherit;
+            }
+            &.disabled {
+                background: inherit;
+            }
+            .icon-bar {
+                width: 24px;
+                height: 3px;
+                background: $white;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: none;
+            }
+        }
+        .btn-navbar[disabled] {
+            background: inherit;
+        }
+    }
+    .navbar-inner {
+        min-height: 40px;
+        background: transparent;
+        padding-right: 0;
+        padding-left: 0;
+        border: 0;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        filter: none;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        div[data-region="drawer-toggle"] {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            float: left;
+            button.btn {
+                border: 0;
+                background: none;
+                padding: 10px;
+                margin: 0;
+                > span {
+                    width: 25px;
+                    height: 3px;
+                    background: $white;
+                    display: block;
+                    margin: 5px auto 0;
+                    border-radius: 5px;
+                    &:nth-child(3) {
+                        margin-top: 0;
+                        top: 13px;
+                        transition: all 0.5s ease;
+                    }
+                    &:last-child {
+                        transition: all 0.5s ease;
+                    }
+                    &:first-child {
+                        display: none;
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+                &.is-active {
+                    padding: 15px;
+                    position: relative;
+                    > span {
+                        position: absolute;
+                        top: 12px;
+                        left: 6px;
+                        transform: rotate(45deg);
+                        transition: all 0.5s ease;
+                        &:last-child {
+                            transform: rotate(-45deg);
+                            transition: all 0.5s ease;
+                        }
+                        &:nth-child(3) {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .popover-region {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            .popover-region-toggle {
+                img {
+                    margin: 0;
+                }
+                i {
+                    color: $white;
+                }
+            }
+            .popover-region-container {
+                top: 100%;
+                .popover-region-content-container {
+                    overflow: initial;
+                }
+            }
+
+        }
+        .custom-menu {
+            float: right;
+            ul {
+                .usermenu {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        background: inherit;
+        > li > a {
+            &:hover {
+                background: inherit;
+            }
+            &:focus {
+                background: inherit;
+            }
+        }
+        > .active > a {
+            background: inherit;
+            &:hover {
+                background: inherit;
+            }
+            &:focus {
+                background: inherit;
+            }
+        }
+    }
+    .dropdown-submenu {
+        &:hover > a {
+            background: inherit;
+        }
+        &:focus > a {
+            background: inherit;
+        }
+    }
+    .custom-nav-search {
+        margin: 5px 0;
+        form {
+            margin: 0;
+        }
+        .fields-wrap {
+            width: 100%;
+            height: 34px;
+            background: $color_plum_approx;
+            padding: 5px 42px 5px 15px;
+            position: relative;
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+            input {
+                background: transparent;
+                padding: 0;
+                border: 0;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: none;
+                margin: 0;
+                outline: none;
+            }
+            input[type="text"] {
+                width: 100%;
+                max-width: none;
+                height: 24px;
+                font-size: 16px;
+                color: $white;
+                line-height: 24px;
+                &:-moz-placeholder {
+                    color: $white;
+                }
+                &:-ms-input-placeholder {
+                    color: $white;
+                }
+            }
+            input[type="text"]::-webkit-input-placeholder {
+                color: $white;
+            }
+            input[type="text"]::-moz-placeholder {
+                color: $white;
+            }
+            .btn-search {
+                width: 42px;
+                height: 34px;
+                font-size: 18px;
+                color: $white;
+                line-height: 34px;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                input[type="submit"] {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    text-indent: -999em;
+                    text-transform: capitalize;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .btn-navbar .icon-bar + .icon-bar {
+        margin-top: 4px;
+    }
+    .nav-collapse .dropdown-menu {
+        padding-left: 0;
+        a:hover {
+            background: $color_secondary !important;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #header .header-menubar {
+        padding: 0;
+        .nav-collapse {
+            .dropdown-menu {
+                padding: 0 0 0 15px;
+                margin: 0;
+                a {
+                    font-weight: normal;
+                    color: $white;
+                    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                    border-radius: 0;
+                    &:hover {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                    &:focus {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                }
+                > li > a {
+                    &:hover {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                    &:focus {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                }
+            }
+            .dropdown-submenu {
+                a {
+                    &:focus {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                    &:hover {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                    &:active {
+                        color: $white;
+                        background: $color_blackcurrant_approx;
+                    }
+                }
+                &:focus a {
+                    color: $white;
+                    background: $color_blackcurrant_approx;
+                }
+                &:hover a {
+                    color: $white;
+                    background: $color_blackcurrant_approx;
+                }
+            }
+            .nav > li > a {
+                font-weight: normal;
+                color: $white;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                &:hover {
+                    color: $white;
+                    background: $color_blackcurrant_approx;
+                }
+                &:focus {
+                    color: $white;
+                    background: $color_blackcurrant_approx;
+                }
+            }
+        }
+        .custom-nav-search {
+            border-top: 1px solid $white;
+            border-top-color: $white_20;
+            margin: 0;
+        }
+        .collapse.in {
+            border-top: 1px solid;
+        }
+        .navbar .nav-collapse.active {
+            border-top: 1px solid;
+        }
+    }
+    .dir-rtl {
+        .header-menubar .nav-collapse .dropdown-menu {
+            padding: 0 15px 0 0;
+            margin: 0;
+        }
+        .form-item .form-label {
+            float: none;
+            text-align: right;
+            label {
+                text-align: right;
+            }
+        }
+        .mform .fitem div.fitemtitle {
+            float: none;
+            text-align: right;
+        }
+        .form-label .form-shortname {
+            text-align: right;
+        }
+    }
+    legend {
+        margin-bottom: 30px;
+    }
+    .form-item {
+        margin-bottom: 20px;
+    }
+    .navbar .nav-collapse {
+        &.active .nav {
+            .dropdown-submenu.open > a {
+                background: none;
+            }
+            .dropdown-menu .dropdown-submenu.open > a {
+                background: none;
+            }
+        }
+        &.in .nav {
+            .dropdown-submenu.open > a {
+                background: $color_blackcurrant_approx;
+            }
+            .dropdown-menu .dropdown-submenu.open > a {
+                background: $color_blackcurrant_approx;
+            }
+        }
+    }
+    .mform .fitem {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-main {
+        button.navbar-toggler {
+            display: none;
+        }
+        .navbar-toggleable-md .navbar-collapse {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header-main {
+        text-align: right;
+        .navbar-toggleable-md {
+            a {
+                text-align: left;
+                display: block;
+                background: none;
+                margin: 0;
+            }
+            .navbar-collapse {
+                clear: both;
+            }
+            .custom-menu {
+                float: none;
+                > ul {
+                    .dropdown.nav-item {
+                        text-align: left;
+                        display: block;
+                        a.nav-link {
+                            display: block;
+                        }
+                        .dropdown-menu {
+                            width: 100%;
+                            border: 0;
+                            padding: 0 20px;
+                            position: static;
+                            a.dropdown-item {
+                                border: 0;
+                            }
+                        }
+                    }
+                    a.nav-item.nav-link {
+                        width: 100%;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        button.navbar-toggler {
+            padding: 10px;
+            margin: 21px 0;
+        }
+
+    }
+    .header-menubar .custom-nav-search {
+        margin: 0;
+        .fields-wrap {
+            max-width: 500px;
+            margin: 5px auto;
+        }
+    }
+    .dir-rtl .mform .fitem .felement {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-logo {
+        max-width: 130px;
+        text-align: center;
+        margin: 0;
+        a {
+            padding: 20px 0;
+        }
+    }
+    .dir-rtl {
+        #groupeditform {
+            .groups {
+                float: none;
+            }
+            .members {
+                float: none;
+            }
+        }
+    }
+    textarea {
+        max-width: 220px;
+    }
+    #groupeditform {
+        .groups {
+            float: none;
+        }
+        .members {
+            float: none;
+        }
+    }
+    .header-main button.navbar-toggler {
+        padding: 10px 0;
+    }
+    .userselector select {
+        max-width: 200px;
+        width: auto;
+    }
+    #region-main  div[role="main"] .pull-left + .no-overflow {
+        width: 100%;
+        overflow: auto;
+    }
+    .singlebutton div {
+        margin-left: 0;
+        input {
+            font-size: 12px;
+            margin-left: 0;
+        }
+    }
+    table#categoryquestions {
+        width: auto;
+    }
+    div[role="main"] .pull-left button {
+        font-size: 12px;
+    }
+    .user-competency-course-navigation span input[type="text"] {
+        width: auto;
+    }
+    #page-mod-quiz-mod #id_reviewoptionshdr .fitem {
+        width: auto;
+    }
+    .jsenabled .collapsibleregion {
+        height: auto;
+    }
+}
+
+.homepage-carousel {
+    .carousel {
+        margin-bottom: 0;
+    }
+    .carousel-indicators {
+        display: none;
+    }
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        border: 3px solid $white;
+        background: inherit;
+        opacity: 1;
+        top: 50%;
+        left: 15px;
+        margin-top: -23px;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 20px;
+        &.right {
+            left: auto;
+            right: 15px;
+            > .fa {
+                right: -0.4px;
+            }
+        }
+        > .fa {
+            position: relative;
+            top: 5.5px;
+        }
+        &.left > .fa {
+            left: -0.4px;
+        }
+    }
+    .carousel-inner > .carousel-item {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .carousel-content {
+            background-color: $white_53;
+            padding: 20px;
+            h2 {
+                font-size: 42px;
+                color: $black;
+                line-height: 50px;
+                margin-top: 0;
+                &:empty {
+                    display: none;
+                }
+            }
+            .carousel-btn {
+                padding: 10px 0 0;
+                > a {
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 23px;
+                    background: $color_secondary;
+                    padding: 10px 15px;
+                    border-bottom: 3px solid $color_blackcurrant_90_approx;
+                    display: inline-block;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        text-decoration: none;
+                    }
+                    > .fa {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .dir-rtl {
+        .homepage-carousel .carousel-inner > .carousel-item .carousel-content {
+            left: 90px;
+        }
+        #footer .social-media > ul > li > a {
+            padding-right: 42px;
+            padding-left: 0;
+            > .media-icon {
+                left: auto;
+                right: 0;
+            }
+        }
+        .coursebox .content {
+            .summary {
+                padding: 0 120px 0 0;
+            }
+            .coursecat {
+                padding: 0 120px 0 0;
+            }
+            .teachers {
+                padding-right: 120px;
+                padding-left: 0;
+            }
+        }
+    }
+    .homepage-carousel .carousel-inner > .carousel-item {
+        min-height: 493px;
+        .item-inner-wrap {
+            min-height: 493px;
+            position: relative;
+        }
+        .carousel-content {
+            max-width: 456px;
+            padding: 18px 28px 28px;
+            position: absolute;
+            bottom: 37px;
+        }
+    }
+    .dir-ltr .homepage-carousel .carousel-inner > .carousel-item .carousel-content {
+        right: 90px;
+    }
+    #footer .social-media > ul > li > a {
+        padding-left: 42px;
+        position: relative;
+        > .media-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .coursebox .content {
+        .summary {
+            padding: 0 0 0 120px;
+        }
+        .coursecat {
+            padding: 0 0 0 120px;
+        }
+        .teachers {
+            padding-left: 120px;
+        }
+    }
+    .custom-login-page .loginbox {
+        .formwrap {
+            padding: 12px 0 0;
+            .form-fields {
+                float: left;
+                margin: 0 20px 0 0;
+            }
+            .support-fields {
+                padding-bottom: 7px;
+                p {
+                    float: left;
+                    width: 227px;
+                    margin: 0 20px 0 0;
+                }
+            }
+            .form-action {
+                float: left;
+                padding: 0;
+            }
+            form#guestlogin .form-action {
+                float: none;
+                padding: 10px 0;
+            }
+        }
+    }
+    .breadcrumb-button.nonavbar {
+        margin-top: 0;
+    }
+}
+
+.custom-courses-list {
+    padding: 30px 0 35px;
+    margin: 0 0 30px;
+    .course-box {
+        padding: 13px 0;
+        .thumb {
+            max-width: 135px;
+            height: 120px;
+            background: $white;
+            padding: 5px;
+            border: 1px solid;
+            a {
+                height: 100%;
+                display: block;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .info {
+            padding: 3px 0 0;
+            p {
+                margin: 0;
+            }
+            h5 {
+                margin-top: 15px;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-courses-list {
+        .course-box {
+            .thumb {
+                margin: 0 auto;
+            }
+            .info {
+                text-align: center;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 0 15px;
+    .purgecaches {
+        margin-bottom: 0;
+        float: left;
+    }
+    .helplink {
+        margin-bottom: 0;
+        float: right;
+    }
+}
+#footer {
+    padding: 0 !important;
+    .footer-main {
+        background: inherit;
+        padding: 36px 0 20px;
+        h4 {
+            color: $white;
+        }
+    }
+    .footer-desc {
+        padding: 0 0 20px;
+        .logo-footer {
+            padding: 0 0 15px;
+            a {
+                max-width: 150px;
+                display: inline-block;
+                img {
+                    width: auto;
+                }
+            }
+        }
+        p {
+            font-size: 16px;
+            color: $white;
+            line-height: 22px;
+        }
+        .readmore {
+            margin: 0;
+            a {
+                color: $white;
+            }
+        }
+    }
+    .footer-nav {
+        padding: 0 0 20px;
+        > ul {
+            list-style: none;
+            padding: 5px 0 0;
+            margin: 0;
+            > li {
+                padding: 5px 0;
+                a {
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 23px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .social-media {
+        padding: 0 0 20px;
+        > ul {
+            list-style: none;
+            padding: 11px 0 0;
+            margin: 0;
+            > li {
+                padding: 5px 0;
+                > a {
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 36px;
+                    display: inline-block;
+                    &:hover {
+                        color: inherit;
+                        text-decoration: none;
+                        .media-icon {
+                            color: $white;
+                            background: inherit;
+                        }
+                    }
+                    &:focus {
+                        color: inherit;
+                        text-decoration: none;
+                        .media-icon {
+                            color: $white;
+                            background: inherit;
+                        }
+                    }
+                    > .media-icon {
+                        width: 36px;
+                        height: 36px;
+                        font-size: 17px;
+                        background: $white;
+                        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                        border-radius: 18px;
+                        display: block;
+                        text-align: center;
+                        > i {
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+            > {
+                .smedia-01 > a > .media-icon {
+                    color: $color_san_marino_approx;
+                }
+                .smedia-02 > a > .media-icon {
+                    color: $color_picton_blue_approx;
+                }
+                .smedia-03 > a > .media-icon {
+                    color: $color_valencia_approx;
+                }
+                .smedia-04 > a > .media-icon {
+                    color: $color_monza_approx;
+                }
+            }
+        }
+    }
+    .footer-contact {
+        padding: 0 0 20px;
+        h4 {
+            margin-bottom: 19px;
+        }
+        p {
+            color: $white;
+            line-height: 24px;
+            margin: 0;
+            > a {
+                color: $white;
+                text-decoration: underline;
+                &:hover {
+                    color: $color_blackcurrant_approx;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: $color_blackcurrant_approx;
+                    text-decoration: none;
+                }
+            }
+            i {
+                margin-right: 4px;
+            }
+        }
+    }
+    .footer-foot {
+        background: inherit;
+        padding: 20px 0;
+        p {
+            color: $white;
+            text-align: center;
+            margin: 0;
+            a {
+                color: $white;
+                text-decoration: underline;
+                &:hover {
+                    color: $color_blackcurrant_approx;
+                }
+            }
+        }
+    }
+}
+#page {
+    padding-bottom: 20px;
+    margin-top: 0;
+    .action-menu .menubar .dropdown {
+        a.dropdown-toggle i.icon {
+            margin: 0;
+        }
+        .dropdown-menu .dropdown-item {
+            padding: 0;
+            a {
+                margin: 0 !important;
+                &.m-l-1 {
+                    padding-left: 25px;
+                }
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .card {
+        &.card-block {
+            .action-menu .menubar .dropdown a.dropdown-toggle {
+                color: inherit;
+            }
+            .section .actions .action-menu .menubar .dropdown .dropdown-menu a.dropdown-item {
+                padding: 8px 20px;
+            }
+            .box .generaltable tbody .action-menu .menubar .dropdown {
+                a.dropdown-toggle {
+                    padding: 8px 20px;
+                }
+                .dropdown-menu a.dropdown-item {
+                    color: $white;
+                    padding: 8px 20px;
+                }
+            }
+        }
+        .card-block .context-header-settings-menu .action-menu .menubar .dropdown a.dropdown-toggle i.icon {
+            margin: 0 5px;
+        }
+    }
+}
+#page-course-management #page .card.card-block .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+    padding: 8px 20px;
+}
+#page-header {
+    .card {
+        .menubar .dropdown .dropdown-menu .dropdown-item {
+            padding: 0;
+            a {
+                padding: 10px;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+        .context-header-settings-menu .action-menu .menubar .dropdown .dropdown-menu {
+            .dropdown-item i {
+                color: $white;
+            }
+        }
+    }
+    .breadcrumb-nav {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .breadcrumb {
+        background: none;
+        padding: 5px 0 4px;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        > li {
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: none;
+            > .divider {
+                color: inherit;
+                padding: 0;
+                &:before {
+                    content: "\f101";
+                    font-size: 12px;
+                    font-family: $font_4;
+                    color: inherit;
+                    padding: 0 6px 0 3px;
+                    display: inline-block;
+                }
+                > span.arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.breadcrumb-button {
+    margin-bottom: 5px;
+    .singlebutton div {
+        margin-bottom: 0;
+    }
+}
+.initialbar {
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-all;
+    &.firstinitial {
+        padding: 10px 0 0;
+    }
+    &.lastinitial {
+        padding: 0 0 10px;
+    }
+}
+.paging {
+    padding: 10px 0;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-all;
+    &:empty {
+        padding: 0;
+    }
+}
+legend {
+    float: left;
+    color: $color_fuscous_gray_approx;
+    padding-bottom: 7px;
+    border-bottom-color: $color_iron_approx;
+    margin-bottom: 40px;
+    + div {
+        clear: both;
+    }
+}
+.mform {
+    .fitem {
+        div.fitemtitle {
+            padding-top: 0;
+        }
+    }
+    legend a {
+        color: $color_fuscous_gray_approx;
+        &:hover {
+            color: $color_fuscous_gray_approx;
+        }
+    }
+    .fcheckbox input {
+        vertical-align: bottom;
+    }
+    .fpassword .unmask {
+        padding: 0 0 0 25px;
+        margin-left: 15px;
+        position: relative;
+        > input {
+            position: absolute;
+            top: 4px;
+            left: 0;
+        }
+        > label {
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+    .fdescription.required {
+        color: $color_tapa_approx;
+    }
+}
+.collapsible-actions {
+    padding: 10px 0;
+    .collapseexpand {
+        font-size: 16px;
+        color: $color_fuscous_gray_approx;
+    }
+}
+label {
+    font-size: 16px;
+}
+#region-main {
+    .mform:not(.unresponsive) .fitem .fitemtitle label {
+        font-weight: normal;
+    }
+    div[role="main"] .pull-left + .no-overflow {
+        overflow: visible;
+    }
+}
+select {
+    width: 224px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 34px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0 none;
+    }
+    &.form-control {
+        height: 40px;
+        border-radius: 0;
+    }
+}
+.custom-select {
+    &:focus {
+        border-color: $color_primary;
+    }
+}
+input[type="text"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="password"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="datetime"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="datetime-local"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="date"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="month"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="time"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="week"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="number"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="email"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="url"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="search"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="tel"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+input[type="color"] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    width: 100%;
+    max-width: 210px;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+.uneditable-input {
+    width: 100%;
+    max-width: 210px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_fuscous_gray_approx;
+    padding: 0 5px;
+    border-width: 1px;
+    border-style: solid;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+textarea {
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    height: auto;
+    font-size: 16px;
+    color: $color_fuscous_gray_approx;
+    line-height: inherit;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    &:focus {
+        border-color: inherit;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+    }
+}
+select[multiple] {
+    max-width: none;
+}
+.uneditable-textarea {
+    border-color: $color_celeste_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+}
+button {
+    height: 40px;
+    color: $color_chicago_approx;
+    line-height: 40px;
+    background: $color_celeste_approx;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.disabled {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+}
+input {
+    &.form-submit {
+        height: 40px;
+        color: $white;
+        line-height: 40px;
+        padding: 0 18px;
+        border: 0;
+        margin-left: 5px;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        text-transform: uppercase;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        background: inherit;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        &:hover {
+            color: $white;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            outline: 0;
+            background: inherit;
+        }
+        &:focus {
+            color: $white;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            outline: 0;
+            background: inherit;
+        }
+        &:active {
+            color: $white;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            outline: 0;
+            background: inherit;
+        }
+        &.active {
+            color: $white;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            outline: 0;
+            background: inherit;
+        }
+        &.disabled {
+            color: $white;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: none;
+            outline: 0;
+            background: inherit;
+        }
+    }
+    &#id_submitbutton {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        &:hover {
+            color: $white;
+            background: inherit;
+        }
+        &:focus {
+            color: $white;
+            background: inherit;
+        }
+        &:active {
+            color: $white;
+            background: inherit;
+        }
+        &.active {
+            color: $white;
+            background: inherit;
+        }
+        &.disabled {
+            color: $white;
+            background: inherit;
+        }
+    }
+    &#id_submitbutton2 {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        &:hover {
+            color: $white;
+            background: inherit;
+        }
+        &:focus {
+            color: $white;
+            background: inherit;
+        }
+        &:active {
+            color: $white;
+            background: inherit;
+        }
+        &.active {
+            color: $white;
+            background: inherit;
+        }
+        &.disabled {
+            color: $white;
+            background: inherit;
+        }
+    }
+    &.active[type="button"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.active[type="submit"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.active[type="reset"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.disabled[type="button"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.disabled[type="submit"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.disabled[type="reset"] {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &.form-submit[disabled] {
+        color: $white;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+        background: inherit;
+    }
+    &#id_submitbutton[disabled] {
+        color: $white;
+        background: inherit;
+    }
+    &#id_submitbutton2[disabled] {
+        color: $white;
+        background: inherit;
+    }
+}
+input[type="button"] {
+    height: 40px;
+    color: $color_chicago_approx;
+    line-height: 40px;
+    background: $color_celeste_approx;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+}
+input[type="submit"] {
+    height: 40px;
+    color: $white;
+    line-height: 40px;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    background: $color_secondary;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $white;
+        background: $color_primary;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $white;
+        background: $color_primary;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+        &:active {
+            background-color: $color_primary;
+        }
+    }
+    &:active {
+        color: $white;
+        background: $color_primary;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+        &:focus {
+            color: $white;
+            background: $color_primary;
+            box-shadow: none;
+            outline: 0;
+        }
+    }
+}
+input[type="reset"] {
+    height: 40px;
+    color: $color_chicago_approx;
+    line-height: 40px;
+    background: $color_celeste_approx;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+}
+button[disabled] {
+    color: $color_chicago_approx;
+    background: $color_nobel_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    outline: 0;
+}
+input[type="button"][disabled] {
+    color: $color_chicago_approx;
+    background: $color_nobel_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    outline: 0;
+}
+input[type="submit"][disabled] {
+    color: $color_chicago_approx;
+    background: $color_nobel_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    outline: 0;
+}
+input[type="reset"][disabled] {
+    color: $color_chicago_approx;
+    background: $color_nobel_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    outline: 0;
+}
+table {
+    margin-top: 10px;
+    form fieldset select {
+        &.select {
+            height: auto;
+            background: none;
+            margin-bottom: 15px;
+        }
+    }
+    &#form {
+        td.submit {
+            background: none;
+            padding: 0;
+            border-top: 0;
+        }
+        tbody > tr:nth-child(odd) {
+            > td {
+                background-color: $color_black_haze_approx;
+            }
+            > th {
+                background-color: $color_black_haze_approx;
+            }
+        }
+    }
+    &.flexible {
+        margin-top: 10px;
+        th {
+            padding: 13px;
+            border-top: 0;
+        }
+        td {
+            padding: 13px;
+            border-top: 0;
+        }
+        tbody {
+            th {
+                color: inherit;
+            }
+            > tr:nth-child(odd) {
+                > td {
+                    background-color: $color_black_haze_approx;
+                }
+                > th {
+                    background-color: $color_black_haze_approx;
+                }
+            }
+            tr:hover {
+                > td {
+                    background-color: $color_concrete_approx;
+                }
+                > th {
+                    background-color: $color_concrete_approx;
+                }
+            }
+        }
+        thead th {
+            color: $white;
+            background: $color_secondary;
+            > a {
+                color: $white;
+            }
+        }
+    }
+    &#listdirectories {
+        th {
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+        }
+        tbody > tr:nth-child(odd) {
+            > td {
+                background-color: $color_black_haze_approx;
+            }
+            > th {
+                background-color: $color_black_haze_approx;
+            }
+        }
+    }
+    &#explaincaps tbody > tr:nth-child(odd) {
+        > td {
+            background-color: $color_black_haze_approx;
+        }
+        > th {
+            background-color: $color_black_haze_approx;
+        }
+    }
+    &#defineroletable tbody > tr:nth-child(odd) {
+        > td {
+            background-color: $color_black_haze_approx;
+        }
+        > th {
+            background-color: $color_black_haze_approx;
+        }
+    }
+    &.grading-report tbody {
+        > tr:nth-child(odd) {
+            > td {
+                background-color: $color_black_haze_approx;
+            }
+            > th {
+                background-color: $color_black_haze_approx;
+            }
+        }
+        tr:hover {
+            > td {
+                background-color: $color_concrete_approx;
+            }
+            > th {
+                background-color: $color_concrete_approx;
+            }
+        }
+    }
+    &.rolecaps tbody > tr:nth-child(odd) {
+        > td {
+            background-color: $color_black_haze_approx;
+        }
+        > th {
+            background-color: $color_black_haze_approx;
+        }
+    }
+    &.userenrolment tbody > tr:nth-child(odd) {
+        > td {
+            background-color: $color_black_haze_approx;
+        }
+        > th {
+            background-color: $color_black_haze_approx;
+        }
+    }
+    &#modules tbody tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+    &#permissions tbody tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+    thead th label {
+        color: $white;
+    }
+    &#tag-management-list td input[type="text"] {
+        max-width: 224px;
+        height: 40px;
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+}
+.form-buttons {
+    background: none;
+    padding: 0;
+    border-top: 0;
+}
+#fitem_id_submitbutton {
+    background: none;
+    padding: 0;
+    border-top: 0;
+}
+#fgroup_id_buttonar {
+    background: none;
+    padding: 0;
+    border-top: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .form-buttons {
+        padding-left: 200px;
+    }
+    .dir-rtl {
+        .form-buttons {
+            padding-right: 200px;
+            padding-left: 0;
+        }
+        .path-admin .buttons {
+            padding-right: 200px;
+            padding-left: 0;
+        }
+    }
+    .loginbox {
+        .rememberpass {
+            margin-left: 0;
+            text-align: center;
+        }
+        .loginform .form-input input {
+            width: auto;
+        }
+        .loginsub.subcontent input[type="submit"] {
+            margin-left: 0;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+    .path-admin .buttons {
+        padding-left: 200px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .form-buttons {
+        padding-left: 220px;
+    }
+    .dir-rtl {
+        .form-buttons {
+            padding-right: 220px;
+            padding-left: 0;
+        }
+        .path-admin .buttons {
+            padding-right: 220px;
+            padding-left: 0;
+        }
+    }
+    .path-admin .buttons {
+        padding-left: 220px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-buttons {
+        padding-left: 265px;
+    }
+    .dir-rtl {
+        .form-buttons {
+            padding-right: 165px;
+        }
+        .form-item {
+            .form-setting {
+                margin-left: 0;
+            }
+            .form-description {
+                margin-left: 0;
+            }
+        }
+        .mform {
+            .fitem .felement {
+                margin-left: 0;
+            }
+            .fdescription.required {
+                margin-left: 0;
+            }
+        }
+        .path-admin .buttons {
+            padding-right: 165px;
+        }
+        .userprofile dl.list dd {
+            margin-left: 0;
+        }
+        .form-horizontal .controls {
+            margin-left: 0;
+        }
+    }
+    .path-admin .buttons {
+        padding-left: 265px;
+    }
+}
+
+#page-admin-tool-timezoneimport-index {
+    #region-main .path-admin .buttons {
+        padding: 0;
+        text-align: center;
+    }
+    &.dir-rtl #region-main .path-admin .buttons {
+        padding: 0;
+        text-align: center;
+    }
+}
+.form-item {
+    margin-bottom: 30px;
+    .form-label {
+        padding-top: 0;
+    }
+    .form-setting .group {
+        span {
+            display: block;
+        }
+    }
+    .form-description {
+        color: $color_tapa_approx;
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .mform .fpassword .unmask {
+        margin: 0;
+        display: block;
+    }
+    .dir-rtl .mform .fpassword .unmask {
+        margin: 0;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .dir-rtl {
+        .form-item {
+            .form-setting {
+                margin-left: 0;
+            }
+            .form-description {
+                margin-left: 0;
+            }
+        }
+        .mform {
+            .fitem .felement {
+                margin-left: 0;
+            }
+            .fdescription.required {
+                margin-left: 0;
+            }
+        }
+        .userprofile dl.list dd {
+            margin-left: 0;
+        }
+        .form-horizontal .controls {
+            margin-left: 0;
+        }
+    }
+    #page-mod-forum-search.dir-rtl .c1 {
+        margin-left: 0;
+    }
+}
+
+.block {
+    padding: 0;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    .header {
+        background: inherit;
+        border: 0;
+        h2 {
+            font-weight: normal;
+            font-size: 26px;
+            color: inherit;
+            line-height: 32px;
+            padding: 10px 15px;
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: none;
+            text-transform: none;
+        }
+        .block_action {
+            padding: 15px 15px 17px;
+        }
+    }
+    .content {
+        padding: 10px 15px;
+        .userpicture {
+            margin-right: 5px;
+        }
+    }
+    .minicalendar {
+        td {
+            &.day {
+                &.today {
+                    color: $white;
+                    background: inherit;
+                    > a {
+                        color: $white;
+                    }
+                }
+                &:hover {
+                    color: $white;
+                    background: inherit;
+                }
+                &.calendar_event_course:hover {
+                    background-color: $color_romantic_approx;
+                }
+                &.calendar_event_global:hover {
+                    background-color: $color_zanah_approx;
+                }
+                &.calendar_event_group:hover {
+                    background-color: $color_cape_honey_approx;
+                }
+                &.calendar_event_user:hover {
+                    background-color: $color_mystic_approx;
+                }
+            }
+            .calendar-event-panel {
+                color: $color_fuscous_gray_approx;
+                div {
+                    margin: 0;
+                }
+            }
+        }
+        th > abbr {
+            font-weight: normal;
+            border-bottom: 0;
+            text-decoration: none;
+        }
+    }
+}
+.block_navigation {
+    .content {
+        padding: 5px 10px;
+    }
+    .block_tree {
+        font-size: 16px;
+        line-height: 22px;
+        .tree_item {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin: 0;
+            > a {
+                color: $color_fuscous_gray_approx;
+                display: block;
+                &:hover {
+                    color: inherit;
+                }
+                &:focus {
+                    color: inherit;
+                }
+            }
+            &.branch.navigation_node {
+                padding: 8px 15px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        li {
+            &.contains_branch ul > li {
+                padding: 0;
+                padding-right: 15px;
+                padding-left: 10px;
+            }
+            &.item_with_icon > p img {
+                top: 10px;
+            }
+            > p.hasicon img {
+                top: 10px;
+            }
+        }
+        .active_tree_node > a {
+            color: inherit;
+        }
+        .type_activity > p.tree_item {
+            &.branch.hasicon.active_tree_node {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin: 0;
+            }
+            &.active_tree_node img {
+                top: 10px;
+            }
+        }
+    }
+}
+.block_settings {
+    .content {
+        padding: 5px 10px;
+        hr {
+            display: none;
+        }
+    }
+    .block_tree {
+        font-size: 16px;
+        > li {
+            padding: 0;
+            padding-right: 15px;
+            padding-left: 10px;
+        }
+        li {
+            > p.tree_item {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin: 0;
+            }
+            &.item_with_icon > p img {
+                top: 10px;
+            }
+        }
+        .tree_item {
+            > a {
+                color: $color_fuscous_gray_approx;
+                display: block;
+                &:hover {
+                    color: inherit;
+                }
+                &:focus {
+                    color: inherit;
+                }
+            }
+            &.branch {
+                background-position: 0 10px;
+            }
+        }
+        .active_tree_node > a {
+            color: inherit;
+        }
+    }
+    .footer {
+        padding: 10px 15px 0;
+        margin-bottom: 0;
+        .adminsearchform div > input[type="submit"] {
+            margin-left: 0;
+        }
+    }
+    #adminsearchquery {
+        max-width: none;
+        height: 40px;
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+}
+.generaltable {
+    margin-top: 10px;
+    th {
+        padding: 13px;
+        border-top: 0;
+    }
+    td {
+        padding: 13px;
+        border-top: 0;
+    }
+    tbody {
+        th {
+            color: inherit;
+        }
+        > tr:nth-child(odd) {
+            > td {
+                background-color: $color_black_haze_approx;
+            }
+            > th {
+                background-color: $color_black_haze_approx;
+            }
+        }
+        tr:hover {
+            > td {
+                background-color: $color_concrete_approx;
+            }
+            > th {
+                background-color: $color_concrete_approx;
+            }
+        }
+    }
+    thead th {
+        color: $white;
+        background: $color_secondary;
+        > a {
+            color: $white;
+        }
+    }
+}
+.userenrolment {
+    margin-top: 10px;
+    tr {
+        vertical-align: middle;
+    }
+    th {
+        padding: 13px;
+        border-top: 0;
+    }
+    td {
+        padding: 13px;
+        border-top: 0;
+    }
+    thead th {
+        color: $white;
+        background: $color_secondary;
+        > a {
+            color: $white;
+        }
+        span > a {
+            color: $white;
+        }
+    }
+    tbody th {
+        color: inherit;
+    }
+}
+.rolecap {
+    margin-top: 10px;
+    th {
+        padding: 13px;
+        border-top: 0;
+    }
+    td {
+        padding: 13px;
+        border-top: 0;
+    }
+    tbody {
+        th {
+            color: inherit;
+        }
+        > tr:nth-child(odd) {
+            > td {
+                background-color: $color_black_haze_approx;
+            }
+            > th {
+                background-color: $color_black_haze_approx;
+            }
+        }
+        tr:hover {
+            > td {
+                background-color: $color_concrete_approx;
+            }
+            > th {
+                background-color: $color_concrete_approx;
+            }
+        }
+    }
+    thead th {
+        color: $white;
+        background: $color_secondary;
+        > a {
+            color: $white;
+        }
+    }
+}
+.category_subcategories {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+    tbody tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+}
+#page-admin-report-log-index {
+    .generaltable {
+        th {
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+        }
+    }
+    &.dir-ltr #region-main .logselecform div label + select {
+        margin-right: 20px;
+    }
+    &.dir-rtl #region-main .logselecform div label + select {
+        margin-left: 20px;
+    }
+    #region-main .logselecform div {
+        input[type="submit"] {
+            display: block;
+        }
+        label + select:after {
+            clear: both;
+            overflow: hidden;
+            display: table;
+            content: "";
+        }
+    }
+}
+.environmenttable {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+}
+.rcs-results {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+}
+.forumpost {
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    .header {
+        margin-bottom: 3px;
+    }
+    .subject {
+        font-weight: normal;
+        font-size: 18px;
+    }
+    .author {
+        padding: 4px 0 0;
+    }
+    .options {
+        .commands > a {
+            color: $color_fuscous_gray_approx;
+            margin: 0 6px;
+            display: inline-block;
+            vertical-align: middle;
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+            &:focus {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        .footer > a {
+            color: $color_fuscous_gray_approx;
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+            &:focus {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    .picture img {
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 18px;
+        margin: 0;
+        &.userpicture {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    .row .left > a {
+        display: inline-block;
+    }
+}
+.blog_entry {
+    .audience {
+        font-weight: bold;
+        color: inherit;
+    }
+    .content {
+        p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .commands {
+            margin-bottom: 15px;
+            > a {
+                color: $color_fuscous_gray_approx;
+                margin: 0 6px;
+                display: inline-block;
+                vertical-align: middle;
+                &:hover {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+        .attachedimages {
+            margin-bottom: 15px;
+        }
+        > .mdl-left {
+            padding: 15px;
+            border: 1px solid $mercury;
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 5px;
+            > .comment-link {
+                font-size: 12px;
+                color: $color_fuscous_gray_approx;
+                &:hover {
+                    color: $color_fuscous_gray_approx;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: $color_fuscous_gray_approx;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .tags {
+        margin-bottom: 15px;
+    }
+}
+.comment-ctrl {
+    padding: 7px 0 0;
+}
+.comment-message {
+    .picture {
+        margin-right: 5px;
+        > a {
+            display: inline-block;
+        }
+    }
+    .user {
+        font-size: 14px;
+    }
+    .time {
+        font-size: 10px;
+    }
+    .text {
+        padding: 5px 0 0;
+    }
+}
+.comment-delete {
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    margin: 0;
+    img {
+        width: 10px;
+    }
+}
+.comment-area {
+    padding: 0;
+    .bd {
+        margin: 0 0 20px;
+    }
+    textarea {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    textarea[cols] {
+        width: 100%;
+        font-size: 14px;
+        background: $color_black_haze_approx;
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+    .fd {
+        text-align: left;
+        > a {
+            font-size: 14px;
+            color: $white;
+            line-height: 40px;
+            background: inherit;
+            padding: 0 18px;
+            display: inline-block;
+            text-transform: uppercase;
+            &:hover {
+                color: $white;
+                background: inherit;
+                text-decoration: none;
+            }
+            &:focus {
+                color: $white;
+                background: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.addbloglink {
+    padding: 10px 0;
+    a {
+        color: $white;
+        line-height: 40px;
+        background: inherit;
+        padding: 0 18px;
+        display: inline-block;
+        text-transform: uppercase;
+        &:hover {
+            color: $white;
+            background: inherit;
+            text-decoration: none;
+        }
+        &:focus {
+            color: $white;
+            background: inherit;
+            text-decoration: none;
+        }
+    }
+}
+.loginbox {
+    max-width: 750px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 0;
+    margin-left: 0;
+    &.twocolumns {
+        font-size: 16px;
+        line-height: 22px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    h2 {
+        font-weight: bold;
+        padding: 0;
+        margin: 20px 0 10px;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .subcontent {
+        padding: 0;
+        margin: 0;
+    }
+    input[type="submit"] {
+        margin-left: 0;
+    }
+    .loginpanel {
+        .loginform {
+            padding-bottom: 24px;
+            margin: -13px 0 0;
+            overflow: hidden;
+        }
+        .desc {
+            margin: 20px 0;
+        }
+    }
+    .loginform {
+        .form-label {
+            margin-top: 34px;
+        }
+        .form-input input {
+            width: 100%;
+            max-width: 224px;
+            margin-bottom: 0;
+        }
+    }
+    .rememberpass {
+        margin: 0 0 20px;
+        > label {
+            font-size: 16px;
+        }
+    }
+    .signuppanel .subcontent {
+        color: $color_mine_shaft_approx;
+        padding-top: 6px;
+        ol {
+            padding: 25px 0 10px 25px;
+            margin: 0;
+            li {
+                color: $color_fuscous_gray_approx;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .dir-rtl {
+        .loginbox {
+            .loginform {
+                .form-label {
+                    text-align: right;
+                }
+                .form-input {
+                    margin-right: 0;
+                }
+            }
+            h2 {
+                text-align: right;
+            }
+            .subcontent {
+                text-align: right;
+            }
+        }
+        .coursebox .content {
+            .courseimage {
+                right: 0;
+            }
+            .coursefile {
+                right: 0;
+            }
+        }
+    }
+    .loginbox .loginform {
+        .form-label {
+            width: 100%;
+            text-align: left;
+        }
+        .form-input {
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .dir-ltr .loginbox {
+        h2 {
+            text-align: left;
+        }
+        .subcontent {
+            text-align: left;
+        }
+    }
+    .coursebox .content {
+        padding: 120px 0 0;
+        .courseimage {
+            left: 0;
+        }
+        .coursefile {
+            left: 0;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .dir-rtl {
+        .loginbox {
+            .rememberpass {
+                margin-right: 48%;
+                text-align: right;
+            }
+            .loginform .form-input {
+                float: left;
+                margin-right: 0;
+            }
+            .loginsub.subcontent input[type="submit"] {
+                margin-right: 48%;
+                display: block;
+            }
+        }
+        .coursebox .content {
+            .courseimage {
+                right: 0;
+                left: auto;
+            }
+            .coursefile {
+                right: 0;
+                left: auto;
+            }
+            .summary {
+                padding: 0 110px 0 0;
+            }
+            .coursecat {
+                padding: 0 110px 0 0;
+            }
+            .teachers {
+                padding-right: 110px;
+                padding-left: 0;
+            }
+        }
+    }
+    .loginbox .loginform {
+        .form-label {
+            width: 46%;
+            label {
+                line-height: 40px;
+                margin-bottom: 0;
+            }
+        }
+        .form-input {
+            width: 52%;
+            margin-top: 34px;
+        }
+    }
+    .dir-ltr .loginbox {
+        .rememberpass {
+            margin-left: 48%;
+            text-align: left;
+        }
+        .loginsub.subcontent input[type="submit"] {
+            margin-left: 48%;
+            display: block;
+        }
+    }
+    .coursebox .content {
+        .courseimage {
+            left: 0;
+        }
+        .coursefile {
+            left: 0;
+        }
+        .summary {
+            padding: 0 0 0 110px;
+        }
+        .coursecat {
+            padding: 0 0 0 110px;
+        }
+        .teachers {
+            padding-left: 110px;
+        }
+    }
+}
+
+#frontpage-category-names {
+    border: 1px solid;
+    h2 {
+        font-size: 26px;
+        line-height: 32px;
+        background: inherit;
+        padding: 10px 15px;
+        border-bottom: 1px solid;
+        margin: 0;
+    }
+}
+.course_category_tree {
+    &.frontpage-category-names {
+        padding: 0 15px 15px;
+        .collapsible-actions {
+            padding: 10px 0 0;
+            .collapseexpand {
+                font-size: 14px;
+                color: $color_fuscous_gray_approx;
+            }
+        }
+        .category {
+            &.with_children {
+                > .info > .categoryname {
+                    background: none;
+                    &:before {
+                        content: "\f13a";
+                        color: inherit;
+                    }
+                }
+                &.collapsed > .info > .categoryname {
+                    background: none;
+                    &:before {
+                        content: "\f138";
+                    }
+                }
+            }
+            > .info {
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: none;
+                > .categoryname {
+                    font-size: 18px;
+                    line-height: 25px;
+                    padding: 7px 0;
+                    margin: 0;
+                    background: none;
+                    > a {
+                        vertical-align: middle;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            text-decoration: none;
+                        }
+                    }
+                    > span {
+                        vertical-align: middle;
+                    }
+                    &:before {
+                        float: left;
+                        content: "\f138";
+                        font-family: $font_4;
+                        color: $color_pumice_approx;
+                        margin: 0 10px 0 0;
+                        position: relative;
+                        top: 0.5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .category > .info {
+        background: $url_2;
+        background-color: linear-gradient(to bottom, $white 0,$color_alabaster_approx 5%,$color_gray_nurse_approx 100%);
+        filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$white', endcolorstr='$color_gray_nurse_approx',gradienttype=0 );
+        padding: 0 15px;
+        border-color: $color_quill_gray_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        margin: 9px 0;
+        > .categoryname {
+            font-size: 18px;
+            line-height: 24px;
+            padding: 12px 25px;
+            margin: 0;
+            > a {
+                color: $color_fuscous_gray_approx;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .courses > .paging.paging-morelink:hover {
+        background: $white;
+    }
+}
+#site-news-forum {
+    border: 1px solid;
+    h2 {
+        font-size: 26px;
+        line-height: 32px;
+        background: inherit;
+        padding: 10px 15px;
+        border-bottom: 1px solid;
+        margin: 0;
+    }
+    .forumpost {
+        padding: 20px;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid $color_gallery_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        margin: 0;
+        .subject {
+            font-weight: normal;
+            font-size: 18px;
+            color: inherit;
+            line-height: 27px;
+        }
+        .author {
+            padding: 3px 0 0;
+            > a {
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+        .row .left > a {
+            display: inline-block;
+        }
+        .picture img.userpicture {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 18px;
+            margin: 0;
+        }
+        .content .posting.fullpost {
+            line-height: 24px;
+            margin-top: 4px;
+            .attachedimages {
+                max-width: 500px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .forumolddiscuss {
+        padding: 12px 15px;
+    }
+}
+#page-site-index {
+    .subscribelink {
+        padding: 10px 15px 0;
+    }
+    .singlebutton {
+        &.forumaddnew {
+            padding: 0 15px 10px;
+            input[type="submit"] {
+                margin: 0;
+            }
+        }
+        div {
+            margin: 0;
+        }
+    }
+}
+#frontpage-course-list {
+    border: 1px solid;
+    h2 {
+        font-size: 26px;
+        line-height: 32px;
+        background: inherit;
+        padding: 10px 15px;
+        border-bottom: 1px solid;
+        margin: 0;
+    }
+    .courses.frontpage-course-list-all {
+        padding: 15px;
+        .fp-coursebox {
+            padding: 15px 0 10px;
+            .fp-coursethumb {
+                max-width: 180px;
+                height: 150px;
+                background: $white;
+                padding: 5px;
+                margin: 0 auto 20px;
+                border: 1px solid $color_alto_approx;
+                a img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .fp-courseinfo {
+                text-align: center;
+                h5 {
+                    margin: 6px 0;
+                    > a {
+                        color: inherit;
+                        display: inline-block;
+                    }
+                }
+                .readmore > a {
+                    font-size: 12px;
+                    color: $gray;
+                    line-height: 18px;
+                    > .fa {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.coursebox {
+    padding: 10px;
+    border: 1px solid $color_quill_gray_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    .content {
+        min-height: 100px;
+        margin: 10px 0 0;
+        position: relative;
+        .summary {
+            float: none;
+            width: auto;
+            margin: 0;
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0;
+            }
+        }
+        .teachers {
+            padding-top: 5px;
+            float: none;
+            width: auto;
+            margin: 0;
+            clear: none;
+            li {
+                color: $color_gray_approx;
+                line-height: 24px;
+            }
+        }
+        .courseimage {
+            float: none;
+            width: auto;
+            margin: 0;
+            clear: none;
+            position: absolute;
+            top: 0;
+        }
+        .coursefile {
+            float: none;
+            width: auto;
+            margin: 0;
+            clear: none;
+            position: absolute;
+            top: 0;
+        }
+        .coursecat {
+            float: none;
+            width: auto;
+            margin: 0;
+        }
+    }
+    > .info {
+        clear: both;
+        overflow: hidden;
+        > .coursename {
+            float: left;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 3px 0;
+            a {
+                color: inherit;
+                padding-left: 27px;
+                background-position: left center;
+                &:hover {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+        > h3.coursename {
+            margin: 3px 0;
+        }
+    }
+}
+.course-content {
+    .topics {
+        h3 {
+            font-size: 21px;
+        }
+        .section {
+            .activity {
+                .activityinstance a {
+                    font-size: 18px;
+                    color: $color_fuscous_gray_approx;
+                    line-height: 24px;
+                    img {
+                        margin-right: 12px;
+                    }
+                    .instancename {
+                        vertical-align: top;
+                    }
+                }
+                .availabilityinfo .no-overflow {
+                    line-height: 22px;
+                }
+                .contentafterlink .no-overflow {
+                    line-height: 22px;
+                }
+            }
+            .summary .no-overflow {
+                color: $color_boston_blue_approx;
+                line-height: 24px;
+                background: $color_link_water_approx;
+                padding: 10px 20px;
+                border: 1px solid $color_charlotte_approx;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 5px;
+                margin-bottom: 25px;
+                p {
+                    color: $color_boston_blue_approx;
+                    line-height: 24px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    ul li.section.main {
+        border-bottom: 1px solid $color_quill_gray_approx;
+        .section li.activity {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .userprofile {
+        .userprofilebox .profilepicture {
+            float: none;
+            width: 106px;
+            margin: 0 auto 10px;
+        }
+        dl.list {
+            dt {
+                text-align: center;
+            }
+            dd {
+                text-align: center;
+            }
+        }
+    }
+    .dir-rtl .userprofile dl.list {
+        dt {
+            text-align: center;
+        }
+        dd {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 575px) {
+    .userprofile {
+        .userprofilebox {
+            .profilepicture {
+                float: left;
+            }
+            .descriptionbox {
+                padding: 0 0 0 118px;
+            }
+        }
+        dl.list {
+            dt {
+                text-align: left;
+            }
+            dd {
+                text-align: left;
+            }
+        }
+    }
+    .dir-rtl .userprofile {
+        .userprofilebox {
+            .profilepicture {
+                float: right;
+            }
+            .descriptionbox {
+                padding: 0 118px 0 0;
+            }
+        }
+        dl.list {
+            dt {
+                text-align: right;
+            }
+            dd {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.message {
+    .contactselector {
+        float: none;
+        width: auto;
+        margin: 0 0 20px;
+        .paging {
+            margin: 10px 0 0;
+        }
+        #message_participants {
+            margin-top: 10px;
+            tr {
+                th {
+                    padding: 5px;
+                }
+                td {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    .messagearea {
+        float: none;
+        width: auto;
+        min-height: 50px;
+        border: 0;
+        .messagesend .messagesendbox {
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+        }
+    }
+}
+.custom-login-page {
+    padding: 50px 0;
+    .loginbox {
+        background: inherit;
+        padding: 10px 20px;
+        border: 3px solid $white;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 6px;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 9px 0 $black_50;
+        margin: 50px auto;
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+        h3 {
+            color: $white;
+            margin: 0;
+        }
+        .alert {
+            color: $white;
+        }
+        .formwrap {
+            form {
+                margin: 0;
+            }
+            .form-fields {
+                margin: 20px 20px 0 0;
+                label {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $white;
+                    margin-bottom: 5px;
+                }
+                .textbox-wrap {
+                    background: $white;
+                    padding-right: 48px;
+                    position: relative;
+                    //Instead of the line below you could use @include box-sizing($bs)
+                    box-sizing: border-box;
+                    .fa {
+                        font-size: 21px;
+                        color: inherit;
+                        position: absolute;
+                    }
+                    .fa-user {
+                        top: 17px;
+                        right: 21px;
+                    }
+                    .fa-lock {
+                        top: 18px;
+                        right: 24px;
+                    }
+                }
+                input {
+                    max-width: 277px;
+                    width: 100%;
+                    height: 56px;
+                    font-size: 18px;
+                    line-height: 36px;
+                    background: none;
+                    padding: 10px;
+                    border: 0;
+                    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                    border-radius: 0;
+                    //Instead of the line below you could use @include box-sizing($bs)
+                    box-sizing: border-box;
+                    margin: 0;
+                    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                    box-shadow: none;
+                }
+                input:-webkit-autofill {
+                    background: none;
+                }
+            }
+            .support-fields {
+                padding: 10px 0;
+                p {
+                    margin: 5px 0;
+
+                    > a {
+                        color: $white;
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            text-decoration: none;
+                        }
+                    }
+                    > label.checkbox {
+                        color: $white;
+                        margin: 0;
+                        display: inline-block;
+                        > input[type="checkbox"] {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+            #guestlogin .form-action {
+                margin-top: 0;
+            }
+            .form-action {
+                padding: 10px 0;
+                margin-top: 40px;
+                label {
+                    display: none;
+                }
+                input {
+                    height: 56px;
+                    font-size: 18px;
+                    color: $color_chicago_approx;
+                    line-height: 56px;
+                    text-transform: none;
+                    background: $white;
+                    padding: 0 30px;
+                    border: 0;
+                    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                    border-radius: 5px;
+                    margin: 0;
+                    &:hover {
+                        background: $color_nobel_approx;
+                    }
+                    &:focus {
+                        background: $color_nobel_approx;
+                    }
+                    &:active {
+                        background: $color_nobel_approx;
+                    }
+                }
+            }
+        }
+    }
+}
+.custom-site-expo {
+    padding: 20px 0;
+    .ebox {
+        margin: 25px 0;
+        .ebox-head {
+            margin: 0 0 5px;
+            .rcthumb {
+                width: 138px;
+                height: 138px;
+                font-size: 63px;
+                color: $white;
+                line-height: 138px;
+                background: inherit;
+                text-align: center;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 69px;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: 0 5px 0 0 $color_silver_86_approx;
+                margin: 0 auto 5px;
+            }
+        }
+        .ebox-body {
+            padding-top: 15px;
+            text-align: center;
+            h6 {
+                font-weight: bold;
+                font-size: 15px;
+                color: $black;
+                line-height: 21px;
+                text-transform: uppercase;
+            }
+            p {
+                line-height: 22px;
+                margin: 0;
+            }
+        }
+    }
+}
+#page-mod-quiz-edit {
+    .maxgrade {
+        margin-top: 0;
+    }
+    .totalpoints {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 992px) and(max-width: 1199px) {
+    .dir-rtl .mform {
+        .fcheckbox > span {
+            margin-right: 10px;
+        }
+        .fradio > span {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .box form div .no-overflow {
+        overflow: visible;
+    }
+}
+
+.moodle-actionmenu.show[data-enhanced] .menu {
+    background: inherit;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    a {
+        color: $white;
+        &:hover {
+            background: inherit;
+            text-decoration: none;
+        }
+        &:focus {
+            background: inherit;
+            text-decoration: none;
+        }
+        &:first-child {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0;
+        }
+        &:last-child {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0;
+        }
+    }
+}
+.dropdown .dropdown-menu a {
+    color: $white;
+    background: $color_blackcurrant_approx;
+    &:hover {
+        background: $color_primary;
+    }
+    &:focus {
+        background: $color_primary;
+    }
+}
+.footer-bottom p {
+    text-align: center;
+}
+#page-navbar .breadcrumb-button {
+    input[type="submit"] {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 9px;
+        margin-bottom: 0;
+    }
+    .forumsearch input[type="text"] {
+        width: auto;
+        height: 20px;
+        font-size: 14px;
+    }
+}
+#adminsettings h3 {
+    color: $color_fuscous_gray_approx;
+    padding-bottom: 7px;
+    border-bottom-color: $color_iron_approx;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+#notice .singlebutton + .singlebutton input {
+    height: 40px;
+    color: $color_chicago_approx;
+    line-height: 40px;
+    background: $color_celeste_approx;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+}
+.submit.buttons input[name="cancel"] {
+    height: 40px;
+    color: $color_chicago_approx;
+    line-height: 40px;
+    background: $color_celeste_approx;
+    padding: 0 18px;
+    border: 0;
+    margin-left: 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    text-transform: uppercase;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    &:hover {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+    &:active {
+        color: $color_chicago_approx;
+        background: $color_nobel_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        outline: 0;
+    }
+}
+.path-admin .buttons {
+    background: none;
+    padding: 0;
+    border-top: 0;
+    input[type="submit"] {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        &:hover {
+            color: $white;
+            background: inherit;
+        }
+        &:focus {
+            color: $white;
+            background: inherit;
+        }
+        &:active {
+            color: $white;
+            background: inherit;
+        }
+    }
+    input {
+        &.active[type="submit"] {
+            color: $white;
+            background: inherit;
+        }
+        &.disabled[type="submit"] {
+            color: $white;
+            background: inherit;
+        }
+    }
+    input[type="submit"][disabled] {
+        color: $white;
+        background: inherit;
+    }
+}
+td.submit {
+    input {
+        color: $white;
+        background: inherit;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        &:hover {
+            color: $white;
+            background: inherit;
+        }
+        &:focus {
+            color: $white;
+            background: inherit;
+        }
+        &:active {
+            color: $white;
+            background: inherit;
+        }
+        &.active {
+            color: $white;
+            background: inherit;
+        }
+        &.disabled {
+            color: $white;
+            background: inherit;
+        }
+    }
+    input[disabled] {
+        color: $white;
+        background: inherit;
+    }
+}
+.fp-content-center form + div {
+    background: none;
+    padding: 0;
+    border-top: 0;
+}
+div.backup-section + form {
+    background: none;
+    padding: 0;
+    border-top: 0;
+}
+input[type="radio"] + label {
+    font-size: 14px;
+}
+input[type="checkbox"] + label {
+    font-size: 14px;
+    margin: 0 5px;
+}
+#page-admin-tool-installaddon-index #installfromrepobox .singlebutton input[type="submit"] {
+    padding: 0 18px;
+}
+.userselector {
+    select {
+        max-width: none;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .form-inline .collapsibleregioninner {
+        .form-check {
+            margin-bottom: 10px;
+        }
+    }
+}
+.mform .form-inline {
+    .form-control {
+        height: auto;
+    }
+    .custom-select {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .form-group.fitem input.form-control {
+        height: 40px;
+        margin-bottom: 0;
+    }
+}
+.felement.fstatic {
+    color: $color_tapa_approx;
+}
+.path-admin-mod-lti .mform .fitem .fitemtitle {
+    min-width: inherit;
+    padding-left: 0;
+}
+.form-password .unmask {
+    margin-left: 5px;
+}
+.no-overflow > {
+    .generaltable {
+        margin-bottom: 20px;
+    }
+    .rolecap {
+        margin-bottom: 20px;
+    }
+}
+form#movecourses table tbody > tr:nth-child(odd) {
+    > td {
+        background-color: $color_black_haze_approx;
+    }
+    > th {
+        background-color: $color_black_haze_approx;
+    }
+}
+#page-admin-course-index .editcourse tbody > tr:nth-child(odd) {
+    > td {
+        background-color: $color_black_haze_approx;
+    }
+    > th {
+        background-color: $color_black_haze_approx;
+    }
+}
+.forumheaderlist tbody {
+    > tr:nth-child(odd) {
+        > td {
+            background-color: $color_black_haze_approx;
+        }
+        > th {
+            background-color: $color_black_haze_approx;
+        }
+    }
+    tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+}
+.user-enroller-panel .uep-search-results {
+    .users tbody tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+    .cohorts tbody tr:hover {
+        > td {
+            background-color: $color_concrete_approx;
+        }
+        > th {
+            background-color: $color_concrete_approx;
+        }
+    }
+}
+#page-report-loglive-index .generaltable {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+}
+#page-report-log-user .generaltable {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+}
+#page-admin-user table {
+    th {
+        padding: 12px;
+    }
+    td {
+        padding: 12px;
+    }
+}
+.path-mod-forum .forumheaderlist {
+    .discussion {
+        .topic {
+            vertical-align: middle;
+            &.starter {
+                vertical-align: middle;
+            }
+        }
+        .discussionsubscription {
+            vertical-align: middle;
+        }
+        .picture {
+            vertical-align: middle;
+        }
+        .author {
+            vertical-align: middle;
+        }
+        .replies {
+            vertical-align: middle;
+        }
+        .lastpost {
+            vertical-align: middle;
+        }
+    }
+    thead .header {
+        color: $white;
+        background: inherit;
+        padding: 13px;
+    }
+    tbody .discussion td {
+        padding: 8px;
+    }
+}
+.userlist {
+    table#participants {
+        td {
+            padding: 8px;
+        }
+        th {
+            padding: 8px;
+        }
+    }
+    .initialbar {
+        .initialbarall.letter.active {
+            border: $color_secondary;
+            background: $color_secondary;
+        }
+        .initialbargroups .initialbargroup li a {
+            color: $color_primary;
+            &:hover {
+                color: $color_secondary;
+                text-decoration: none;
+                background: none;
+            }
+            &:focus {
+                color: $color_secondary;
+                background: none;
+            }
+        }
+    }
+}
+#page-admin-tool-messageinbound-index .generaltable thead th .handler-function {
+    color: $white;
+}
+#page-admin-report-eventlist-index #region-main #report-eventlist-table {
+    overflow-x: auto;
+}
+.comment-list li {
+    padding: 10px;
+    border: 1px solid $mercury;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    margin: 0 0 15px;
+    .comment-message > .comment-message-meta {
+        min-height: 20px;
+        padding-right: 10px;
+    }
+}
+.courses .coursebox {
+    padding: 10px;
+    margin-bottom: 9px;
+    &.even {
+        background: $white;
+    }
+    &:hover {
+        background: $white;
+    }
+}
+#page-message-edit #region-main {
+    .mform {
+        fieldset {
+            margin-bottom: 20px;
+        }
+        legend {
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+    }
+    #messageprocessor_general > div {
+        margin: 0 0 5px;
+        > label {
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+}
+.groupmanagementtable #buttonscell p.arrow_button input {
+    padding: 0 10px;
+    margin-top: 10px;
+    text-transform: none;
+}
+#page-admin-roles-allow #region-main .generaltable {
+    margin-top: 20px;
+}
+.userprofile .userprofilebox {
+    .descriptionbox {
+        .description {
+            margin: 0 0 10px;
+            &:empty {
+                margin: 0;
+            }
+            p {
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+        }
+        .list {
+            margin: 0;
+            overflow: hidden;
+            dt {
+                float: none;
+                width: auto;
+                clear: none;
+            }
+            dd {
+                margin: 0 0 10px;
+                clear: none;
+            }
+        }
+    }
+    .profilepicture a {
+        display: block;
+    }
+}
+#page-message-index .message .messagearea #advancedcontactssearchspan table.message_form tr > td > input[type="text"] {
+    min-width: 150px;
+    height: 40px;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+#page-admin-report-performance-index #region-main #performanceissuereporttable {
+    margin-top: 20px;
+}
+#page-admin-user-profile-index #region-main .profileeditor div {
+    &.singleselect {
+        margin-bottom: 10px;
+    }
+    &.singlebutton {
+        margin-bottom: 10px;
+    }
+}
+
+.theme-color-schemes {
+    display: inline-block;
+    li {
+        list-style: none;
+    }
+    .thumbnail {
+        max-width: 100px;
+        padding: 5px;
+        border-color: $gallery;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        > img {
+            margin: 0;
+        }
+        h6 {
+            font-size: 16px;
+            color: $color_fuscous_gray_approx;
+            margin-top: 10px;
+            margin-bottom: 0;
+            text-transform: none;
+            text-align: center;
+        }
+    }
+}
+.alert .close {
+    height: auto;
+    top: 0;
+    background: none;
+}
+.pagelayout-report .no-overflow {
+    overflow: auto;
+}
+.path-grade-report-grader .gradeparent {
+    .no-overflow {
+        overflow: visible;
+    }
+    .cell {
+        padding: 4px 45px 4px 10px;
+    }
+}
+.block_search_forums #searchform_search {
+    width: 100%;
+}
+.path-grade-report-user #graded_users_selector + p {
+    clear: both;
+}
+.pagelayout-frontpage {
+    .page-navbar {
+        display: none;
+    }
+    #page-header {
+        display: none;
+    }
+    #page {
+        margin-top: auto;
+    }
+}
+.has-blocks .card form .box ul li {
+    list-style: none;
+}
+.block-region .block .card-block {
+    padding: 0;
+    border: 1px solid $color_snuff_approx;
+    .card-title {
+        font-size: 26px;
+        padding: 10px 15px;
+        font-weight: normal;
+        background: $color_tutu_approx;
+        text-transform: capitalize;
+        border-bottom: 1px solid $color_snuff_approx;
+    }
+    .card-text {
+        padding: 20px;
+        padding-top: 0;
+    }
+}
+.path-my .coursebox {
+    padding: 15px;
+}
+
+.card {
+    .menubar {
+        margin-right: 5px;
+        .dropdown .dropdown-menu .dropdown-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &:hover {
+                text-decoration: none;
+            }
+            i {
+                color: $white;
+            }
+            img {
+                margin: 0 5px;
+            }
+        }
+        .icon {
+            width: 14px;
+        }
+        img {
+            width: 14px;
+        }
+    }
+    &.card-block .block .card-block .block-controls .menubar .dropdown a.dropdown-toggle {
+        background: none;
+    }
+}
+.block .card-block .block-controls .menubar .dropdown .dropdown-menu a.dropdown-toggle {
+    background: none;
+    i {
+        color: $white;
+        margin: 0 0 0 5px;
+    }
+}
+
+@media (max-width: 575px) {
+    .card .menubar .dropdown .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+}
+
+#page-content .card .nav-tabs {
+    border-bottom: 0;
+}
+
+#nav-drawer {
+    top: 51px;
+}
+.form-autocomplete-suggestions {
+    li {
+        &:hover {
+            color: $white;
+            background: $color_primary;
+        }
+        &:focus {
+            color: $white;
+            background: $color_primary;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .category-item-actions .menubar .dropdown .dropdown-menu {
+        left: 0;
+        right: auto;
+    }
+}
+
+
+/*moodle-32*/
+
+.tag_cloud .s20 {
+    font-size: 16px;
+}
+.card .action-menu .menubar .dropdown a.dropdown-toggle:after {
+    color: $color_mountain_mist_approx;
+}
+.block .calendar_filters {
+    ul li a {
+        span {
+            padding: 0 2px;
+            margin: 0;
+            display: inline-block;
+        }
+        i.icon {
+            margin: 0;
+        }
+        span.eventname {
+            margin: 0;
+        }
+    }
+}
+.path-grade-edit-tree .setup-grades td.column-name .gradeitemheader {
+    display: inline-block;
+}
+.path-grade-report-singleview .reporttable tbody th {
+    white-space: normal;
+}
+.path-grade-report-singleview .reporttable tbody td.range {
+    white-space: normal;
+}
+.categoryquestionscontainer table td a img {
+    width: 14px;
+    display: inline-block;
+}
+.dir-rtl {
+    #page-login-index .card .card-block .custom-login form .rememberpass {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+#page-login-index .card {
+    max-width: 750px;
+    background-color: $color_primary;
+    border: 3px solid $white;
+    border-radius: 6px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin: 0 auto;
+    .card-block {
+        padding: 0;
+        .custom-login {
+            h2 {
+                color: $white;
+                margin-bottom: 20px;
+            }
+            form {
+                .form-fields {
+                    width: 40%;
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    label {
+                        color: $white;
+                        margin-top: 5px;
+                        display: inline-block;
+                    }
+                    .textbox-wrap {
+                        background: $white;
+                        box-sizing: border-box;
+                        padding-right: 48px;
+                        position: relative;
+                        .form-control {
+                            background: rgba(0, 0, 0, 0);
+                            border: 0 none;
+                            border-radius: 0;
+                            box-shadow: none;
+                            box-sizing: border-box;
+                            font-size: 18px;
+                            height: 56px;
+                            line-height: 36px;
+                            margin: 0;
+                            max-width: 277px;
+                            padding: 10px;
+                            width: 100%;
+                        }
+                        i {
+                            font-size: 21px;
+                            position: absolute;
+                            right: 20px;
+                            top: 17px;
+                        }
+                    }
+                }
+                .btn {
+                    width: auto;
+                    height: 60px;
+                    color: $color_chicago_approx;
+                    line-height: 56px;
+                    display: inline-block;
+                    padding: 0 30px;
+                    margin: 5px 0 10px 0;
+                    border-radius: 5px;
+                    background-color: $white;
+                    &:hover {
+                        background: $color_nobel_approx;
+                    }
+                    &:focus {
+                        background: $color_nobel_approx;
+                    }
+                }
+                .rememberpass {
+                    display: inline-block;
+                    margin-left: 15px;
+                    label {
+                        color: $white;
+                        margin-top: 0;
+                        float: none;
+                    }
+                }
+                .forgetpass {
+                    display: inline-block;
+                    p a {
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            h6 {
+                color: $white;
+            }
+            .potentialidplist {
+                .potentialidp {
+                    display: inline-block;
+                    margin: 10px 10px 10px 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        background: $white;
+                        padding: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+.custom-signuppanel {
+    color: $white;
+    margin-top: 20px;
+    h2 {
+        color: $white;
+    }
+}
+
+@media (max-width: 575px) {
+    #page-login-index .card .card-block .custom-login form .form-fields {
+        width: 100%;
+    }
+}
+
+.forumnodiscuss {
+    margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+    .frontpage-course-list-all .row .col-md-3:nth-child(4n+1) {
+        clear: both;
+    }
+}
+
+@media (max-width: 767px) {
+    .frontpage-course-list-all .row .col-md-3:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+#course-category-listings {
+    .course-listing {
+        .listing-pagination {
+            a {
+                color: $white;
+                background: $color_secondary;
+                &:hover {
+                    background: $color_primary;
+                    text-decoration: none;
+                }
+                &:focus {
+                    background: $color_primary;
+                    text-decoration: none;
+                }
+                &.active-page {
+                    background: $color_primary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.block .block-controls .menubar .dropdown .dropdown-toggle i {
+    margin: 0 0 0 5px;
+}
+.dir-rtl {
+    .block .block-controls .menubar .dropdown .dropdown-toggle i {
+        margin: 0 5px 0 0;
+    }
+}
+.langimport select.form-control {
+    height: auto;
+}
