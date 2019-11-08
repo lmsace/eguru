@@ -966,6 +966,7 @@ table.flexible {
 .btn-group {
     .dropdown-menu {
         .dropdown-item {
+            color: $white;
             &.active {
                 background: $color_primary;
             }
@@ -1070,10 +1071,19 @@ table.flexible {
         }
     }
 }
-.header-main .message-drawer {
+.header-main .message-app {
     .header-container {
          .badge {
             background-color: $color_primary !important;
+        }
+        .dropdown .dropdown-menu a {
+            background-color: $color_secondary;
+            &:hover {
+                background-color: $color_primary;
+            }
+            &:focus {
+                background-color: $color_primary;
+            }
         }
     }
     .body-container {
@@ -1150,3 +1160,59 @@ table.flexible {
 .notification-area .content-item-container.selected {
     background-color: $color_secondary;
 }
+.notification-area .content-item-container:hover {
+    background-color: $color_secondary;
+}
+.message-app {
+    .body-container {
+        .nav-pills .nav-link {
+            &.active {
+                background-color: $color_primary;
+            }
+        }
+    }
+    .dropdown .dropdown-menu a.dropdown-item {
+        background: none;
+        &:hover {
+            background: $color_primary;
+        }
+        &:focus {
+            background: $color_primary;
+        }
+       &:active {
+            background: $color_primary;
+        }
+    }
+}
+tr.discussion {
+    td .dropdown .dropdown-menu {
+        .dropdown-item {
+            padding: 0;
+        }
+    }
+    .btn {
+        i.icon {
+            color: $color_primary;
+        }
+    }
+}
+/*Moodle-3.7*/
+
+.block_recentlyaccessedcourses .paging-bar-container {
+    .pagination {
+        .page-item {
+            .page-link {
+                color: $color_primary;
+            }
+        }
+    }
+ }
+ .dropdown .dropdown-menu a {
+    background-color: $color_secondary;
+    &:hover {
+        background-color: $color_primary;
+    }
+    &:focus {
+        background-color: $color_primary;
+    }
+ }

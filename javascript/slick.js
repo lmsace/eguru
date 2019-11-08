@@ -523,7 +523,7 @@
     Slick.prototype.buildRows = function() {
 
         var _ = this,
-a, b, c, newSlides, numOfSlides, originalSlides, slidesPerSection;
+        a, b, c, newSlides, numOfSlides, originalSlides, slidesPerSection;
 
         newSlides = document.createDocumentFragment();
         originalSlides = _.$slider.children();
@@ -750,7 +750,7 @@ a, b, c, newSlides, numOfSlides, originalSlides, slidesPerSection;
     Slick.prototype.cleanUpRows = function() {
 
         var _ = this,
-originalSlides;
+        originalSlides;
 
         if (_.options.rows > 1) {
             originalSlides = _.$slides.children().children();
@@ -1864,7 +1864,7 @@ originalSlides;
     Slick.prototype.slideHandler = function(index, sync, dontAnimate) {
 
         var targetSlide, animSlide, oldSlide, slideLeft,
-targetLeft = null,
+        targetLeft = null,
             _ = this;
 
         sync = sync || false;
@@ -1995,7 +1995,7 @@ targetLeft = null,
     Slick.prototype.swipeDirection = function() {
 
         var xDist, yDist, r, swipeAngle,
-_ = this;
+        _ = this;
 
         xDist = _.touchObject.startX - _.touchObject.curX;
         yDist = _.touchObject.startY - _.touchObject.curY;

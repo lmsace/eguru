@@ -31,14 +31,10 @@ $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 <h3>Theme Credits</h3>
 <p>
 <h3>Moodle Eguru theme</h3>
-<p>
-This theme is based on the Boost based Moodle theme.
-</p>
-<p>
-Authors: LMSACE Dev Team<br>
+<p> This theme is based on the Boost based Moodle theme. </p>
+<p>Authors: LMSACE Dev Team<br>
 Contact: info@lmsace.com<br>
-Website: <a href="http://www.lmsace.com">www.lmsace.com</a><br>
-</p>';
+Website: <a href="http://www.lmsace.com">www.lmsace.com</a><br> </p>';
 $string['configtitle'] = 'Eguru';
 $string['connectus'] = 'Connect with us';
 $string['contact'] = 'Contact';

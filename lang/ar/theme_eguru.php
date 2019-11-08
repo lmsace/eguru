@@ -30,14 +30,10 @@ $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 <h3>قروض موضوع</h3>
 <p>
 <h3>Moodle Eguru موضوع</h3>
-<p>
-ويستند هذا الموضوع على موضوع Boost based موودل.
-</p>
-<p>
-المؤلف: LMSACE فريق ديف<br>
+<p>ويستند هذا الموضوع على موضوع Boost based موودل.</p>
+<p>المؤلف: LMSACE فريق ديف<br>
 اتصال: info@lmsace.com<br>
-موقع الكتروني: <a href="http://www.lmsace.com">www.lmsace.com</a><br>
-</p>';
+موقع الكتروني: <a href="http://www.lmsace.com">www.lmsace.com</a><br></p>';
 $string['configtitle'] = 'Eguru';
 $string['connectus'] = 'تواصل معنا';
 $string['contact'] = 'اتصال';
