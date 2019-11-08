@@ -62,29 +62,22 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
         $rcourseids = array_keys($courses);
         $newcourse = get_string('availablecourses');
 
-        $header = '<div id="frontpage-course-list">
-        <h2>'.$newcourse.'</h2>
-        <div class="courses frontpage-course-list-all">';
-
-        $footer = '
-        </div>
-        </div>';
-
+        $header = '<div id="frontpage-course-list"><h2>'.$newcourse.'</h2><div class="courses frontpage-course-list-all">';
+        $footer = '</div></div>';
         $content = '';
-
         if (count($rcourseids) > 0) {
-                $content .= '<div class="row">';
+            $content .= '<div class="row">';
             foreach ($rcourseids as $courseid) {
 
                 $rowcontent = '';
 
-                    $course = get_course($courseid);
+                $course = get_course($courseid);
 
-                    $no = get_config('theme_eguru', 'patternselect');
-                    $nimgp = (empty($no)||$no == "default") ? 'cs00/no-image' : 'cs0'.$no.'/no-image';
+                $no = get_config('theme_eguru', 'patternselect');
+                $nimgp = (empty($no)||$no == "default") ? 'cs00/no-image' : 'cs0'.$no.'/no-image';
 
-                    $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
-                    $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
+                $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
+                $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
                 if ($course instanceof stdClass) {
                     require_once($CFG->libdir. '/coursecatlib.php');
@@ -108,21 +101,10 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     $imgurl = $noimgurl;
                 }
 
-                $rowcontent .= '<div class="col-md-3 col-sm-6">
-                    <div class="fp-coursebox">
-                    <div class="fp-coursethumb">
-                    <a href="'.$courseurl.'">
-                    <img src="'.$imgurl.'" width="243" height="165" alt="'.$course->fullname.'">
-                    </a>
-                    </div>
-                    <div class="fp-courseinfo">
-                    <h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5>
-                    </div>
-                    </div>
-                    </div>';
+                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt="'.$course->fullname.'"></a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5></div></div></div>';
                 $content .= $rowcontent;
             }
-                $content .= '</div>';
+            $content .= '</div>';
         }
 
         $coursehtml = $header.$content.$footer;
@@ -181,26 +163,9 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
         $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_text');
         $promotedtitle = theme_eguru_lang($promotedtitle);
 
-        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses">
-							  <div class="container">
-								<div class="titlebar with-felements">
-									<h2>'.$promotedtitle.'</h2>
-									<div class="slidenav pagenav">
-										<button class="nav-item nav-prev slick-prev">
-										<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i>
-										</button>
-										<button class="nav-item nav-next slick-next">
-										<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i>
-										</button>
-										<div class="clearfix"></div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="promoted_courses" data-crow="'.$totalfcourse.'">';
+        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="slidenav pagenav"><button class="nav-item nav-prev slick-prev"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><button class="nav-item nav-next slick-next"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><div class="clearfix"></div></div><div class="clearfix"></div></div><div class="promoted_courses" data-crow="'.$totalfcourse.'">';
 
-        $featuredfooter = ' </div>
-                            </div>
-                            </div>';
+        $featuredfooter = ' </div></div></div>';
 
         if (!empty($fcourseids)) {
             foreach ($fcourseids as $courseids) {
@@ -240,23 +205,99 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     if (empty($imgurl)) {
                         $imgurl = $noimgurl;
                     }
-                        $coursehtml = '<div class="col-md-2">
-                            <div class="course-box">
-                            <div class="thumb"><a href="'.$courseurl.'">
-							<img src="'.$imgurl.'" width="135" height="135" alt="'.$course->fullname.'"></a></div>
-                            <div class="info">
-                            <h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5>
-                            </div>
-                            </div>
-                            </div>';
+                    $coursehtml = '<div class="col-md-2"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt="'.$course->fullname.'"></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5></div></div></div>';
 
-                        $rowcontent .= $coursehtml;
+                    $rowcontent .= $coursehtml;
                 }
-                    $rowcontent .= '</div></div>';
-                    $featuredcontent .= $rowcontent;
+                $rowcontent .= '</div></div>';
+                $featuredcontent .= $rowcontent;
             }
         }
         $featuredcourses = $featuredheader.$featuredcontent.$featuredfooter;
         return $featuredcourses;
+    }
+
+    /**
+     * Displays one course in the list of courses.
+     *
+     * This is an internal function, to display an information about just one course
+     * please use {@link core_course_renderer::course_info_box()}
+     *
+     * @param coursecat_helper $chelper various display options
+     * @param course_in_list|stdClass $course
+     * @param string $additionalclasses additional classes to add to the main <div> tag (usually
+     *    depend on the course position in list - first/last/even/odd)
+     * @return string
+     */
+    protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
+        global $CFG;
+        if (!isset($this->strings->summary)) {
+            $this->strings->summary = get_string('summary');
+        }
+        if ($chelper->get_show_courses() <= self::COURSECAT_SHOW_COURSES_COUNT) {
+            return '';
+        }
+        if ($course instanceof stdClass) {
+            require_once($CFG->libdir. '/coursecatlib.php');
+            $course = new course_in_list($course);
+        }
+        $content = '';
+        $classes = trim('coursebox clearfix '. $additionalclasses);
+        if ($chelper->get_show_courses() >= self::COURSECAT_SHOW_COURSES_EXPANDED) {
+            $nametag = 'h3';
+        } else {
+            $classes .= ' collapsed';
+            $nametag = 'div';
+        }
+
+        // .coursebox
+        $content .= html_writer::start_tag('div', array(
+            'class' => $classes,
+            'data-courseid' => $course->id,
+            'data-type' => self::COURSECAT_TYPE_COURSE,
+        ));
+
+        $content .= html_writer::start_tag('div', array('class' => 'info'));
+
+        // course name
+        $coursename = $chelper->get_course_formatted_name($course);
+        $coursenamelink = html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
+                                            $coursename, array('class' => $course->visible ? '' : 'dimmed'));
+        $content .= html_writer::tag($nametag, $coursenamelink, array('class' => 'coursename'));
+        // If we display course in collapsed form but the course has summary or course contacts, display the link to the info page.
+        $content .= html_writer::start_tag('div', array('class' => 'moreinfo'));
+        if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
+            if ($course->has_summary() || $course->has_course_contacts() || $course->has_course_overviewfiles()) {
+                $url = new moodle_url('/course/info.php', array('id' => $course->id));
+                $image = $this->output->pix_icon('i/info', $this->strings->summary);
+                $content .= html_writer::link($url, $image, array('title' => $this->strings->summary));
+                // Make sure JS file to expand course content is included.
+                $this->coursecat_include_js();
+            }
+        }
+        $content .= html_writer::end_tag('div'); // .moreinfo
+
+        // print enrolmenticons
+        if ($icons = enrol_get_course_info_icons($course)) {
+            $content .= html_writer::start_tag('div', array('class' => 'enrolmenticons'));
+            foreach ($icons as $pix_icon) {
+                $content .= $this->render($pix_icon);
+            }
+            $content .= html_writer::end_tag('div'); // .enrolmenticons
+        }
+
+        $content .= html_writer::end_tag('div'); // .info
+
+        if (empty($course->get_course_overviewfiles())) {
+            $class = "content-block";
+        } else {
+            $class = "";
+        }
+        $content .= html_writer::start_tag('div', array('class' => 'content '.$class));
+        $content .= $this->coursecat_coursebox_content($chelper, $course);
+        $content .= html_writer::end_tag('div'); // .content
+
+        $content .= html_writer::end_tag('div'); // .coursebox
+        return $content;
     }
 }

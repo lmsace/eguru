@@ -99,6 +99,7 @@ function theme_eguru_get_extra_scss($theme) {
  */
 function theme_eguru_page_init(moodle_page $page) {
     $page->requires->jquery();
+    $page->requires->js('/theme/eguru/javascript/theme.js');
 }
 
 /**
@@ -285,11 +286,8 @@ function theme_eguru_get_html_for_settings(renderer_base $output, moodle_page $p
  */
 function theme_eguru_set_fontwww() {
     global $CFG, $PAGE;
-    if (empty($CFG->themewww)) {
-        $themewww = $CFG->wwwroot."/theme";
-    } else {
-        $themewww = $CFG->themewww;
-    }
+
+    $themewww = $CFG->wwwroot."/theme";
     $theme = theme_config::load('eguru');
     $fontwww = '$fontwww: "'. $themewww.'/eguru/fonts/"'.";\n";
     return $fontwww;
@@ -302,11 +300,8 @@ function theme_eguru_set_fontwww() {
  */
 function theme_eguru_pre_css_set_fontwww($css) {
     global $CFG, $PAGE;
-    if (empty($CFG->themewww)) {
-        $themewww = $CFG->wwwroot."/theme";
-    } else {
-        $themewww = $CFG->themewww;
-    }
+
+    $themewww = $CFG->wwwroot."/theme";
     $tag = '[[setting:fontwww]]';
     $theme = theme_config::load('eguru');
     $css = str_replace($tag, $themewww.'/eguru/fonts/', $css);

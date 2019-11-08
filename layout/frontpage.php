@@ -48,7 +48,10 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<?php  require_once(dirname(__FILE__) . '/includes/header.php');  ?>
+<?php
+    require_once(dirname(__FILE__) . '/includes/header.php');
+    echo $headerlayout;
+    ?>
 <!--E.O.Custom theme header-->
 <link rel="stylesheet" href="<?php echo theme_eguru_theme_url(); ?>/style/slick.css" />
 
@@ -96,7 +99,7 @@ if ($toggleslideshow == 1) {
 
  <script src="<?php echo theme_eguru_theme_url(); ?>/javascript/slick.js"></script>
 <script>
- $( function() {
+$( function() {
 
     if ($('body').hasClass('dir-rtl') ) {
         var rtl = true;
@@ -113,16 +116,13 @@ if ($toggleslideshow == 1) {
         nextArrow: '#Promoted-Courses .pagenav .slick-next',
     });
 
-    /*var frow = $(".promoted_courses").attr("data-crow");
-    frow = parseInt(frow);
-    if (frow < 2) {
-        $("#Promoted-Courses .pagenav").hide();
-    }*/
+
 });
 </script>
 
 <?php
-require_once(dirname(__FILE__) . '/includes/footer.php');
+    require_once(dirname(__FILE__) . '/includes/footer.php');
+    echo $footerlayout;
 ?>
 <!--E.O.Custom theme footer-->
 

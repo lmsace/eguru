@@ -82,19 +82,37 @@ a {
 .btn-primary {
     background: $color_secondary;
     &:hover {
-        background: $color_primary;
+        background: $color_primary !important;
     }
     &:focus {
         &:active {
             color: $white;
-            background-color: $color_primary;
+            background-color: $color_primary !important;
         }
     }
     &:focus {
-        background: $color_primary;
+        background: $color_primary !important;
     }
     &:active {
-        background: $color_primary;
+        background: $color_primary !important;
+    }
+}
+.btn-secondary {
+    background: $color_secondary;
+    &:hover {
+        background: $color_primary !important;
+    }
+    &:focus {
+        &:active {
+            color: $white;
+            background-color: $color_primary !important;
+        }
+    }
+    &:focus {
+        background: $color_primary !important;
+    }
+    &:active {
+        background: $color_primary !important;
     }
 }
 #header {
@@ -695,33 +713,26 @@ table.flexible {
 
 
 /*M-32*/
-.block-region .block .card-block {
+.block-region .block .card-body {
     border-color: $color_ziggurat_approx;
     .card-title {
         background-color: $color_polar_approx;
         border-color: $color_ziggurat_approx;
     }
 }
-
 #page {
     .action-menu {
-        .menubar .dropdown .dropdown-menu .dropdown-item {
-            a {
-                color: $white;
-                padding: 7px 20px;
-                background-color: $color_secondary;
-                &:hover {
-                    color: $white;
-                    background-color: $color_primary;
+        .menubar .dropdown {
+            .dropdown-menu .dropdown-item {
+                padding: 0;
+                a.dropdown-toggle {
+                    padding: .25rem 1.5rem;
                 }
             }
-        }
-    }
-    .card {
-        .card-block {
-            .block-controls .action-menu .menubar .dropdown {
-                .dropdown-menu a.dropdown-item {
+            .dropdown-menu .dropdown-item {
+                a {
                     color: $white;
+                    padding: 7px 20px;
                     background-color: $color_secondary;
                     &:hover {
                         color: $white;
@@ -730,7 +741,29 @@ table.flexible {
                 }
             }
         }
-        &.card-block {
+    }
+    .card {
+        .card-body {
+            .block-controls .action-menu .menubar .dropdown {
+                .dropdown-menu a.dropdown-item {
+                    color: $white;
+                    background-color: $color_secondary;
+                    padding: .25rem 1.5rem;
+                    &:hover {
+                        color: $white;
+                        background-color: $color_primary;
+                    }
+                }
+            }
+            .course-content .topics .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+                background-color: $color_primary;
+                padding: 10px;
+                &:hover {
+                    background-color: $color_secondary;
+                }
+            }
+        }
+        &.card-body {
             .action-menu .menubar .dropdown {
                 a {
                     color: $white;
@@ -811,7 +844,7 @@ table.flexible {
     background-color: $color_primary;
 }
 #page-course-management {
-    #page .card.card-block .action-menu .menubar .dropdown a.dropdown-toggle {
+    #page .card.card-body .action-menu .menubar .dropdown a.dropdown-toggle {
         color: $color_primary;
     }
 }
@@ -837,6 +870,19 @@ table.flexible {
 .userenrolment thead th {
     background: $color_secondary;
 }
+.userlist .initialbar .pagination .page-item {
+    &.active .page-link {
+        color: $white;
+        background-color: $color_primary;
+        border-color: $color_primary;
+        &:hover {
+            color: $white;
+        }
+    }
+    .page-link {
+        color: $color_primary;
+    }
+}
 .userlist .initialbar {
     .initialbarall.letter.active {
         border: $color_secondary;
@@ -859,11 +905,65 @@ table.flexible {
     background: $color_secondary;
 }
 
-#page .card.card-block .box .generaltable tbody .action-menu .menubar .dropdown a.dropdown-toggle {
+#page .card.card-body .box .generaltable tbody .action-menu .menubar .dropdown a.dropdown-toggle {
     &:hover {
         color: $color_secondary;
     }
     &:focus {
         color: $color_secondary;
+    }
+}
+
+/*m-3.5*/
+.block_myoverview .content-centred .nav.nav-pills .nav-item .nav-link.active {
+    background-color: $color_primary;
+}
+.list-group-item.active {
+    border-color: $color_secondary;
+    background-color: $color_secondary;
+}
+.pagelayout-incourse {
+    #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+        &:hover {
+            background: $color_primary;
+            a {
+                background: $color_primary;
+            }
+        }
+        a {
+            padding: .25rem 1.5rem;
+        }
+    }
+}
+#region-main .singlebutton.enrolusersbutton .btn {
+    background-color: $color_primary;
+    border-color: $color_primary;
+}
+/*#page-course-view-weeks .card .menubar .dropdown .dropdown-menu .dropdown-item {
+    padding: .25rem 1.5rem;
+    background: $color_primary;
+    &:hover {
+        background: $color_secondary;
+    }
+}*/
+#page-course-view-weeks .card .actions .commands .menubar .dropdown .dropdown-menu .dropdown-item {
+    padding: .25rem 1.5rem;
+    background: $color_primary;
+    &:hover {
+        background: $color_secondary;
+    }
+}
+#page-course-view-weeks .card .section_action_menu .menubar .dropdown .dropdown-menu .dropdown-item {
+    padding: .25rem 1.5rem;
+    background: $color_primary;
+    &:hover {
+        background: $color_secondary;
+    }
+}
+#page-course-management .dropdown .dropdown-menu a {
+    padding: .25rem 1.5rem!important;
+    background: $color_primary;
+    &:hover {
+        background: $color_secondary;
     }
 }

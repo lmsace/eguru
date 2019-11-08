@@ -15,9 +15,9 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_eguru/columns1
+    @template theme_boost/columns1
 
-    Eguru 1 column layout template.
+    Boost 1 column layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -36,43 +36,34 @@
          "bodyattributes":""
     }
 }}
-{{{ output.doctype }}}
-<html {{{ output.htmlattributes }}}>
-<head>
-    <title>{{{ output.page_title }}}</title>
-    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
-    {{{ output.standard_head_html }}}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+{{> theme_boost/head }}
 
 <body {{{ bodyattributes }}}>
 
 <div id="page-wrapper">
 
     {{{ output.standard_top_of_body_html }}}
-    {{>theme_eguru/header}}
 
-    <div id="page" class="container">
+    <div id="page" class="container-fluid">
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+            <div id="region-main-box" class="col-12">
                 <section id="region-main">
-                    <div class="card card-block">
-                    {{{ output.course_content_header }}}
-                    {{{ output.main_content }}}
-                    {{{ output.course_content_footer }}}
+                    <div class="card">
+                        <div class="card-body">
+                            {{{ output.course_content_header }}}
+                            {{{ output.main_content }}}
+                            {{{ output.activity_navigation }}}
+                            {{{ output.course_content_footer }}}
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-{{> theme_boost/nav-drawer }}
 </div>
-
-{{>theme_eguru/footer}}
-
+{{{ output.standard_end_of_body_html }}}
 </body>
 </html>
-
 {{#js}}
 require(['theme_boost/loader']);
 {{/js}}

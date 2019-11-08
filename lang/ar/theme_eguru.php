@@ -57,8 +57,7 @@ $string['footbgimg'] = 'الصورة الخلفية';
 $string['footbgimgdesc'] = 'حجم صورة الخلفية يجب أن يكون متبعا حجم 1345 X 517';
 $string['footerheading'] = 'كتل تذييل';
 $string['footerlogo'] = 'تذييل شعار';
-$string['footerlogodesc'] = 'يرجى تحميل شعارك تذييل مخصص هنا إذا كنت ترغب في إضافته إلى تذييل.
-                       <br>يجب أن تكون الصورة 80px عالية وأي عرض معقول (الحد الأدنى: 205px) أن الدعاوى.';
+$string['footerlogodesc'] = 'يرجى تحميل شعارك تذييل مخصص هنا إذا كنت ترغب في إضافته إلى تذييل. <br>يجب أن تكون الصورة 80px عالية وأي عرض معقول (الحد الأدنى: 205px) أن الدعاوى.';
 $string['footnote'] = 'حاشية';
 $string['footnotedefault'] = 'أبجد هوز هو مجرد دمية النص من صناعة المطابع ودور النشر. وكان أبجد هوز في هذه الصناعة القياسية دمية النص من أي وقت مضى منذ 1500s، عندما مجهول مقعدا الطابعة الطباعة من نوع والتنضيد ترونيك، وصحائف taining الممرات أبجد هوز.';
 $string['footnotedesc'] = 'For ex: lang:display or Display أيا كان ما أضفنا إلى هذا جزء النص سيتم عرضها في تذييل طوال حياتك موودل site.Please إعطاء أي مفتاح اللغة أو النص.';
@@ -68,8 +67,7 @@ $string['gpurl_default'] = 'https://www.google.com/+yourgoogleplusid';
 $string['gpurldesc'] = 'عنوان الموقع على + Google لمؤسستك.';
 $string['headerheading'] = 'رأس';
 $string['logo'] = 'الشعار';
-$string['logodesc'] = 'يرجى تحميل شعار مخصص هنا إذا كنت ترغب في إضافته إلى رأس.
-                       <br>يجب أن تكون الصورة 50px عالية وأي عرض معقول (الحد الأدنى: 235px) أن الدعاوى.';
+$string['logodesc'] = 'يرجى تحميل شعار مخصص هنا إذا كنت ترغب في إضافته إلى رأس. <br>يجب أن تكون الصورة 50px عالية وأي عرض معقول (الحد الأدنى: 235px) أن الدعاوى.';
 $string['numberofslides'] = 'عدد الشرائح';
 $string['numberofslides_desc'] = 'عدد الشرائح على شريط التمرير';
 $string['numberoftmonials'] = 'عدد من الشهادات';
@@ -116,11 +114,9 @@ lang:faq|http://www.example.com/faq.php
 lang:support|http://www.example.com/support.php
 lang:contact|http://www.example.com/contact.php';
 $string['footerblink_desc'] = 'يمكنك تكوين تذييل بلوك سريعة هنا ليتم عرضها حسب المواضيع. يتكون كل سطر من بعض النصوص إما مفتاح القائمة لغة أو نص أو URL الارتباط (اختياري)، مفصولة الأحرف الأنابيب.
-For example:
-<pre>
-lang:moodlecommunity|https://moodle.org
-دعم موودل|https://moodle.org/support
-</pre>';
+For example: <pre>
+     lang:moodlecommunity|https://moodle.org
+     دعم موودل|https://moodle.org/support </pre>';
 $string['medianame1'] = 'فيس بوك';
 $string['medianame2'] = 'تغريد';
 $string['medianame3'] = 'جوجل بلس';
@@ -133,8 +129,7 @@ $string['mediaicon4'] = 'fa-pinterest-p';
 $string['default_color'] = 'نظام الألوان الافتراضي';
 $string['color_schemes_heading'] = 'أنظمة الألوان';
 $string['promotedtitledefault'] = 'دورات الترويج';
-$string['promotedtitledesc'] = 'For ex: lang:display or Display يرجى إعطاء رقي عنوان دورات كتلة،
-إما مفتاح اللغة أو النص.';
+$string['promotedtitledesc'] = 'For ex: lang:display or Display يرجى إعطاء رقي عنوان دورات كتلة، إما مفتاح اللغة أو النص.';
 $string['pcourseenable'] = 'تمكين دورات رقي';
 $string['login'] = 'تسجيل الدخول';
 $string['link'] = 'حلقة الوصل';

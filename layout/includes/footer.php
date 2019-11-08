@@ -160,4 +160,4 @@ $templatecontext = [
     ];
 
     $templatecontext['flatnavigation'] = $PAGE->flatnav;
-    echo $OUTPUT->render_from_template('theme_eguru/footer', $templatecontext);
+    $footerlayout = $OUTPUT->render_from_template('theme_eguru/footer', $templatecontext);

@@ -59,4 +59,4 @@ $templatecontext = [
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 $flatnavbar = $OUTPUT->render_from_template('theme_boost/nav-drawer', $templatecontext);
-echo $OUTPUT->render_from_template('theme_eguru/header', $templatecontext);
+$headerlayout = $OUTPUT->render_from_template('theme_eguru/header', $templatecontext);

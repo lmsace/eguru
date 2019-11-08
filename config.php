@@ -41,8 +41,6 @@ $THEME->enable_dock = false;
 
 $THEME->yuicssmodules = array();
 
-$THEME->javascripts_footer = ['theme'];
-
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
 $THEME->requiredblocks = '';
