@@ -182,6 +182,25 @@ img {
         margin: 0;
     }
 }
+.homepage-carousel .carousel-control {
+    span {
+        background: none;
+        display: flex;
+        align-items: center;
+        &:before {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &.left .carousel-control-prev-icon:before {
+        content: '\f0d9';
+        font-family: $font_3;
+    }
+    &.right .carousel-control-next-icon:before {
+        content: '\f0da';
+        font-family: $font_3;
+    }
+}
 .dir-rtl {
     .homepage-carousel .carousel-control {
         &.left i:before {
@@ -189,6 +208,14 @@ img {
             font-family: $font_3;
         }
         &.right i:before {
+            content: '\f0d9';
+            font-family: $font_3;
+        }
+        &.left .carousel-control-prev-icon:before {
+            content: '\f0da';
+            font-family: $font_3;
+        }
+        &.right .carousel-control-next-icon:before {
             content: '\f0d9';
             font-family: $font_3;
         }
@@ -609,6 +636,7 @@ img {
         }
         a.dropdown-toggle {
             color: $white;
+            padding: 0;
         }
         .toggle-display {
             height: auto;
@@ -689,6 +717,7 @@ img {
         }
         a.dropdown-toggle .avatars img.userpicture {
             margin: 0;
+            width: auto;
         }
     }
     .moodle-actionmenu[data-enhance] .toggle-display.textmenu {
@@ -718,7 +747,7 @@ img {
     .usermenu .dropdown .dropdown-menu {
         width: auto;
         min-width: 150px;
-        margin-top: 10px;
+        margin-top: 7px;
         top: auto;
         left: auto;
         right: 0;
@@ -878,7 +907,11 @@ img {
         }
     }
 }
-
+@media (min-width: 992px) {
+    .header-main .d-lg-block {
+        display: inline-block!important;
+    }
+}
 @media (max-width: 991px) {
     .header-main .navbar-toggleable-md .custom-menu > ul {
         display: block;
@@ -1021,6 +1054,9 @@ img {
     .caret {
         margin-left: 5px;
     }
+    &:focus {
+        box-shadow: none;
+    }
 }
 .btn-large {
     font-size: 17.5px;
@@ -1035,7 +1071,7 @@ img {
     padding: 0 6px;
 }
 .btn-default {
-    color: $color_chicago_approx;
+    color: $color_chicago_approx!important;
     background: $color_celeste_approx !important;
     border: 0;
     &:hover {
@@ -1099,6 +1135,7 @@ img {
         box-shadow: none !important;
     }
 }
+
 .btn-secondary {
     outline: none;
     background: none;
@@ -1111,6 +1148,7 @@ img {
         background-color: $color_whisper !important;
         border-color: $color_gray !important;
         box-shadow: none !important;
+        color: inherit!important;
         &:active {
             outline: none;
             background-color: $color_whisper !important;
@@ -1360,7 +1398,7 @@ img {
                 display: flex;
                 align-items: center;
                 .popover-region-toggle.nav-link {
-                    padding: 10px 0;
+                    padding: 0;
                     img {
                         margin: 0;
                     }
@@ -1372,6 +1410,19 @@ img {
                     .popover-region-content-container {
                         overflow: initial;
                     }
+                }
+            }
+            .search-input-wrapper {
+                height: 100%;
+                align-items: center;
+                display: flex;
+                padding: 0;
+                i.icon {
+                    color: $white;
+                    margin-top: 0;
+                }
+                .search-input-form {
+                    margin-left: 5px;
                 }
             }
         }
@@ -1741,7 +1792,7 @@ img {
             .custom-menu {
                 float: none;
                 > ul {
-                    .nav-item {
+                    .dropdown.nav-item {
                         text-align: left;
                         display: block;
                         a.nav-link {
@@ -1756,6 +1807,9 @@ img {
                                 border: 0;
                             }
                         }
+                    }
+                    .nav-item {
+                        display: block;
                     }
                     a.nav-item.nav-link {
                         width: 100%;
@@ -2273,8 +2327,6 @@ footer {
             }
         }
     }
-    .card {
-        &.card-body {
             .action-menu {
                 /*margin-top: 10px;*/
                 .menubar .dropdown a.dropdown-toggle {
@@ -2293,15 +2345,11 @@ footer {
                     padding: 8px 20px;
                 }
             }
-        }
-        .card-body {
             .context-header-settings-menu .action-menu .menubar .dropdown a.dropdown-toggle i.icon {
                 margin: 0 5px;
             }
-        }
-    }
 }
-#page-course-management #page .card.card-body .action-menu .menubar .dropdown {
+#page-course-management #page /*.card.card-body*/ .action-menu .menubar .dropdown {
     .dropdown-menu .dropdown-item {
         padding: 8px 20px;
     }
@@ -2310,7 +2358,6 @@ footer {
     }
 }
 #page-header {
-    .card {
         .menubar .dropdown .dropdown-menu .dropdown-item {
             padding: 0;
             a {
@@ -2328,7 +2375,6 @@ footer {
                 color: $white;
             }
         }
-    }
     .breadcrumb-nav {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -2454,7 +2500,7 @@ label {
 }
 select {
     width: 224px;
-    height: 40px;
+    /*height: 40px;*/
     font-size: 16px;
     line-height: 34px;
     color: $color_fuscous_gray_approx;
@@ -2469,7 +2515,7 @@ select {
         outline: 0 none;
     }
     &.form-control {
-        height: 40px;
+        /*height: 40px;*/
         border-radius: 0;
     }
 }
@@ -3075,6 +3121,9 @@ input[type="submit"][disabled] {
     background: $color_nobel_approx;
     box-shadow: none;
     outline: 0;
+    &:hover {
+        color: $white;
+    }
 }
 input[type="reset"][disabled] {
     color: $color_chicago_approx;
@@ -3418,12 +3467,17 @@ table {
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    .block-controls.header {
-        background: none;
-        border: 0;
-        position: absolute;
-        top: 10px;
-        right: 5px;
+    .block-controls{
+        &.header {
+            background: none;
+            border: 0;
+            position: absolute;
+            top: 10px;
+            right: 5px;
+        }
+        .dropdown-toggle {
+            padding: 0;
+        }
     }
     .header {
         background: inherit;
@@ -4396,11 +4450,16 @@ table {
     border: 1px solid $color_quill_gray_approx;
     border-radius: 0;
     .content {
-        min-height: 100px;
         margin: 10px 0 0;
         position: relative;
-        &.content-block .summary {
-            padding: 0;
+        &.content-block {
+            .summary {
+                padding: 0;
+            }
+            .teachers {
+                padding: 0;
+                padding-top: 10px;
+            }
         }
         .summary {
             float: none;
@@ -4413,7 +4472,7 @@ table {
             }
         }
         .teachers {
-            padding-top: 5px;
+            padding-top: 10px;
             float: none;
             width: auto;
             margin: 0;
@@ -5387,7 +5446,6 @@ form#movecourses table tbody > tr:nth-child(odd) {
     padding: 15px;
 }
 
-.card {
     .menubar {
         margin-right: 5px;
         .dropdown .dropdown-menu .dropdown-item {
@@ -5410,10 +5468,10 @@ form#movecourses table tbody > tr:nth-child(odd) {
             width: 14px;
         }
     }
-    &.card-body .block .card-body .block-controls .menubar .dropdown a.dropdown-toggle {
+    .block .card-body .block-controls .menubar .dropdown a.dropdown-toggle {
         background: none;
     }
-}
+
 .block .card-body .block-controls .menubar .dropdown .dropdown-menu a.dropdown-toggle {
     background: none;
     i {
@@ -5423,7 +5481,7 @@ form#movecourses table tbody > tr:nth-child(odd) {
 }
 
 @media (max-width: 575px) {
-    .card .menubar .dropdown .dropdown-menu {
+    .menubar .dropdown .dropdown-menu {
         left: auto;
         right: 0;
     }
@@ -5466,8 +5524,11 @@ form#movecourses table tbody > tr:nth-child(odd) {
 .tag_cloud .s20 {
     font-size: 16px;
 }
-.card .action-menu .menubar .dropdown a.dropdown-toggle:after {
+.action-menu .menubar .dropdown a.dropdown-toggle:after {
     color: $color_mountain_mist_approx;
+}
+.usermenu .action-menu .menubar .dropdown a.dropdown-toggle:after {
+    color: $white;
 }
 .block .calendar_filters {
     ul li a {
@@ -5611,6 +5672,11 @@ form#movecourses table tbody > tr:nth-child(odd) {
                 }
             }
         }
+    }
+}
+#page-login-index #header  {
+    .navbar-inner button.btn {
+        display: none;
     }
 }
 .custom-signuppanel {
@@ -5806,6 +5872,12 @@ button.closebutton {
 .calendarwrapper {
     overflow: auto;
 }
+#page-my-index .block .block-cards,
+.header-main .message-drawer {
+    .text-primary {
+        color: inherit!important;
+    }
+}
 @media (min-width: 576px) {
     #page-my-index {
         .tab-content {
@@ -5823,4 +5895,277 @@ button.closebutton {
             }
         }
     }
+}
+
+/*moodle-3.6*/
+
+#page-wrapper {
+    height: auto;
+}
+.dropdown .dropdown-menu {
+    .dropdown-divider {
+        margin: 0;
+    }
+    .dropdown-header {
+        color: $white;
+    }
+}
+.block-myoverview {
+    .dropdown-menu {
+        .dropdown-item {
+            &.active {
+                background: $color_primary;
+            }
+            &:hover {
+                color: $white;
+                background: $color_primary;
+            }
+            &:focus {
+                color: $white;
+                background: $color_primary;
+            }
+            i.icon {
+                color: $white;
+            }
+        }
+    }
+}
+.btn.btn-outline-secondary.dropdown-toggle {
+    &:hover {
+        color: $white;
+        background: $color_primary;
+    }
+    &:focus {
+        color: $white;
+        background: $color_primary;
+        box-shadow: none;
+        &:active {
+            color: $white;
+            box-shadow: none;
+        }
+    }
+    &:active {
+        color: $white;
+        background: $color_primary;
+    }
+}
+
+button.close, .moodle-dialogue-base button.closebutton {
+    &:hover {
+        background: none;
+    }
+    &:focus {
+        background: none;
+    }
+}
+#course-category-listings .item-actions .menubar {
+    .action-menu-trigger .dropdown a.dropdown-toggle {
+        padding: 0;
+    }
+}
+.pagination {
+    .page-item {
+        .page-link {
+            &:focus {
+                box-shadow: none;
+            }
+            i.icon {
+                line-height: 24px;
+            }
+        }
+    }
+}
+.activity-navigation {
+    a.btn.btn-link {
+        color: $color_primary;
+        &:hover {
+            color: $color_secondary;
+        }
+    }
+}
+.block-region .block .card-body .block-myoverview .card-title {
+    padding: 0;
+    background: none;
+    border: 0;
+    margin-right: 0 !important;
+    a {
+        font-size: 16px;
+        color: $color_primary;
+    }
+}
+.block-timeline {
+    .dropdown-menu {
+        .dropdown-item {
+            &.active {
+                background: $color_primary;
+            }
+            &:hover {
+                background: $color_primary;
+            }
+            &:focus {
+                background: $color_primary;
+            }
+            &:active {
+                background: $color_primary;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .dir-rtl .block-timeline .dropdown-menu {
+        right: auto;
+    }
+}
+.show > .btn-outline-secondary.dropdown-toggle {
+    background: $color_primary;
+}
+
+@media (max-width: 600px) {
+    #page-header .card .card-body .flex-wrap .d-flex  {
+        display: block !important;
+    }
+}
+
+.block-region .block {
+    &.card .card-body {
+        padding: 0 !important;
+    }
+}
+.block-recentlyaccessedcourses {
+    .card .card-body.course-info-container {
+        padding: 1.25rem!important;
+    }
+}
+.header-main .message-drawer {
+    .header-container {
+        .input-group .input-group-prepend {
+            .input-group-text {
+                padding-right: 10px !important;
+            }
+        }
+        .badge {
+            background-color: $color_primary !important;
+        }
+    }
+    img {
+        max-width: none;
+    }
+     .body-container {
+        .view-overview-body {
+            .section {
+                .badge {
+                    background-color: $color_primary !important;
+                }
+                .btn.btn-link {
+                    margin: 0;
+                }
+            }
+        }
+         .custom-control.custom-radio {
+            .custom-control-input:checked~.custom-control-label {
+                &:before {
+                    background-color: $color_primary;
+                }
+            }
+            .custom-control-input:active~.custom-control-label {
+                &:before {
+                    background-color: rgba(56, 39, 56,.25);
+                }
+            }
+            .custom-control-input:checked:focus~.custom-control-label {
+                &:before {
+                    background-color: $color_primary;
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(56, 39, 56,.25);
+                }
+            }
+        }
+        .switch {
+            input:checked + label {
+                &:before {
+                    background-color: $color_primary;
+                }
+            }
+            input:focus + label {
+                &:before {
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(56, 39, 56,.25);
+                }
+            }
+            input:checked:focus + label {
+                &:before {
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(56, 39, 56,.25);
+                }
+            }
+        }
+        .nav {
+            .nav-item {
+                a.nav-link {
+                    color: $white;
+                    &.active {
+                        color: $white;
+                        background: $color_primary;
+                    }
+                }
+            }
+        }
+        .view-conversation {
+            .btn-primary,
+            .btn-secondary {
+                span {
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+}
+#region-main {
+    &.has-blocks {
+        .dashboard-card-deck .dashboard-card {
+            .card-body {
+                .card-title {
+                    font-size: 16px;
+                    width: 100%;
+                    border: 0;
+                    padding: 10px;
+                    margin-right: 0 !important;
+                    i.icon {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .block-myoverview {
+        .dashboard-card-deck .dashboard-card {
+            .card-body {
+                padding: 10px !important;
+                .card-title {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+#block-region-side-pre {
+    .block_globalsearch {
+        .searchform {
+            input[type="text"] {
+                display: inline-block;
+            }
+        }
+    }
+    .block-starredcourses .card-body {
+        padding: 10px!important;
+    }
+}
+@media (max-width: 575px) {
+    .dir-rtl .block-myoverview .paged-content-page-container .dropdown-menu.dropdown-menu-right.show {
+        right: auto;
+    }
+}
+.recipienttable td.actions input.actionbutton {
+    height: auto;
+    line-height: normal;
+}
+.path-mod-quiz #header input[size] {
+    width: 100%;
 }

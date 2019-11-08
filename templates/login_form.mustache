@@ -125,7 +125,7 @@
         <div class="custom-login">
 
             <div class="">
-                <h2>Login into your account</h2>
+                <h2>{{#str}} loginheader, theme_eguru {{/str}} </h2>
                 <form class="m-t-1" action="{{loginurl}}" method="post" id="login" {{^passwordautocomplete}}autocomplete="off"{{/passwordautocomplete}}>
                     <input id="anchor" type="hidden" name="anchor" value="">
                     <script>document.getElementById('anchor').value = location.hash;</script>

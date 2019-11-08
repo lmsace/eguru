@@ -101,7 +101,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     $imgurl = $noimgurl;
                 }
 
-                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt="'.$course->fullname.'"></a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5></div></div></div>';
+                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt=""></a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
                 $content .= $rowcontent;
             }
             $content .= '</div>';
@@ -160,7 +160,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
 
         $fcourseids = array_chunk($rcourseids, 6);
         $totalfcourse = count($fcourseids);
-        $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_text');
+        $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_html');
         $promotedtitle = theme_eguru_lang($promotedtitle);
 
         $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="slidenav pagenav"><button class="nav-item nav-prev slick-prev"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><button class="nav-item nav-next slick-next"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><div class="clearfix"></div></div><div class="clearfix"></div></div><div class="promoted_courses" data-crow="'.$totalfcourse.'">';
@@ -205,7 +205,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     if (empty($imgurl)) {
                         $imgurl = $noimgurl;
                     }
-                    $coursehtml = '<div class="col-md-2"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt="'.$course->fullname.'"></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->fullname.'</a></h5></div></div></div>';
+                    $coursehtml = '<div class="col-md-2"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
 
                     $rowcontent .= $coursehtml;
                 }

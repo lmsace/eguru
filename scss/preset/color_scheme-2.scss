@@ -83,6 +83,9 @@ a {
     background: $color_secondary;
     &:hover {
         background: $color_primary !important;
+        &:active {
+            background: $color_primary !important;
+        }
     }
     &:focus {
         &:active {
@@ -377,6 +380,11 @@ input {
         }
         &:hover {
             background: $color_primary;
+        }
+        &.calendar_event_site:hover {
+            a {
+                color: $white;
+            }
         }
     }
 }
@@ -677,10 +685,10 @@ table.flexible {
 .comment-area .fd > a {
     background: $color_primary;
     &:hover {
-        background: $color_plum_approx;
+        background: $color_secondary;
     }
     &:focus {
-        background: $color_plum_approx;
+        background: $color_secondary;
     }
 }
 .custom-login-page .loginbox {
@@ -724,58 +732,62 @@ table.flexible {
             }
         }
     }
-    .card {
-        .card-body {
-            .block-controls .action-menu .menubar .dropdown {
-                .dropdown-menu a.dropdown-item {
-                    color: $white;
-                    background-color: $color_secondary;
-                    padding: .25rem 1.5rem;
-                    &:hover {
-                        color: $white;
-                        background-color: $color_primary;
-                    }
-                }
-            }
-            .course-content .topics .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+
+    .block-controls .action-menu .menubar .dropdown {
+        .dropdown-menu a.dropdown-item {
+            color: $white;
+            background-color: $color_secondary;
+            padding: .25rem 1.5rem;
+            &:hover {
+                color: $white;
                 background-color: $color_primary;
-                padding: 10px;
-                &:hover {
-                    background-color: $color_secondary;
-                }
-            }
-        }
-        &.card-body {
-            .action-menu .menubar .dropdown {
-                a {
-                    color: $white;
-                    background-color: $color_secondary;
-                    &:hover {
-                        color: $white;
-                        background-color: $color_primary;
-                    }
-                }
-                a.dropdown-toggle {
-                    background: none;
-                }
-            }
-            .course-content .section .action-menu .menubar {
-                a.dropdown-toggle {
-                    color: inherit;
-                }
-                .dropdown .dropdown-menu a.dropdown-item {
-                    background-color: $color_secondary;
-                    &:hover {
-                        background-color: $color_primary;
-                    }
-                    &:focus {
-                        background-color: $color_primary;
-                    }
-                }
             }
         }
     }
-    .card .action-menu .menubar .dropdown a.dropdown-toggle:after {
+    .course-content .topics .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+        background-color: $color_primary;
+        padding: 10px;
+        &:hover {
+            background-color: $color_secondary;
+        }
+    }
+    .action-menu .menubar .dropdown {
+        a {
+            color: $white;
+            background-color: $color_secondary;
+            &:hover {
+                color: $white;
+                background-color: $color_primary;
+            }
+        }
+        a.dropdown-toggle {
+            background: none;
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+    .course-content .section .action-menu .menubar {
+        a.dropdown-toggle {
+            color: inherit;
+        }
+        .dropdown .dropdown-menu a.dropdown-item {
+            background-color: $color_secondary;
+            padding: 10px;
+            &:hover {
+                background-color: $color_primary;
+            }
+            &:focus {
+                background-color: $color_primary;
+            }
+        }
+    }
+    .block-region .block .card-body .card-text {
+        .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+            padding: .25rem 1.5rem;
+        }
+    }
+    .action-menu .menubar .dropdown a.dropdown-toggle:after {
         color: $color_mountain_mist_approx;
     }
 }
@@ -886,7 +898,7 @@ table.flexible {
 .form-autocomplete-suggestions li:hover {
     background: $color_secondary;
 }
-#page .card.card-body .box .generaltable tbody .action-menu .menubar .dropdown a.dropdown-toggle {
+#page .box .generaltable tbody .action-menu .menubar .dropdown a.dropdown-toggle {
     &:hover {
         color: $color_secondary;
     }
@@ -913,12 +925,20 @@ table.flexible {
         }
         a {
             padding: .25rem 1.5rem;
+            /*padding: 0;*/
         }
     }
 }
-#region-main .singlebutton.enrolusersbutton .btn {
-    background-color: $color_primary;
-    border-color: $color_primary;
+#region-main {
+    .singlebutton {
+        &.enrolusersbutton .btn {
+            background-color: $color_primary;
+            border-color: $color_primary;
+        }
+        .btn.btn-primary {
+            background-color: $color_primary;
+        }
+    }
 }
 #page-course-view-weeks .card .actions .commands .menubar .dropdown .dropdown-menu .dropdown-item {
     padding: .25rem 1.5rem;
@@ -940,4 +960,194 @@ table.flexible {
     &:hover {
         background: $color_secondary;
     }
+}
+
+/**moodle-3.6**/
+
+.btn-group {
+    .dropdown-menu {
+        .dropdown-item {
+            &.active {
+                background: $color_primary;
+            }
+            &:hover {
+                color: $white;
+                background: $color_primary;
+            }
+            &:focus {
+                color: $white;
+                background: $color_primary;
+            }
+            &:active {
+                color: $white;
+                background: $color_primary;
+            }
+        }
+    }
+}
+.block-myoverview {
+    .dropdown-menu {
+        .dropdown-item {
+            &.active {
+                background: $color_primary;
+            }
+            &:hover {
+                color: $white;
+                background: $color_primary;
+            }
+            &:focus {
+                color: $white;
+                background: $color_primary;
+            }
+        }
+        a {
+            background-color: $color_nile_blue_approx;
+        }
+    }
+    .progress {
+        border-radius: 5px;
+        .progress-bar {
+            background-color: $color_primary;
+        }
+    }
+    .paged-content-page-container {
+        a.coursename,
+        .btn-link.btn-icon {
+            color: $color_primary;
+        }
+    }
+}
+.btn.btn-outline-secondary.dropdown-toggle {
+    &:hover {
+        color: $white;
+        background: $color_primary;
+    }
+    &:focus {
+        color: $white;
+        background: $color_primary;
+        box-shadow: none;
+        &:active {
+            color: $white;
+            box-shadow: none;
+        }
+    }
+    &:active {
+        color: $white;
+        background: $color_primary;
+    }
+}
+.block-timeline {
+    .dropdown-menu {
+        .dropdown-item {
+             background-color: $color_secondary;
+            &.active {
+                background: $color_primary;
+            }
+            &:hover {
+                background: $color_primary;
+            }
+            &:focus {
+                background: $color_primary;
+            }
+            &:active {
+                background: $color_primary;
+            }
+        }
+    }
+}
+.show > .btn-outline-secondary.dropdown-toggle {
+    background: $color_primary;
+}
+.block-region .block .card-body .block-myoverview .card-title {
+    a {
+        color: $color_primary;
+    }
+}
+.activity-navigation {
+    a.btn.btn-link {
+        color: $color_primary;
+        &:hover {
+            color: $color_secondary;
+        }
+    }
+}
+.header-main .message-drawer {
+    .header-container {
+         .badge {
+            background-color: $color_primary !important;
+        }
+    }
+    .body-container {
+        .view-overview-body .section {
+            .badge {
+                background-color: $color_primary !important;
+            }
+        }
+        .nav {
+            .nav-item {
+                a.nav-link {
+                    background: $color_secondary;
+                    &:hover {
+                        background: $color_primary;
+                    }
+                    &:focus {
+                        background: $color_primary;
+                    }
+                    &.active {
+                        background: $color_primary;
+                    }
+                }
+            }
+        }
+        .custom-control.custom-radio {
+            .custom-control-input:checked~.custom-control-label {
+                &:before {
+                    background-color: $color_primary;
+                }
+            }
+            .custom-control-input:active~.custom-control-label {
+                &:before {
+                    background-color: rgba(24, 48, 84,.25);
+                }
+            }
+            .custom-control-input:checked:focus~.custom-control-label {
+                &:before {
+                    background-color: $color_primary;
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(24, 48, 84,.25);
+                }
+            }
+        }
+        .switch {
+            input:checked + label {
+                &:before {
+                    background-color: $color_primary;
+                }
+            }
+            input:focus + label {
+                &:before {
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(24, 48, 84,.25);
+                }
+            }
+            input:checked:focus + label {
+                &:before {
+                    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(24, 48, 84,.25);
+                }
+            }
+        }
+    }
+    .dropdown .dropdown-menu a {
+        background-color: $color_secondary;
+        &:hover {
+            background-color: $color_primary;
+        }
+    }
+}
+#header .popover-region-content-container .content-item-container:hover {
+    background-color: $color_secondary;
+    .view-more {
+        color: $white;
+    }
+}
+.notification-area .content-item-container.selected {
+    background-color: $color_secondary;
 }

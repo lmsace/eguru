@@ -358,7 +358,7 @@ function theme_eguru_render_slideimg($p, $sliname) {
  * @param bool $format
  * @return bool
  */
-function theme_eguru_get_setting($setting, $format = false) {
+function theme_eguru_get_setting($setting, $format = true) {
     global $CFG;
     require_once($CFG->dirroot . '/lib/weblib.php');
     static $theme;

@@ -44,16 +44,16 @@ $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
 $footerlogo = !empty(theme_eguru_get_setting('footerblklogo')) ? 1 : 0;
 
-$footnote = !empty(theme_eguru_get_setting('footnote')) ? theme_eguru_get_setting('footnote', 'format_text') : '';
+$footnote = !empty(theme_eguru_get_setting('footnote')) ? theme_eguru_get_setting('footnote', 'format_html') : '';
 $footnote = theme_eguru_lang($footnote);
 
-$footerbtitle2 = !empty(theme_eguru_get_setting('footerbtitle2')) ? theme_eguru_get_setting('footerbtitle2', 'format_text') : '';
+$footerbtitle2 = !empty(theme_eguru_get_setting('footerbtitle2')) ? theme_eguru_get_setting('footerbtitle2', 'format_html') : '';
 $footerbtitle2 = theme_eguru_lang($footerbtitle2);
 
-$footerbtitle3 = !empty(theme_eguru_get_setting('footerbtitle3')) ? theme_eguru_get_setting('footerbtitle3', 'format_text') : '';
+$footerbtitle3 = !empty(theme_eguru_get_setting('footerbtitle3')) ? theme_eguru_get_setting('footerbtitle3', 'format_html') : '';
 $footerbtitle3 = theme_eguru_lang($footerbtitle3);
 
-$footerbtitle4 = !empty(theme_eguru_get_setting('footerbtitle4')) ? theme_eguru_get_setting('footerbtitle4', 'format_text') : '';
+$footerbtitle4 = !empty(theme_eguru_get_setting('footerbtitle4')) ? theme_eguru_get_setting('footerbtitle4', 'format_html') : '';
 $footerbtitle4 = theme_eguru_lang($footerbtitle4);
 
 $footerlinks = theme_eguru_generate_links('footerblink2');
