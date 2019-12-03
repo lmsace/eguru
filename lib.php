@@ -120,7 +120,10 @@ function theme_eguru_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    $css = theme_eguru_pre_css_set_fontwww($css);
+    $css = theme_eguru_set_customcss($css, $customcss);
+    //$css = theme_eguru_pre_css_set_fontwww($css);
+    $css = theme_eguru_set_fontwww($css);
+    $css = theme_eguru_get_pattern_color($css, $theme);
 
     return $css;
 }
@@ -244,6 +247,24 @@ function theme_eguru_send_cached_css($path, $filename, $lastmodified, $etag) {
 }
 
 /**
+ * Adds any custom CSS to the CSS before it is cached.
+ *
+ * @param string $css The original CSS.
+ * @param string $customcss The custom CSS to add.
+ * @return string The CSS which now contains our custom CSS.
+ */
+function theme_eguru_set_customcss($css, $customcss) {
+    $tag = '[[setting:customcss]]';
+    $replacement = $customcss;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
  * Returns an object containing HTML for the areas affected by settings.
  *
  * Do not add Clean specific logic in here, child themes should be able to
@@ -284,13 +305,26 @@ function theme_eguru_get_html_for_settings(renderer_base $output, moodle_page $p
  *
  * @return string $fontwww
  */
-function theme_eguru_set_fontwww() {
+/*function theme_eguru_set_fontwww() {
     global $CFG, $PAGE;
 
     $themewww = $CFG->wwwroot."/theme";
     $theme = theme_config::load('eguru');
     $fontwww = '$fontwww: "'. $themewww.'/eguru/fonts/"'.";\n";
     return $fontwww;
+}*/
+function theme_eguru_set_fontwww($css) {
+    global $CFG, $PAGE;
+    if (empty($CFG->themewww)) {
+        $themewww = $CFG->wwwroot."/theme";
+    } else {
+        $themewww = $CFG->themewww;
+    }
+
+    $tag = '[[setting:fontwww]]';
+    $theme = theme_config::load('eguru');
+    $css = str_replace($tag, $themewww.'/eguru/fonts/', $css);
+    return $css;
 }
 
 /**
@@ -520,5 +554,158 @@ function theme_eguru_lang($key = '') {
         }
     } else {
         return $key;
+    }
+}
+
+function theme_eguru_get_pattern_color( $css, $type='') {
+
+$patterncolors = array (
+    'lavender' => array (
+        'color_primary' => '#8e558e',
+        'color_secondary' => '#a55ba5',
+        'color_blackcurrant_approx' => '#382738',
+        'color_plum_approx' => '#764076',
+        'color_blackcurrant_90_approx' => 'rgba(56, 39, 56, 0.9)',
+        'color_french_lilac_approx' => '#ead1ea',
+        'color_snuff_approx' => '#edd3ed',
+        'color_tutu_approx' => '#fef',
+        'color_blackcurrant_25_approx' => 'rgba(56, 39, 56, .25)'
+        ),
+
+    'green' => array (
+        'color_primary' => '#426e17',
+        'color_secondary' => '#7abb3b',
+        'color_blackcurrant_approx' => '#2f510f',
+        'color_plum_approx' => '#528125',
+        'color_blackcurrant_90_approx' => 'rgba(47, 81, 15, .9)',
+        'color_french_lilac_approx' =>'#cedec0',
+        'color_snuff_approx' => '#bad3a3',
+        'color_tutu_approx' => '#f2fde8',
+        'color_blackcurrant_25_approx' => 'rgba(47, 81, 15, .25)'
+        ),
+
+    'blue' => array (
+        'color_primary' => '#2b4e84',
+        'color_secondary' => '#3e65a0',
+        'color_blackcurrant_approx' => '#183054',
+        'color_plum_approx' => '#3b5f96',
+        'color_blackcurrant_90_approx' => 'rgba(24, 48, 84, .9)',
+        'color_french_lilac_approx' => '#ccd8e8',
+        'color_snuff_approx' => '#c0ccdc',
+        'color_tutu_approx' => '#e8f0fb',
+        'color_blackcurrant_25_approx' => 'rgba(24, 48, 84, .25)'
+        ),
+
+    'warm_red' => array (
+        'color_primary' => '#561209',
+        'color_secondary' => '#a64437',
+        'color_blackcurrant_approx' => '#5e1e15',
+        'color_plum_approx' => '#70271e',
+        'color_blackcurrant_90_approx' => 'rgba(90, 30, 21, .9)',
+        'color_french_lilac_approx' => '#dec4c1',
+        'color_snuff_approx' => '#f7e3e1',
+        'color_tutu_approx' => '#fff1ef',
+        'color_blackcurrant_25_approx' => 'rgba(90, 30, 21, .25)'
+        ),
+
+    'dark_cyan' => array (
+        'color_primary' => '#20897b',
+        'color_secondary' => '#4ba89c',
+        'color_blackcurrant_approx' => '#103430',
+        'color_plum_approx' => '#17786b',
+        'color_blackcurrant_90_approx' => 'rgba(16, 52, 48, .9)',
+        'color_french_lilac_approx' => '#c2e8e5',
+        'color_snuff_approx' => '#c0dcdb',
+        'color_tutu_approx' => '#e4f7f6',
+        'color_blackcurrant_25_approx' => 'rgba(16, 52, 48, .25)'
+        )
+    );
+    $selectedpattern = theme_eguru_get_setting('patternselect');
+        foreach ($patterncolors[$selectedpattern] as $key => $value) {
+            $tag = '[['.$key.']]';
+            $replacement = $value;
+            $css = str_replace($tag, $replacement, $css);
+        }
+        return $css;
+    }
+/*function theme_eguru_get_pattern_color( $css, $type='') {
+
+    $pattern = array( "lavender" => "#8e558e", "green" => "#426e17", "blue" => "#2b4e84", "warm_red" => "#561209", "dark_cyan" => "#20897b" );
+    $pattern = array(
+    	"lavender" => ["#8e558e", "#a55ba5" ],
+    	"green" => ["#426e17", "#7abb3b"],
+    	"blue" => ["#2b4e84", "#3e65a0"],
+    	"warm_red" => ["#561209", "#a64437"],
+    	"dark_cyan" => ["#20897b", "#4ba89c"]
+    );
+    $patternstatus = theme_eguru_get_setting('patternselect');
+
+    $tag = '[[setting:primarycolor]]';
+    $second_tag = '[[setting:secondarycolor]]';
+
+    $primary_replace = $pattern[$patternstatus][0];
+    $second_replace = $pattern[$patternstatus][1];
+
+    if (is_null($primary_replace)) {
+        $primary_replace = '#8e558e';
+    }
+
+    if (is_null($second_replace)) {
+        $second_replace = '#a55ba5';
+    }
+
+    $css = str_replace($tag, $primary_replace, $css);
+
+    $css = str_replace($second_tag, $second_replace, $css);
+
+    $primarybdr = array(
+        '[[color_snuff_approx]]' => '#edd3ed',
+        '[[color_rainee_approx]]' => '#bad3a3',
+        '[[color_ghost_approx]]' => '#c0ccdc',
+        '[[color_pot_pourri_approx]]' => '#f7e3e1',
+        '[[color_ziggurat_approx]]' => '#c0dcdb',
+    );
+    $primarybdr = array('#edd3ed', '#bad3a3', '#c0ccdc', '#f7e3e1', '#c0dcdb');
+    $tag = '[[setting:primarybdr]]';
+    $css = str_replace($tag, $primarybdr, $css);
+
+    $primarybg = array('#fef', '#f2fde8', '#e8f0fb', '#fff1ef', '#e4f7f6');
+    $tag = '[[setting:primarybg]]';
+    $css = str_replace($tag, $primarybg, $css);
+
+	$primaryapprox = array(
+		'[[color_blackcurrant_25_approx]]' => 'rgba(56, 39, 56, .25)',
+		'[[color_green_house_25_approx]]' => 'rgba(47, 81, 15, .25)',
+		'[[color_nile_blue_25_approx]]' => 'rgba(24, 48, 84, .25)',
+		'[[color_redwood_25_approx]]' => 'rgba(90, 30, 21, .25)',
+		'[[color_gable_green_25_approx]]' => 'rgba(16, 52, 48, .25)',
+	);
+
+	foreach ($primaryapprox as $key => $value) {
+		$rgb = theme_eguru_get_hexa($pattern[$patternstatus], $value);
+		$css = str_replace($key, $rgb, $css);
+	}
+
+    //str_replace(search, #39b3e6, subject)//
+    return $css;
+}*/
+
+
+
+/**
+ * Function returns the rgb format with the combination of passed color hex and opacity.
+ * @param type|string $hexa
+ * @param type|int $opacity
+ * @return type|string
+ */
+function theme_eguru_get_hexa($hexa, $opacity) {
+    if (!empty($hexa)) {
+        list($r, $g, $b) = sscanf($hexa, "#%02x%02x%02x");
+        if ($opacity == '') {
+            $opacity = 0.0;
+        } else {
+            $opacity = $opacity / 10;
+        }
+        return "rgba($r, $g, $b, $opacity)";
     }
 }

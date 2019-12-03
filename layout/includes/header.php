@@ -44,6 +44,14 @@ $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $logo = theme_eguru_get_logo_url();
 $surl = new moodle_url('/course/search.php');
 
+$custom = $OUTPUT->custom_menu();
+
+if ($custom == '') {
+    $class = "navbar-toggler navbar-toggler-right d-lg-none nocontent-navbar";
+} else {
+    $class = "navbar-toggler navbar-toggler-right d-lg-none";
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -55,6 +63,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'logo' => $logo,
     'surl' => $surl,
+    "customclass" => $class
     ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;

@@ -74,8 +74,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                 $course = get_course($courseid);
 
                 $no = get_config('theme_eguru', 'patternselect');
-                $nimgp = (empty($no)||$no == "default") ? 'cs00/no-image' : 'cs0'.$no.'/no-image';
-
+                $nimgp = (empty($no)||$no == "lavender") ? 'lavender/no-image' : $no.'/no-image';
                 $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
                 $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
@@ -174,7 +173,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                 foreach ($courseids as $courseid) {
                     $course = get_course($courseid);
                     $no = get_config('theme_eguru', 'patternselect');
-                    $nimgp = (empty($no)|| $no == "default") ? 'cs00/no-image' : 'cs0'.$no.'/no-image';
+                    $nimgp = (empty($no)||$no == "lavender") ? 'lavender/no-image' : $no.'/no-image';
 
                     $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
 

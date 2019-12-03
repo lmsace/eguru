@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'eguru';
 
-$THEME->sheets = [];
+$THEME->sheets = ['eguru'];
 
 $THEME->editor_sheets = [];
 
@@ -47,17 +47,17 @@ $THEME->requiredblocks = '';
 
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 
-$THEME->prescsscallback = 'theme_eguru_get_pre_scss';
-
-$THEME->extrascsscallback = 'theme_eguru_get_extra_scss';
-
 $THEME->csstreepostprocessor = 'theme_eguru_css_tree_post_processor';
 
-$THEME->scss = function($theme) {
-    return theme_eguru_get_main_scss_content($theme);
-};
-
 $no = get_config('theme_eguru', 'patternselect'); // Selected theme pattern no returned.
+
+if ($no) {
+    $THEME->sheets[] = 'color_scheme-'.$no;
+} else {
+    $THEME->sheets[] = 'color_scheme-default';
+}
+
+$THEME->sheets[] = 'custom';
 
 $THEME->csspostprocess = 'theme_eguru_process_css';
 

@@ -121,6 +121,14 @@ switch ($blockarrange) {
     break;
 }
 
+$custom = $OUTPUT->custom_menu();
+
+if ($custom == '') {
+    $class = "navbar-toggler navbar-toggler-right d-lg-none nocontent-navbar";
+} else {
+    $class = "navbar-toggler navbar-toggler-right d-lg-none";
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -164,7 +172,8 @@ $templatecontext = [
     'block3' => $block3,
     'block4' => $block4,
     'colclass' => $colclass,
-    'blockarrange' => $blockarrange
+    'blockarrange' => $blockarrange,
+    "customclass" => $class
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
