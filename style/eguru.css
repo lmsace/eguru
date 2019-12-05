@@ -2791,7 +2791,6 @@ input[type="submit"] {
      text-shadow: none;
 }
 input[type="submit"]:hover {
-     color: var(--white);
      background: var(--color_primary);
      box-shadow: none;
      outline: 0;
@@ -3815,11 +3814,20 @@ table#tag-management-list td input[type="text"] {
 .course_category_tree .category.with_children > .info > .categoryname {
      background-image: url([[pix:theme|cs00/t/expanded]]);
 }
+.dir-rtl .course_category_tree .category.with_children > .info > .categoryname {
+     background-image: url([[pix:theme|cs00/t/expanded_rtl]]);
+}
 .course_category_tree .category.with_children.collapsed > .info > .categoryname {
      background-image: url([[pix:theme|cs00/t/collapsed]]);
 }
+.dir-rtl .course_category_tree .category.with_children.collapsed>.info>.categoryname {
+     background-image: url([[pix:theme|cs00/t/collapsed_rtl]]);
+}
 .course_category_tree .category > .info > .categoryname {
      background-image: url([[pix:theme|cs00/t/collapsed_empty]]);
+}
+.dir-rtl .course_category_tree .category > .info > .categoryname {
+     background-image: url([[pix:theme|cs00/t/collapsed_empty_rtl]]);
 }
 #frontpage-category-names {
      border: 1px solid var(--color_snuff_approx);
