@@ -93,7 +93,7 @@ $phoneno  = theme_eguru_get_setting('phoneno');
 $mail = get_string('footeremail', 'theme_eguru');
 $phone = get_string('phone', 'theme_eguru');
 
-$copyright = theme_eguru_get_setting('copyright');
+$copyright = theme_eguru_get_setting('copyright', 'format_html');
 
 $block1 = ($footerlogo != '' || $footnote != '') ? 1 : 0;
 $block2 = ($footerbtitle2 != '' || $footerlinks != '') ? 1 : 0;
