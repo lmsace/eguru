@@ -3813,14 +3813,21 @@ table#tag-management-list td input[type="text"] {
      }
 }
 .course_category_tree .category.with_children > .info > .categoryname {
-     background-image: url([[pix:theme|cs00/t/expanded]]);
+     background-image: url([[expanded]]);
 }
+
 .course_category_tree .category.with_children.collapsed > .info > .categoryname {
-     background-image: url([[pix:theme|cs00/t/collapsed]]);
+     background-image: url([[collapsed]]);
 }
+
 .course_category_tree .category > .info > .categoryname {
-     background-image: url([[pix:theme|cs00/t/collapsed_empty]]);
+     background-image: url([[collapsed_empty]]);
 }
+
+.dir-rtl .course_category_tree .category.with_children.collapsed > .info > .categoryname {
+     background-image: url([[collapsed_rtl]]);
+}
+
 #frontpage-category-names {
      border: 1px solid var(--color_snuff_approx);
 }
