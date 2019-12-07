@@ -3335,7 +3335,7 @@ table#tag-management-list td input[type="text"] {
 .generaltable tbody > tr:nth-child(odd) > td {
      background-color: var(--color_black_haze_approx);
 }
-.generaltable tbody > tr > td + td {
+#adminthemeselector.generaltable tbody > tr > td + td {
      width: 20%;
 }
 .generaltable tbody > tr:nth-child(odd) > th {
