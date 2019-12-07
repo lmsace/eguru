@@ -2791,7 +2791,6 @@ input[type="submit"] {
      text-shadow: none;
 }
 input[type="submit"]:hover {
-     color: var(--white);
      background: var(--color_primary);
      box-shadow: none;
      outline: 0;
@@ -3827,6 +3826,11 @@ table#tag-management-list td input[type="text"] {
 .dir-rtl .course_category_tree .category.with_children.collapsed > .info > .categoryname {
      background-image: url([[collapsed_rtl]]);
 }
+
+.dir-rtl .course_category_tree .category > .info > .categoryname {
+     background-image: url([[collapsed_empty_rtl]]);
+}
+
 
 #frontpage-category-names {
      border: 1px solid var(--color_snuff_approx);
