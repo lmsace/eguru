@@ -487,7 +487,7 @@ function theme_eguru_get_pattern_color( $css, $type='') {
     $rtl  = (right_to_left()) ? '_rtl' : '';
 
     $patterncolors = array (
-        'lavender' => array (
+        'default' => array (
             'color_primary' => '#8e558e',
             'color_secondary' => '#a55ba5',
             'color_blackcurrant_approx' => '#382738',
@@ -497,13 +497,13 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#edd3ed',
             'color_tutu_approx' => '#fef',
             'color_blackcurrant_25_approx' => 'rgba(56, 39, 56, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('lavender/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('lavender/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('lavender/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('lavender/t/expanded', 'theme')
+            'collapsed_empty' => $OUTPUT->image_url('default/t/collapsed_empty', 'theme'),
+            'collapsed' => $OUTPUT->image_url('default/t/collapsed', 'theme'),
+            'collapsed_rtl' => $OUTPUT->image_url('default/t/collapsed_rtl', 'theme'),
+            'expanded' => $OUTPUT->image_url('default/t/expanded', 'theme')
         ),
 
-        'green' => array (
+        '1' => array (
             'color_primary' => '#426e17',
             'color_secondary' => '#7abb3b',
             'color_blackcurrant_approx' => '#2f510f',
@@ -513,13 +513,13 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#bad3a3',
             'color_tutu_approx' => '#f2fde8',
             'color_blackcurrant_25_approx' => 'rgba(47, 81, 15, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('green/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('green/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('green/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('green/t/expanded', 'theme')
+            'collapsed_empty' => $OUTPUT->image_url('cs01/t/collapsed_empty', 'theme'),
+            'collapsed' => $OUTPUT->image_url('cs01/t/collapsed', 'theme'),
+            'collapsed_rtl' => $OUTPUT->image_url('cs01/t/collapsed_rtl', 'theme'),
+            'expanded' => $OUTPUT->image_url('cs01/t/expanded', 'theme')
         ),
 
-        'blue' => array (
+        '2' => array (
             'color_primary' => '#2b4e84',
             'color_secondary' => '#3e65a0',
             'color_blackcurrant_approx' => '#183054',
@@ -529,13 +529,13 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#c0ccdc',
             'color_tutu_approx' => '#e8f0fb',
             'color_blackcurrant_25_approx' => 'rgba(24, 48, 84, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('blue/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('blue/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('blue/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('blue/t/expanded', 'theme')
+            'collapsed_empty' => $OUTPUT->image_url('cs02/t/collapsed_empty', 'theme'),
+            'collapsed' => $OUTPUT->image_url('cs02/t/collapsed', 'theme'),
+            'collapsed_rtl' => $OUTPUT->image_url('cs02/t/collapsed_rtl', 'theme'),
+            'expanded' => $OUTPUT->image_url('cs02/t/expanded', 'theme')
         ),
 
-        'warm_red' => array (
+        '3' => array (
             'color_primary' => '#561209',
             'color_secondary' => '#a64437',
             'color_blackcurrant_approx' => '#5e1e15',
@@ -545,13 +545,13 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#f7e3e1',
             'color_tutu_approx' => '#fff1ef',
             'color_blackcurrant_25_approx' => 'rgba(90, 30, 21, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('warm_red/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('warm_red/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('warm_red/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('warm_red/t/expanded', 'theme')
+            'collapsed_empty' => $OUTPUT->image_url('cs03/t/collapsed_empty', 'theme'),
+            'collapsed' => $OUTPUT->image_url('cs03/t/collapsed', 'theme'),
+            'collapsed_rtl' => $OUTPUT->image_url('cs03/t/collapsed_rtl', 'theme'),
+            'expanded' => $OUTPUT->image_url('cs03/t/expanded', 'theme')
         ),
 
-        'dark_cyan' => array (
+        '4' => array (
             'color_primary' => '#20897b',
             'color_secondary' => '#4ba89c',
             'color_blackcurrant_approx' => '#103430',
@@ -561,10 +561,10 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#c0dcdb',
             'color_tutu_approx' => '#e4f7f6',
             'color_blackcurrant_25_approx' => 'rgba(16, 52, 48, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('dark_cyan/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('dark_cyan/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('dark_cyan/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('dark_cyan/t/expanded', 'theme')
+            'collapsed_empty' => $OUTPUT->image_url('cs04/t/collapsed_empty', 'theme'),
+            'collapsed' => $OUTPUT->image_url('cs04/t/collapsed', 'theme'),
+            'collapsed_rtl' => $OUTPUT->image_url('cs04/t/collapsed_rtl', 'theme'),
+            'expanded' => $OUTPUT->image_url('cs04/t/expanded', 'theme')
         )
     );
 

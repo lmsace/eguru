@@ -62,14 +62,15 @@ if (is_siteadmin()) {
     $name = 'theme_eguru/patternselect';
     $title = get_string('patternselect', 'theme_eguru');
     $description = get_string('patternselectdesc', 'theme_eguru');
-    $default = 'lavender';
+    $default = 'default';
     $choices = array(
-        'lavender' => get_string( 'lavender', 'theme_eguru'),
-        'green' => get_string('green', 'theme_eguru'),
-        'blue' => get_string('blue', 'theme_eguru'),
-        'warm_red' => get_string('warm_red', 'theme_eguru'),
-        'dark_cyan' => get_string('dark_cyan', 'theme_eguru')
+        'default' => get_string( 'lavender', 'theme_eguru'),
+        '1' => get_string('green', 'theme_eguru'),
+        '2' => get_string('blue', 'theme_eguru'),
+        '3' => get_string('warm_red', 'theme_eguru'),
+        '4' => get_string('dark_cyan', 'theme_eguru')
     );
+    
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
