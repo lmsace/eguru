@@ -154,20 +154,21 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
             return false;
         }
 
-        $fcourseids = array_chunk($rcourseids, 6);
+       // $fcourseids = array_chunk($rcourseids, 6);
+        $fcourseids = $rcourseids;
         $totalfcourse = count($fcourseids);
         $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_html');
         $promotedtitle = theme_eguru_lang($promotedtitle);
 
-        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="slidenav pagenav"><button class="nav-item nav-prev slick-prev"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><button class="nav-item nav-next slick-next"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></button><div class="clearfix"></div></div><div class="clearfix"></div></div><div class="promoted_courses" data-crow="'.$totalfcourse.'">';
+        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="clearfix"></div></div> <div class="row"> <div class="promoted_courses col-md-12" data-crow="'.$totalfcourse.'">';
 
-        $featuredfooter = ' </div></div></div>';
+        $featuredfooter = ' </div></div></div></div>';
 
         if (!empty($fcourseids)) {
-            foreach ($fcourseids as $courseids) {
-                $rowcontent = '<div><div class="row">';
-
-                foreach ($courseids as $courseid) {
+           /* foreach ($fcourseids as $courseids) {
+                $rowcontent = '<div><div class="row">';*/
+                $rowcontent = '';
+                foreach ($fcourseids as $courseid) {
                     $course = get_course($courseid);
                     $no = get_config('theme_eguru', 'patternselect');
                     $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
@@ -200,15 +201,16 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     if (empty($imgurl)) {
                         $imgurl = $noimgurl;
                     }
-                    $coursehtml = '<div class="col-md-2"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
+                    $coursehtml = '<div class="col-md-3"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
 
                     $rowcontent .= $coursehtml;
                 }
-                $rowcontent .= '</div></div>';
+               // $rowcontent .= '</div></div>';
                 $featuredcontent .= $rowcontent;
-            }
+            //}
         }
         $featuredcourses = $featuredheader.$featuredcontent.$featuredfooter;
+      
         return $featuredcourses;
     }
 

@@ -107,13 +107,30 @@ $( function() {
         var rtl = false;
     }
     $(".promoted_courses").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         rtl:rtl,
         arrows:true ,
         swipe:false,
-        prevArrow:'#Promoted-Courses .pagenav .slick-prev',
-        nextArrow: '#Promoted-Courses .pagenav .slick-next',
+       /* prevArrow:'#Promoted-Courses .pagenav .slick-prev',
+        nextArrow: '#Promoted-Courses .pagenav .slick-next',*/
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                   
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1, 
+                    slidesToScroll: 1,                                               
+                }
+            }
+        ],
     });
 
 

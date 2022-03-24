@@ -107,17 +107,18 @@ function slideshow() {
                     $content .= html_writer::end_tag('div');
                 }
             endfor;
+            if ($numberofslides > 1) {
+                $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev', 'href' => '#home-page-carousel', '
+                  data-slide' => 'prev'));
 
-            $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev', 'href' => '#home-page-carousel', '
-              data-slide' => 'prev'));
+                $content .= '<span class="carousel-control-prev-icon"></span>';
+                $content .= html_writer::end_tag('a');
 
-            $content .= '<span class="carousel-control-prev-icon"></span>';
-            $content .= html_writer::end_tag('a');
-
-            $content .= html_writer::start_tag('a', array('
-                class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel', 'data-slide' => 'next'));
-            $content .= '<span class="carousel-control-next-icon"></span>';
-            $content .= html_writer::end_tag('a');
+                $content .= html_writer::start_tag('a', array('
+                    class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel', 'data-slide' => 'next'));
+                $content .= '<span class="carousel-control-next-icon"></span>';
+                $content .= html_writer::end_tag('a');
+              }
 
             $content .= html_writer::end_tag('div');
             $content .= html_writer::end_tag('div');

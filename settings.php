@@ -156,7 +156,7 @@ if (is_siteadmin()) {
     $name = 'theme_eguru/numberofslides';
     $title = get_string('numberofslides', 'theme_eguru');
     $description = get_string('numberofslides_desc', 'theme_eguru');
-    $default = 3;
+    $default = 1;
     $choices = array(
         1 => '1',
         2 => '2',
