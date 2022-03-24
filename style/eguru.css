@@ -1520,6 +1520,14 @@ input[type="text"] {
     background: var(--color_secondary);
 }
 
+.jsenabled .userselector .collapsibleregion {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.userselector .form-inline .collapsibleregioninner .form-check {
+    justify-content: normal;
+}
+
 @media (max-width: 991px) {
     #header .header-menubar {
         padding: 0;
@@ -1926,7 +1934,7 @@ input[type="text"] {
     }
 }
 .custom-courses-list {
-    padding: 30px 0 35px;
+    padding: 40px 0 35px;
     margin: 0 0 30px;
     background: var(--color_gallery_approx);
 }
@@ -2077,7 +2085,7 @@ footer .helplink {
     color: var(--white);
 }
 #footer .footer-nav {
-    padding: 0 0 20px;
+    margin-bottom: 50px;
 }
 #footer .footer-nav > ul {
     list-style: none;
@@ -2094,7 +2102,7 @@ footer .helplink {
     display: inline-block;
 }
 #footer .social-media {
-    padding: 0 0 20px;
+    margin-bottom: 50px;
 }
 #footer .social-media > ul {
     list-style: none;
@@ -2151,7 +2159,7 @@ footer .helplink {
     color: var(--color_monza_approx);
 }
 #footer .footer-contact {
-    padding: 0 0 20px;
+    margin-bottom: 50px;
 }
 #footer .footer-contact h4 {
     margin-bottom: 19px;
@@ -2262,7 +2270,6 @@ footer .helplink {
 }
 #page-header .breadcrumb {
     background: none;
-    padding: 5px 0 4px;
     border-radius: 0;
 }
 #page-header .breadcrumb > li {
@@ -4108,9 +4115,12 @@ table#tag-management-list td input[type="text"] {
     line-height: 24px;
     margin-top: 4px;
 }
+#site-news-forum .post-content-container img {
+    max-width: 350px !important;
+}
 #site-news-forum .forumpost .attachedimages {
     margin-top: 20px;
-    max-width: 150px;
+    max-width: 350px !important;
 }
 #site-news-forum .forumpost .attachedimages img {
     width: 100%;
@@ -5045,6 +5055,7 @@ tr.discussion .btn i.icon {
     text-align: center;
 }
 .alert .close {
+    min-height: auto;
     height: auto;
     top: 0;
     background: none;
@@ -5133,12 +5144,25 @@ tr.discussion .btn i.icon {
     margin: 0 0 0 5px;
 }
 
+@media (max-width: 767px) {
+    .nav-tabs .nav-link.active:not(:disabled):not(.disabled):active,
+    .nav-tabs .nav-link.active:not(:disabled):not(.disabled).active,
+    .show>.nav-tabs .nav-link.active.dropdown-toggle,
+    .nav-pills .nav-link.active:not(:disabled):not(.disabled):active,
+    .nav-pills .nav-link.active:not(:disabled):not(.disabled).active,
+    .show > .nav-pills .nav-link.active.dropdown-toggle {
+        border-color: var(--color_primary);
+        background: var(--color_primary);
+    }
+}
+
 @media (max-width: 575px) {
     .menubar .dropdown .dropdown-menu {
         left: auto;
         right: 0;
     }
 }
+
 #page-content .card .nav-tabs {
     border-bottom: 0;
 }
@@ -5395,16 +5419,14 @@ tr.discussion .btn i.icon {
     display: block;
 }
 .pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
-    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover {
     background: var(--color_primary);
 }
 .pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover a {
     background: var(--color_primary);
-}
-.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item a {
-    padding: 0.25rem 1.5rem;
 }
 .pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item .currentlink {
     color: var(--white);
@@ -5634,21 +5656,32 @@ button.close:focus,
 .header-main .message-app img {
     max-width: none;
 }
-.header-main .message-app .body-container .view-overview-body .section .badge {
+.message-app .body-container .view-overview-body .section .badge {
     background-color: var(--color_primary) !important;
 }
-.header-main .message-app .body-container .view-overview-body .section .btn.btn-link {
+.message-app .body-container .view-overview-body .section .btn.btn-link {
     margin: 0;
 }
-.header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
-.header-main .message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
+.message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before{
     background-color: var(--color_primary);
     border-color: var(--color_primary);
+    box-shadow: 0 0 0 0.2rem var(--color_primary);
 }
-.header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
     background-color: rgba(56, 39, 56, .25);
 }
-.header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:checked:focus ~ .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem var(--color_primary_approx_60);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:not(:disabled):active ~ .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+    border-color: var(--color_primary);
+    background-color: var(--color_primary);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:checked:focus ~ .custom-control-label:before {
     background-color: var(--color_primary);
     box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
 }

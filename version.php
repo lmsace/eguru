@@ -36,10 +36,10 @@ $plugin->version   = 2022032400;
 $plugin->maturity = MATURITY_STABLE;
 
 // Plugin release version.
-$plugin->release = 'v3.10';
+$plugin->release = 'v3.11';
 
 // Requires this Moodle version.
-$plugin->requires  = 2020110900;
+$plugin->requires  = 2021051700;
 					
 // Full name of the plugin (used for diagnostics).
 $plugin->component = 'theme_eguru';
