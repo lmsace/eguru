@@ -256,27 +256,27 @@ img {
 }
 .homepage-carousel .carousel-control.left .carousel-control-prev-icon:before {
     content: '\f0d9';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .homepage-carousel .carousel-control.right .carousel-control-next-icon:before {
     content: '\f0da';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .dir-rtl .homepage-carousel .carousel-control.left i:before {
     content: '\f0da';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .dir-rtl .homepage-carousel .carousel-control.right i:before {
     content: '\f0d9';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .dir-rtl .homepage-carousel .carousel-control.left .carousel-control-prev-icon:before {
     content: '\f0da';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .dir-rtl .homepage-carousel .carousel-control.right .carousel-control-next-icon:before {
     content: '\f0d9';
-    font-family: fontawesome;
+    font-family: var(--font_1);
 }
 .dir-rtl .block .content .userpicture {
     margin-left: 5px;
@@ -864,7 +864,7 @@ div.dropdown-item:focus-within {
 }
 .header-main button.navbar-toggler:before {
     content: '\f0c9';
-    font-family: fontawesome;
+    font-family: var(--font_1);
     color: var(--white);
     font-size: 26px;
 }
@@ -1210,6 +1210,19 @@ input[type="text"] {
     margin-bottom: 0;
     padding: 0;
     box-shadow: none;
+}
+.header-menubar .navbar .simplesearchform .collapse form .input-group .btn-close {
+    right: 50px;
+}
+.header-menubar .navbar .simplesearchform .collapse form .input-group .input-group-append .btn {
+    color: var(--white);
+    border: 0;
+    background: none;
+    margin-right: 5px;
+}
+.header-menubar .navbar .simplesearchform .btn-open,
+.header-menubar .navbar .simplesearchform .btn-open:hover {
+    color: var(--white);
 }
 .header-menubar .navbar .nav > li > a {
     font-size: 16px;
@@ -2282,7 +2295,7 @@ footer .helplink {
 #page-header .breadcrumb > li > .divider:before {
     content: "\f101";
     font-size: 12px;
-    font-family: FontAwesome;
+    font-family: var(--font_1);
     color: var(--color_blackcurrant_approx);
     padding: 0 6px 0 3px;
     display: inline-block;
@@ -4009,7 +4022,7 @@ table#tag-management-list td input[type="text"] {
 .course_category_tree.frontpage-category-names .category > .info > .categoryname:before {
     float: left;
     content: "\f138";
-    font-family: FontAwesome;
+    font-family: var(--font_1);
     color: var(--color_pumice_approx);
     margin: 0 10px 0 0;
     position: relative;
@@ -4017,13 +4030,7 @@ table#tag-management-list td input[type="text"] {
     cursor: pointer;
 }
 .course_category_tree .category > .info {
-    background:
-        url(
-            data:image/svg+xml;
-            base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjZmJmYmZiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=
-        );
     background: linear-gradient(to bottom, var(--white) 0, var(--color_alabaster_approx) 5%, var(--color_gray_nurse_approx) 100%);
-    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='--white', endcolorstr='--color_gray_nurse_approx', gradienttype=0);
     padding: 0 15px;
     border-color: var(--color_quill_gray_approx);
     border-radius: 0;
@@ -5147,7 +5154,7 @@ tr.discussion .btn i.icon {
 @media (max-width: 767px) {
     .nav-tabs .nav-link.active:not(:disabled):not(.disabled):active,
     .nav-tabs .nav-link.active:not(:disabled):not(.disabled).active,
-    .show>.nav-tabs .nav-link.active.dropdown-toggle,
+    .show > .nav-tabs .nav-link.active.dropdown-toggle,
     .nav-pills .nav-link.active:not(:disabled):not(.disabled):active,
     .nav-pills .nav-link.active:not(:disabled):not(.disabled).active,
     .show > .nav-pills .nav-link.active.dropdown-toggle {
@@ -5665,19 +5672,23 @@ button.close:focus,
 .message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
 .message-app .body-container .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
 .message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before{
+.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before {
     background-color: var(--color_primary);
     border-color: var(--color_primary);
     box-shadow: 0 0 0 0.2rem var(--color_primary);
 }
-.message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio
+.custom-control-input:active ~ .custom-control-label:before {
     background-color: rgba(56, 39, 56, .25);
 }
-.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+.message-app .body-container .custom-control.custom-radio
+.custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem var(--color_primary_approx_60);
 }
-.message-app .body-container .custom-control.custom-radio .custom-control-input:not(:disabled):active ~ .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before {
     border-color: var(--color_primary);
     background-color: var(--color_primary);
 }
@@ -5749,7 +5760,6 @@ button.close:focus,
 .block_recentlyaccessedcourses .paging-bar-container .pagination .page-item .page-link {
     color: var(--color_primary);
 }
-
 .coursecat-management-header > div > div {
     display: inline-block !important;
 }
