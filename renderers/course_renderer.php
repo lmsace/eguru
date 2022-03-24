@@ -44,9 +44,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
      */
     public function frontpage_available_courses() {
         /* available courses */
-        global $CFG, $OUTPUT;
-        // require_once($CFG->libdir. '/coursecatlib.php');.
-
+        global $CFG;
         $chelper = new coursecat_helper();
         $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_EXPANDED)->set_courses_display_options(array(
             'recursive' => true,
@@ -75,11 +73,10 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
 
                 $no = get_config('theme_eguru', 'patternselect');
                 $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
-                $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
+                $noimgurl = $this->output->image_url($nimgp, 'theme');
                 $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
                 if ($course instanceof stdClass) {
-                    // require_once($CFG->libdir. '/coursecatlib.php');.
                     $course = new core_course_list_element($course);
                 }
 
@@ -120,7 +117,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
      * @return string
      */
     public function promoted_courses() {
-        global $CFG, $OUTPUT, $DB;
+        global $CFG , $DB;
 
         $pcourseenable = theme_eguru_get_setting('pcourseenable');
         if (!$pcourseenable) {
@@ -175,12 +172,11 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     $no = get_config('theme_eguru', 'patternselect');
                     $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
 
-                    $noimgurl = $OUTPUT->image_url($nimgp, 'theme');
+                    $noimgurl = $this->output->image_url($nimgp, 'theme');
 
                     $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
                     if ($course instanceof stdClass) {
-                        // require_once($CFG->libdir. '/coursecatlib.php');.
                         $course = new core_course_list_element($course);
                     }
 
@@ -230,6 +226,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
      */
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
         global $CFG;
+        
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }
@@ -237,7 +234,6 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
             return '';
         }
         if ($course instanceof stdClass) {
-            // require_once($CFG->libdir. '/coursecatlib.php');.
             $course = new core_course_list_element($course);
         }
         $content = '';
@@ -249,7 +245,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
             $nametag = 'div';
         }
 
-        // .coursebox.
+        // Coursebox.
         $content .= html_writer::start_tag('div', array(
             'class' => $classes,
             'data-courseid' => $course->id,
@@ -258,7 +254,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
 
         $content .= html_writer::start_tag('div', array('class' => 'info'));
 
-        // course name.
+        // Course name.
         $coursename = $chelper->get_course_formatted_name($course);
         $coursenamelink = html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
                                             $coursename, array('class' => $course->visible ? '' : 'dimmed'));
@@ -274,18 +270,18 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                 $this->coursecat_include_js();
             }
         }
-        $content .= html_writer::end_tag('div'); // .moreinfo.
+        $content .= html_writer::end_tag('div'); // Moreinfo.
 
-        // print enrolmenticons.
+        // Print enrolmenticons.
         if ($icons = enrol_get_course_info_icons($course)) {
             $content .= html_writer::start_tag('div', array('class' => 'enrolmenticons'));
-            foreach ($icons as $pix_icon) {
-                $content .= $this->render($pix_icon);
+            foreach ($icons as $pixicon) {
+                $content .= $this->render($pixicon);
             }
-            $content .= html_writer::end_tag('div'); // .enrolmenticons.
+            $content .= html_writer::end_tag('div'); // Enrolmenticons.
         }
 
-        $content .= html_writer::end_tag('div'); // .info.
+        $content .= html_writer::end_tag('div'); // Enfo.
 
         if (empty($course->get_course_overviewfiles())) {
             $class = "content-block";
@@ -294,9 +290,10 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
         }
         $content .= html_writer::start_tag('div', array('class' => 'content '.$class));
         $content .= $this->coursecat_coursebox_content($chelper, $course);
-        $content .= html_writer::end_tag('div'); // .content.
-
-        $content .= html_writer::end_tag('div'); // .coursebox.
+        // Content.
+        $content .= html_writer::end_tag('div');
+         // Coursebox.
+        $content .= html_writer::end_tag('div');
         return $content;
     }
 }

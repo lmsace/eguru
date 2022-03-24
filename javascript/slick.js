@@ -15,7 +15,7 @@
 
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
-(function(factory) {
+/*(function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
@@ -25,7 +25,7 @@
         factory(jQuery);
     }
 
-}(function($) {
+}*/(function($) {
     'use strict';
     var Slick = window.Slick || {};
 
@@ -188,8 +188,8 @@
 
             _.instanceUid = instanceUid++;
 
-            // A simple way to check for HTML strings
-            // Strict HTML recognition (must start with <)
+            // A simple way to check for HTML strings.
+            // Strict HTML recognition (must start with <).
             // Extracted from jQuery v1.11 source.
             _.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/;
 
@@ -207,7 +207,7 @@
 
         var _ = this;
 
-        if (typeof (index) === 'boolean') {
+        if (typeof(index) === 'boolean') {
             addBefore = index;
             index = null;
         } else if (index < 0 || (index >= _.slideCount)) {
@@ -216,7 +216,7 @@
 
         _.unload();
 
-        if (typeof (index) === 'number') {
+        if (typeof(index) === 'number') {
             if (index === 0 && _.$slides.length === 0) {
                 $(markup).appendTo(_.$slideTrack);
             } else if (addBefore) {
@@ -487,8 +487,7 @@
 
         _.$slider.addClass('slick-slider');
 
-        _.$slideTrack = (_.slideCount === 0
-            ) ? $('<div class="slick-track"/>').appendTo(_.$slider) : _.$slides.wrapAll('<div class="slick-track"/>').parent();
+        _.$slideTrack = (_.slideCount === 0) ? $('<div class="slick-track"/>').appendTo(_.$slider) : _.$slides.wrapAll('<div class="slick-track"/>').parent();
 
         _.$list = _.$slideTrack.wrap(
             '<div aria-live="polite" class="slick-list"/>').parent();
@@ -522,23 +521,22 @@
 
     Slick.prototype.buildRows = function() {
 
-        var _ = this,
-        a, b, c, newSlides, numOfSlides, originalSlides, slidesPerSection;
+        var _ = this, a, b, c, newSlides, numOfSlides, originalSlides,slidesPerSection;
 
         newSlides = document.createDocumentFragment();
         originalSlides = _.$slider.children();
 
-        if (_.options.rows > 1) {
+        if(_.options.rows > 1) {
             slidesPerSection = _.options.slidesPerRow * _.options.rows;
             numOfSlides = Math.ceil(
                 originalSlides.length / slidesPerSection
             );
 
-            for (a = 0; a < numOfSlides; a++) {
+            for(a = 0; a < numOfSlides; a++){
                 var slide = document.createElement('div');
-                for (b = 0; b < _.options.rows; b++) {
+                for(b = 0; b < _.options.rows; b++) {
                     var row = document.createElement('div');
-                    for (c = 0; c < _.options.slidesPerRow; c++) {
+                    for(c = 0; c < _.options.slidesPerRow; c++) {
                         var target = (a * slidesPerSection + ((b * _.options.slidesPerRow) + c));
                         if (originalSlides.get(target)) {
                             row.appendChild(originalSlides.get(target));
@@ -547,12 +545,12 @@
                     slide.appendChild(row);
                 }
                 newSlides.appendChild(slide);
-            }
+            };
             _.$slider.html(newSlides);
             _.$slider.children().children().children()
                 .width((100 / _.options.slidesPerRow) + "%")
                 .css({'display': 'inline-block'});
-        }
+        };
 
     };
 
@@ -749,10 +747,9 @@
 
     Slick.prototype.cleanUpRows = function() {
 
-        var _ = this,
-        originalSlides;
+        var _ = this, originalSlides;
 
-        if (_.options.rows > 1) {
+        if(_.options.rows > 1) {
             originalSlides = _.$slides.children().children();
             originalSlides.removeAttr('style');
             _.$slider.html(originalSlides);
@@ -806,10 +803,8 @@
                     opacity: '',
                     width: ''
                 });
-
                 _.$slider.html(_.$slides);
         }
-
         _.cleanUpRows();
 
         _.$slider.removeClass('slick-slider');
@@ -1287,7 +1282,6 @@
                 loadImages(cloneRange);
             }
         }
-
     };
 
     Slick.prototype.loadSlider = function() {
@@ -1400,10 +1394,10 @@
                     _.setPosition();
                 }
             })
-                .error(function() {
-                    targetImage.removeAttr('data-lazy');
-                    _.progressiveLazyLoad();
-                });
+            .error(function() {
+                targetImage.removeAttr('data-lazy');
+                _.progressiveLazyLoad();
+            });
         }
 
     };
@@ -1491,7 +1485,7 @@
 
         var _ = this;
 
-        if (typeof (index) === 'boolean') {
+        if (typeof(index) === 'boolean') {
             removeBefore = index;
             index = removeBefore === true ? 0 : _.slideCount - 1;
         } else {
@@ -1863,8 +1857,7 @@
 
     Slick.prototype.slideHandler = function(index, sync, dontAnimate) {
 
-        var targetSlide, animSlide, oldSlide, slideLeft,
-        targetLeft = null,
+        var targetSlide, animSlide, oldSlide, slideLeft, targetLeft = null,
             _ = this;
 
         sync = sync || false;
@@ -1994,8 +1987,7 @@
 
     Slick.prototype.swipeDirection = function() {
 
-        var xDist, yDist, r, swipeAngle,
-        _ = this;
+        var xDist, yDist, r, swipeAngle, _ = this;
 
         xDist = _.touchObject.startX - _.touchObject.curX;
         yDist = _.touchObject.startY - _.touchObject.curY;
@@ -2299,6 +2291,7 @@
     };
 
     $.fn.slick = function() {
+        console.log("slick");
         var _ = this,
             opt = arguments[0],
             args = Array.prototype.slice.call(arguments, 1),
@@ -2318,4 +2311,4 @@
         return _;
     };
 
-}));
+})(jQuery);

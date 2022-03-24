@@ -70,7 +70,6 @@ if (is_siteadmin()) {
         '3' => get_string('warm_red', 'theme_eguru'),
         '4' => get_string('dark_cyan', 'theme_eguru')
     );
-    
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);

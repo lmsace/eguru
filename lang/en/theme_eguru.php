@@ -177,3 +177,4 @@ $string['color_2'] = "Color 2";
 $string['color_3'] = "Color 3";
 $string['color_4'] = "Color 4";
 $string['phone'] = "Phone";
+$string['privacy:metadata'] = 'The eguru theme does not store any personal data about any user.';

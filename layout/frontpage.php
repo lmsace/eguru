@@ -26,7 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 // Get the HTML for the settings bits.
 global $OUTPUT, $PAGE;
 $html = theme_eguru_get_html_for_settings($OUTPUT, $PAGE);
-
 if (right_to_left()) {
     $regionbsid = 'region-bs-main-and-post';
 } else {
@@ -88,13 +87,14 @@ if ($toggleslideshow == 1) {
             <?php
                 echo $OUTPUT->course_content_header();
                 echo $OUTPUT->main_content();
-                echo $OUTPUT->course_content_footer();
+               echo $OUTPUT->course_content_footer();
             ?>
         </div>
         <?php echo $OUTPUT->blocks('side-pre', 'col-md-3'); ?>
 
     </div>
     <?php echo (!empty($flatnavbar)) ? $flatnavbar : ""; ?>
+
 </div>
 
  <script src="<?php echo theme_eguru_theme_url(); ?>/javascript/slick.js"></script>

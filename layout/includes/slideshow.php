@@ -33,79 +33,95 @@ function slideshow() {
     global $PAGE;
 
     $numberofslides = theme_eguru_get_setting('numberofslides');
+    $slideimage = '';
+    $visableslide = 0;
 
-    if ($numberofslides) {
-        $content = html_writer::start_tag('div', array('class' => 'homepage-carousel'));
+    for ($s1 = 1; $s1 <= $numberofslides; $s1++) {
+        $slideimage .= theme_eguru_render_slideimg($s1, 'slide' . $s1 . 'image');
+    }
 
-        $content .= html_writer::start_tag('div', array('id' => 'home-page-carousel', 'class' => 'carousel slide', 'data-ride' => 'carousel'));
+    if ($slideimage) {
 
-        $content .= html_writer::start_tag('ol', array('class' => 'carousel-indicators'));
+        if ($numberofslides) {
 
-        for ($s = 0; $s < $numberofslides; $s++):
-            $clstxt = ($s == "0") ? ' class="active"' : '';
-            $content .= html_writer::start_tag('li', array('data-target' => '#home-page-carousel', 'data-slide-to' => $s.$clstxt));
-            $content .= html_writer::end_tag('li');
-        endfor;
+            $content = html_writer::start_tag('div', array('class' => 'homepage-carousel'));
 
-        $content .= html_writer::end_tag('ol');
-        $content .= html_writer::start_tag('div', array('class' => 'carousel-inner', 'role' => 'listbox'));
+            $content .= html_writer::start_tag('div', array('id' => 'home-page-carousel', 'class' => 'carousel slide', 'data-ride' => 'carousel'));
 
-        for ($s1 = 1; $s1 <= $numberofslides; $s1++):
-            $clstxt2 = ($s1 == "1") ? ' active' : '';
-            $slidecaption = theme_eguru_get_setting('slide'.$s1.'caption', true);
-            $slidecaption = theme_eguru_lang($slidecaption);
-            $slideimg = theme_eguru_render_slideimg($s1, 'slide' . $s1 . 'image');
-            $slidebtn = theme_eguru_get_setting('slide'.$s1.'urltext');
-            $slidebtn = theme_eguru_lang($slidebtn);
-            $slidebtnurl = theme_eguru_get_setting('slide' . $s1 . 'url');
-            $icon = "fa-angle-right";
-            if (right_to_left()) {
-                $icon = "fa-angle-left";
-            }
+            $content .= html_writer::start_tag('ol', array('class' => 'carousel-indicators'));
 
-            $content .= html_writer::start_tag('div', array('
-                class' => 'carousel-item'.$clstxt2, 'style' => 'background-image: url('.$slideimg));
+            for ($s = 0; $s < $numberofslides; $s++):
+                $clstxt = ($s == "0") ? ' class="active"' : '';
+                $content .= html_writer::start_tag('li', array('data-target' => '#home-page-carousel', 'data-slide-to' => $s.$clstxt));
+                $content .= html_writer::end_tag('li');
+            endfor;
 
-            $content .= html_writer::start_tag('div', array('class' => 'carousel-overlay-content container-fluid'));
-            if ($slidecaption != '' || $slidebtn != '') {
-                $content .= html_writer::start_tag('div', array('class' => 'carousel-content'));
-                $content .= html_writer::start_tag('h2');
-                $content .= $slidecaption;
-                $content .= html_writer::end_tag('h2');
+            $content .= html_writer::end_tag('ol');
+            $content .= html_writer::start_tag('div', array('class' => 'carousel-inner', 'role' => 'listbox'));
 
-                if ($slidebtn != '') {
-                    $content .= html_writer::start_tag('div', array('class' => 'carousel-btn'));
+            for ($s1 = 1; $s1 <= $numberofslides; $s1++):
+                $slidecaption = theme_eguru_get_setting('slide'.$s1.'caption', true);
+                $slidecaption = theme_eguru_lang($slidecaption);
+                $slideimg = theme_eguru_render_slideimg($s1, 'slide' . $s1 . 'image');
+                if (empty($slideimg)) {
+                    $slideimg = '';
+                }
+                $slidebtn = theme_eguru_get_setting('slide'.$s1.'urltext');
+                $slidebtn = theme_eguru_lang($slidebtn);
+                $slidebtnurl = theme_eguru_get_setting('slide' . $s1 . 'url');
+                $icon = "fa-angle-right";
+                if (right_to_left()) {
+                    $icon = "fa-angle-left";
+                }
 
-                    $content .= html_writer::start_tag('a', array('href' => $slidebtnurl, 'class' => 'read-more'));
-                    $content .= $slidebtn;
-                    $content .= html_writer::start_tag('i', array('class' => 'fa fa-arrow-right'));
-                    $content .= html_writer::end_tag('i');
+                if (!empty($slideimg)) {
+                    $visableslide += 1;
+                    $clstxt1 = ($visableslide == "1") ? ' active' : '';
+                    $content .= html_writer::start_tag('div', array('
+                    class' => 'carousel-item'.$clstxt1, 'style' => 'background-image: url('.$slideimg));
 
-                    $content .= html_writer::end_tag('a');
+                    $content .= html_writer::start_tag('div', array('class' => 'carousel-overlay-content container-fluid'));
+                    if ($slidecaption != '' || $slidebtn != '') {
+                         $content .= html_writer::start_tag('div', array('class' => 'carousel-content'));
+                        $content .= html_writer::start_tag('h2');
+                        $content .= $slidecaption;
+                        $content .= html_writer::end_tag('h2');
+
+                        if ($slidebtn != '') {
+                            $content .= html_writer::start_tag('div', array('class' => 'carousel-btn'));
+
+                            $content .= html_writer::start_tag('a', array('href' => $slidebtnurl, 'class' => 'read-more'));
+                            $content .= $slidebtn;
+                            $content .= html_writer::start_tag('i', array('class' => 'fa fa-arrow-right'));
+                            $content .= html_writer::end_tag('i');
+
+                            $content .= html_writer::end_tag('a');
+
+                            $content .= html_writer::end_tag('div');
+                        }
+                        $content .= html_writer::end_tag('div');
+                    }
+
+                    $content .= html_writer::end_tag('div');
 
                     $content .= html_writer::end_tag('div');
                 }
-                $content .= html_writer::end_tag('div');
-            }
-            $content .= html_writer::end_tag('div');
+            endfor;
+
+            $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev', 'href' => '#home-page-carousel', '
+              data-slide' => 'prev'));
+
+            $content .= '<span class="carousel-control-prev-icon"></span>';
+            $content .= html_writer::end_tag('a');
+
+            $content .= html_writer::start_tag('a', array('
+                class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel', 'data-slide' => 'next'));
+            $content .= '<span class="carousel-control-next-icon"></span>';
+            $content .= html_writer::end_tag('a');
 
             $content .= html_writer::end_tag('div');
-        endfor;
-
-        $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev', 'href' => '#home-page-carousel', '
-            data-slide' => 'prev'));
-
-        $content .= '<span class="carousel-control-prev-icon"></span>';
-        $content .= html_writer::end_tag('a');
-
-        $content .= html_writer::start_tag('a', array('
-            class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel', 'data-slide' => 'next'));
-        $content .= '<span class="carousel-control-next-icon"></span>';
-        $content .= html_writer::end_tag('a');
-
-        $content .= html_writer::end_tag('div');
-        $content .= html_writer::end_tag('div');
-        $content .= html_writer::end_tag('div');
+            $content .= html_writer::end_tag('div');
+            $content .= html_writer::end_tag('div');
     ?>
 <style type="text/css">
     .theme-slider, #home-page-carousel .carousel-item {
@@ -175,6 +191,7 @@ function slideshow() {
 
 <?php
 
+        }
     }
     return $content;
 }

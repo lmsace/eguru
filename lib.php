@@ -58,7 +58,6 @@ function theme_eguru_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    //$css = theme_eguru_pre_css_set_fontwww($css);
     $css = theme_eguru_set_fontwww($css);
     $css = theme_eguru_get_pattern_color($css, $theme);
     $css = theme_eguru_set_customcss($css, $customcss);
@@ -243,14 +242,7 @@ function theme_eguru_get_html_for_settings(renderer_base $output, moodle_page $p
  *
  * @return string $fontwww
  */
-/*function theme_eguru_set_fontwww() {
-    global $CFG, $PAGE;
 
-    $themewww = $CFG->wwwroot."/theme";
-    $theme = theme_config::load('eguru');
-    $fontwww = '$fontwww: "'. $themewww.'/eguru/fonts/"'.";\n";
-    return $fontwww;
-}*/
 function theme_eguru_set_fontwww($css) {
     global $CFG, $PAGE;
     if (empty($CFG->themewww)) {
@@ -300,12 +292,14 @@ function theme_eguru_render_slideimg($p, $sliname) {
 
     $nos = theme_eguru_get_setting('numberofslides');
     $i = $p % 3;
-    $slideimage = $OUTPUT->image_url('home/slide'.$i, 'theme');
-
     // Get slide image or fallback to default.
     if (theme_eguru_get_setting($sliname)) {
         $slideimage = $PAGE->theme->setting_file_url($sliname , $sliname);
     }
+    if (empty($slideimage)) {
+        $slideimage = '';
+    }
+
     return $slideimage;
 }
 
@@ -482,7 +476,7 @@ function theme_eguru_lang($key = '') {
 }
 
 function theme_eguru_get_pattern_color( $css, $type='') {
-    global $OUTPUT;
+    global $OUTPUT , $CFG;
 
     $rtl  = (right_to_left()) ? '_rtl' : '';
 
@@ -497,10 +491,10 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#edd3ed',
             'color_tutu_approx' => '#fef',
             'color_blackcurrant_25_approx' => 'rgba(56, 39, 56, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('default/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('default/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('default/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('default/t/expanded', 'theme')
+            'collapsed_empty' => $CFG->wwwroot.'/theme/eguru/pix/default/t/collapsed_empty',
+            'collapsed' => $CFG->wwwroot.'/theme/eguru/pix/default/t/collapsed',
+            'collapsed_rtl' => $CFG->wwwroot.'/theme/eguru/pix/default/t/collapsed_rtl',
+            'expanded' => $CFG->wwwroot.'/theme/eguru/pix/default/t/expanded'
         ),
 
         '1' => array (
@@ -509,16 +503,15 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_blackcurrant_approx' => '#2f510f',
             'color_plum_approx' => '#528125',
             'color_blackcurrant_90_approx' => 'rgba(47, 81, 15, .9)',
-            'color_french_lilac_approx' =>'#cedec0',
+            'color_french_lilac_approx' => '#cedec0',
             'color_snuff_approx' => '#bad3a3',
             'color_tutu_approx' => '#f2fde8',
             'color_blackcurrant_25_approx' => 'rgba(47, 81, 15, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('cs01/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('cs01/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('cs01/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('cs01/t/expanded', 'theme')
+            'collapsed_empty' => $CFG->wwwroot.'/theme/eguru/pix/cs01/t/collapsed_empty.png',
+            'collapsed' => $CFG->wwwroot.'/theme/eguru/pix/cs01/t/collapsed.png',
+            'collapsed_rtl' => $CFG->wwwroot.'/theme/eguru/pix/cs01/t/collapsed_rtl.png',
+            'expanded' => $CFG->wwwroot.'/theme/eguru/pix/cs01/t/expanded.png'
         ),
-
         '2' => array (
             'color_primary' => '#2b4e84',
             'color_secondary' => '#3e65a0',
@@ -529,10 +522,10 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#c0ccdc',
             'color_tutu_approx' => '#e8f0fb',
             'color_blackcurrant_25_approx' => 'rgba(24, 48, 84, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('cs02/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('cs02/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('cs02/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('cs02/t/expanded', 'theme')
+            'collapsed_empty' => $CFG->wwwroot.'/theme/eguru/pix/cs02/t/collapsed_empty.png',
+            'collapsed' => $CFG->wwwroot.'/theme/eguru/pix/cs02/t/collapsed.png',
+            'collapsed_rtl' => $CFG->wwwroot.'/theme/eguru/pix/cs02/t/collapsed_rtl.png',
+            'expanded' => $CFG->wwwroot.'/theme/eguru/pix/cs02/t/expanded.png'
         ),
 
         '3' => array (
@@ -545,10 +538,10 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#f7e3e1',
             'color_tutu_approx' => '#fff1ef',
             'color_blackcurrant_25_approx' => 'rgba(90, 30, 21, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('cs03/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('cs03/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('cs03/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('cs03/t/expanded', 'theme')
+            'collapsed_empty' => $CFG->wwwroot.'/theme/eguru/pix/cs03/t/collapsed_empty.png',
+            'collapsed' => $CFG->wwwroot.'/theme/eguru/pix/cs03/t/collapsed.png',
+            'collapsed_rtl' => $CFG->wwwroot.'/theme/eguru/pix/cs03/t/collapsed_rtl.png',
+            'expanded' => $CFG->wwwroot.'/theme/eguru/pix/cs03/t/expanded.png'
         ),
 
         '4' => array (
@@ -561,10 +554,10 @@ function theme_eguru_get_pattern_color( $css, $type='') {
             'color_snuff_approx' => '#c0dcdb',
             'color_tutu_approx' => '#e4f7f6',
             'color_blackcurrant_25_approx' => 'rgba(16, 52, 48, .25)',
-            'collapsed_empty' => $OUTPUT->image_url('cs04/t/collapsed_empty', 'theme'),
-            'collapsed' => $OUTPUT->image_url('cs04/t/collapsed', 'theme'),
-            'collapsed_rtl' => $OUTPUT->image_url('cs04/t/collapsed_rtl', 'theme'),
-            'expanded' => $OUTPUT->image_url('cs04/t/expanded', 'theme')
+            'collapsed_empty' => $CFG->wwwroot.'/theme/eguru/pix/cs04/t/collapsed_empty.png',
+            'collapsed' => $CFG->wwwroot.'/theme/eguru/pix/cs04/t/collapsed.png',
+            'collapsed_rtl' => $CFG->wwwroot.'/theme/eguru/pix/cs04/t/collapsed_rtl.png',
+            'expanded' => $CFG->wwwroot.'/theme/eguru/pix/cs04/t/expanded.png'
         )
     );
 
