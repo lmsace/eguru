@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
  * slideshow
  * @return string
  */
-function slideshow() {
+function theme_eguru_frontpage_slideshow() {
     global $PAGE;
 
     $numberofslides = theme_eguru_get_setting('numberofslides');
@@ -196,4 +196,3 @@ function slideshow() {
     }
     return $content;
 }
-echo slideshow();

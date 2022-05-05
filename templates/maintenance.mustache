@@ -42,37 +42,45 @@
 </head>
 
 <body {{{ output.body_attributes }}}>
-
+    {{> core/local/toast/wrapper}}
 <div id="page-wrapper">
 
     {{{ output.standard_top_of_body_html }}}
+    <div class="header-main ">
+        <div class="container">
+            <nav class="navbar navbar-light bg-faded ">
+                <a href="{{{ config.wwwroot }}}/?redirect=0" class="navbar-brand {{^ logourl }}
+                        hidden-sm-down
+                    {{/ logourl }}">
+                    <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+                </a>
+            </nav>
+        </div>
+    </div>
 
     <div id="page" class="container pb-3">
-
-        <div class="row">
+        <div class="row ">
             <div class="col-12 py-3">
                 {{{ output.page_heading }}}
             </div>
         </div>
 
         <div id="page-content" class="row">
-            <section id="region-main" class="col-12">
+            <section id="region-main" class="col-12" aria-label="{{#str}}content{{/str}}">
                 {{{ output.main_content }}}
             </section>
         </div>
-
     </div>
+    <footer id="page-footer" class=" footer-popover footer-dark bg-dark text-light">
+        <div id="footer">
+          <div class="footer-bootom">
+            {{# copyright_footer}}
+              <p>{{{copyright_footer}}}</p>
+            {{/ copyright_footer}}
+          </div>
+        </div>
+    </footer>
 </div>
-
-<footer id="page-footer" class="py-3 bg-dark text-light">
-    <div class="container">
-        {{{ output.standard_footer_html }}}
-        {{{ output.standard_end_of_body_html }}}
-    </div>
-</footer>
 
 </body>
 </html>
-{{#js}}
-require(['theme_boost/loader']);
-{{/js}}

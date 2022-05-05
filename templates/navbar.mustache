@@ -15,61 +15,95 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    Page navbar.
+
+    @template theme_boost/navbar
+
+    This template renders the top navbar.
+
+    Example context (json):
+    {
+        "output": {
+            "should_display_navbar_logo": true,
+            "get_compact_logo_url": "http://placekitten.com/50/50",
+            "custom_menu": "<li>..</li>",
+            "page_heading_menu": "<li>..</li>",
+            "search_box": "<div><input type='text'></div>",
+            "navbar_plugin_output": "<div class='dropdown'>Messaging</div>",
+            "user_menu": "<div class='dropdown'>John Doe</div>"
+        },
+        "config": {
+            "wwwroot": "#",
+            "homeurl": "/my/"
+        },
+        "sitename": "Moodle Site",
+        "mobileprimarynav": [
+            {
+                "text": "Dashboard",
+                "url": "/my",
+                "isactive": true
+            },
+            {
+                "text": "Site home",
+                "url": "/",
+                "isactive": false
+            },
+            {
+                "text": "My courses",
+                "url": "/course",
+                "isactive": false
+            }
+        ]
+    }
 }}
-<nav id="header" role="banner"  class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex">
-    <!-- LMSACE S.o -->
-    <div class="header-menubar">
-        <div class="container">
-            <div class="navbar">
-             <div class="navbar-inner">
-                <div data-region="drawer-toggle" class="d-inline-block mr-3">
-                    <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<nav id="header" class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
-                    </button>
-                </div>
+    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+        <span class="navbar-toggler-icon"></span>
+        <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+    </button>
+    <a href="{{{ config.wwwroot }}}/?redirect=0" class="navbar-brand {{# logo }}has-logo{{/ logo }}
+                {{^ logo }}
+                    hidden-sm-down
+                {{/ logo }}
+                    ">
+                {{# logo }}
+                    <span class="logo">
+                        <img src="{{logo}}" alt="{{sitename}}">
+                    </span>
+                {{/ logo }}
+                {{^ logo }}
+                    <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+                {{/ logo }}
+    </a>
+
+    {{#primarymoremenu}}
+        <div class="primary-navigation">
+            {{> core/moremenu}}
         </div>
+    {{/primarymoremenu}}
 
-        <ul class="nav navbar-nav ml-auto">
-            <div class="d-none d-lg-block">
-                {{{ output.search_box }}}
-            </div>
-            <!-- navbar_plugin_output -->
-            <li class="nav-item">
-            {{{ output.navbar_plugin_output }}}
-            </li>
-            
-            <!-- user_menu -->
-            <li class="nav-item d-flex align-items-center">
-                {{{ output.user_menu }}}
-            </li>
-        </ul>
-        <!-- search_box -->
+    <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+        <!-- page_heading_menu -->
+        {{{ output.page_heading_menu }}}
+    </ul>
 
-          <div id="Mainmenu" class="nav-collapse collapse navbar-responsive-collapse">
-
-            {{{output.custom_menu}}}
-
-            <div class="custom-nav-search">
-
-                <form action="{{{surl}}}" method="get">
-                    <div class="fields-wrap">
-                        <input type="text" placeholder="<?php echo get_string('searchcourses'); ?>" name="search">
-                        <div class="btn-search fa fa-search"><input type="submit" value="Search"></div>
-                    </div>
-                </form>
-
-            </div>
-          </div>
-
+    <div id="usernavigation" class="navbar-nav ml-auto">
+        {{# output.search_box }}
+            {{{ output.search_box }}}
+            <div class="divider border-left h-75 align-self-center mx-1"></div>
+        {{/output.search_box}}
+        {{#langmenu}}
+            {{> theme_boost/language_menu }}
+            <div class="divider border-left h-75 align-self-center mx-1"></div>
+        {{/langmenu}}
+        {{{ output.navbar_plugin_output }}}
+        <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+            {{#usermenu}}
+                {{> core/user_menu }}
+            {{/usermenu}}
         </div>
-      </div>
+        {{{ output.edit_switch }}}
     </div>
-
-
-
 </nav>
 
+{{> theme_boost/primary-drawer-mobile }}

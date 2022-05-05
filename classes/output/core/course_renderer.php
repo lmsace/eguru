@@ -26,9 +26,17 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot . "/course/renderer.php");
+namespace theme_eguru\output\core;
+
+use moodle_url;
+use lang_string;
+use html_writer;
+use core_course_category;
+use coursecat_helper;
+use stdClass;
+use context_course;
+use core_course_list_element;
 
 /**
  * This class has function for core course renderer
@@ -36,7 +44,7 @@ require_once($CFG->dirroot . "/course/renderer.php");
  * @author    LMSACE Dev Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class theme_eguru_core_course_renderer extends core_course_renderer {
+class course_renderer extends \core_course_renderer {
 
     /**
      * Renderer function for the frontpage available courses.
@@ -45,6 +53,7 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
     public function frontpage_available_courses() {
         /* available courses */
         global $CFG;
+        $output = '';
         $chelper = new coursecat_helper();
         $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_EXPANDED)->set_courses_display_options(array(
             'recursive' => true,
@@ -104,12 +113,13 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
         }
 
         $coursehtml = $header.$content.$footer;
-        echo $coursehtml;
+        $output .= $coursehtml;
 
         if (!$totalcount && !$this->page->user_is_editing() && has_capability('moodle/course:create', context_system::instance())) {
             // Print link to create a new course, for the 1st available category.
-            echo $this->add_new_course_button();
+            $output .= $this->add_new_course_button();
         }
+        return $output;
     }
 
     /**
@@ -154,27 +164,22 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
             return false;
         }
 
-       // $fcourseids = array_chunk($rcourseids, 6);
         $fcourseids = $rcourseids;
         $totalfcourse = count($fcourseids);
         $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_html');
         $promotedtitle = theme_eguru_lang($promotedtitle);
 
-        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="clearfix"></div></div> <div class="row"> <div class="promoted_courses col-md-12" data-crow="'.$totalfcourse.'">';
-
-        $featuredfooter = ' </div></div></div></div>';
-
         if (!empty($fcourseids)) {
-           /* foreach ($fcourseids as $courseids) {
-                $rowcontent = '<div><div class="row">';*/
+
                 $rowcontent = '';
+                $blocks = [];
+                $i = 0;
                 foreach ($fcourseids as $courseid) {
+                    $info = [];
                     $course = get_course($courseid);
                     $no = get_config('theme_eguru', 'patternselect');
                     $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
-
                     $noimgurl = $this->output->image_url($nimgp, 'theme');
-
                     $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
                     if ($course instanceof stdClass) {
@@ -201,17 +206,18 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
                     if (empty($imgurl)) {
                         $imgurl = $noimgurl;
                     }
-                    $coursehtml = '<div class="col-md-3"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
-
-                    $rowcontent .= $coursehtml;
+                    $info['courseurl'] = $courseurl;
+                    $info['imgurl'] = $imgurl;
+                    $info['coursename'] = $course->get_formatted_name();
+                    $info['active'] = ($i == 1) ? true : false;
+                    $blocks[] = $info;
+                    $i++;
                 }
-               // $rowcontent .= '</div></div>';
-                $featuredcontent .= $rowcontent;
-            //}
         }
-        $featuredcourses = $featuredheader.$featuredcontent.$featuredfooter;
-      
-        return $featuredcourses;
+        $template['courses'] = array_chunk($blocks, 5);
+        $template['promatedcourse'] = true;
+        $template['promotedtitle'] = $promotedtitle;
+        return $this->output->render_from_template("theme_eguru/courseblocks", $template);
     }
 
     /**
@@ -297,5 +303,73 @@ class theme_eguru_core_course_renderer extends core_course_renderer {
          // Coursebox.
         $content .= html_writer::end_tag('div');
         return $content;
+    }
+
+     /**
+     * Outputs contents for frontpage as configured in $CFG->frontpage or $CFG->frontpageloggedin
+     *
+     * @return string
+     */
+    public function frontpage() {
+        global $CFG, $SITE;
+        require_once($CFG->dirroot. "/theme/eguru/layout/includes/marketingspots.php");
+        $output = '';
+        $output .= $this->promoted_courses();
+        $output .= eguru_marketingspot();
+
+        if (isloggedin() and !isguestuser() and isset($CFG->frontpageloggedin)) {
+            $frontpagelayout = $CFG->frontpageloggedin;
+        } else {
+            $frontpagelayout = $CFG->frontpage;
+        }
+
+        foreach (explode(',', $frontpagelayout) as $v) {
+            switch ($v) {
+                // Display the main part of the front page.
+                case FRONTPAGENEWS:
+                    if ($SITE->newsitems) {
+                        // Print forums only when needed.
+                        require_once($CFG->dirroot .'/mod/forum/lib.php');
+                        if (($newsforum = forum_get_course_forum($SITE->id, 'news')) &&
+                                ($forumcontents = $this->frontpage_news($newsforum))) {
+                            $newsforumcm = get_fast_modinfo($SITE)->instances['forum'][$newsforum->id];
+                            $output .= $this->frontpage_part('skipsitenews', 'site-news-forum',
+                                $newsforumcm->get_formatted_name(), $forumcontents);
+                        }
+                    }
+                    break;
+
+                case FRONTPAGEENROLLEDCOURSELIST:
+                    $mycourseshtml = $this->frontpage_my_courses();
+                    if (!empty($mycourseshtml)) {
+                        $output .= $this->frontpage_part('skipmycourses', 'frontpage-course-list',
+                            get_string('mycourses'), $mycourseshtml);
+                    }
+                    break;
+
+                case FRONTPAGEALLCOURSELIST:
+                    $availablecourseshtml = $this->frontpage_available_courses();
+                    $output .= $this->frontpage_part('skipavailablecourses', 'frontpage-available-course-list',
+                       '', $availablecourseshtml);
+                    break;
+
+                case FRONTPAGECATEGORYNAMES:
+                    $output .= $this->frontpage_part('skipcategories', 'frontpage-category-names',
+                        get_string('categories'), $this->frontpage_categories_list());
+                    break;
+
+                case FRONTPAGECATEGORYCOMBO:
+                    $output .= $this->frontpage_part('skipcourses', 'frontpage-category-combo',
+                        get_string('courses'), $this->frontpage_combo_list());
+                    break;
+
+                case FRONTPAGECOURSESEARCH:
+                    $output .= $this->box($this->course_search_form(''), 'd-flex justify-content-center');
+                    break;
+
+            }
+            $output .= '<br />';
+        }
+        return $output;
     }
 }

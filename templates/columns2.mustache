@@ -60,6 +60,11 @@
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
+        <div class="secondarynavigation">
+            {{#secondarymoremenu}}
+                {{> core/moremenu}}
+            {{/secondarymoremenu}}
+        </div>
 
         <div id="page-content" class="row pb-3">
             <div id="region-main-box" class="col-12">

@@ -118,4 +118,3 @@ function eguru_marketingspot() {
     $content .= html_writer::end_tag('div');
     return $content;
 }
-echo eguru_marketingspot();

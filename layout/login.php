@@ -34,8 +34,6 @@ $templatecontext = [
     'headerlayout' => $headerlayout,
 ];
 
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
-$flatnavbar = $OUTPUT->render_from_template('theme_boost/nav-drawer', $templatecontext);
 echo $OUTPUT->render_from_template('theme_eguru/login', $templatecontext);
 require_once(dirname(__FILE__) .'/includes/footer.php');
 echo $footerlayout;
