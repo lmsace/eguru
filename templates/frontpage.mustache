@@ -18,7 +18,6 @@
     @template theme_boost/drawers
 
     Boost drawer template.
-
     Context variables required for this template:
     * sitename - The name of the site
     * output - The core renderer for the page
@@ -167,18 +166,15 @@
                 </div>
             </div>
         </div>
-        {{> theme_eguru/footer }}
     </div>
+    {{> theme_eguru/footer }}
     {{{ output.standard_after_main_region_html }}}
 </div>
 
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
-    Drawer.init();
-    M.util.js_complete('theme_boost/loader');
+require(['jquery'], function($) {
     if ($('body').hasClass('dir-rtl') ) {
         var rtl = true;
     } else {

@@ -17,8 +17,9 @@
 /**
  * A drawer based layout for the boost theme.
  *
- * @package   theme_boost
- * @copyright 2021 Bas Brands
+ * @package   theme_eguru
+ * @copyright 2015 onwards lmsace
+ * @author    LMSACE Dev Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

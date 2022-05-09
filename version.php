@@ -29,7 +29,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 // The current module version (Date: YYYYMMDDXX).
-$plugin->version   = 2022050500;
+$plugin->version   = 2021052200;
 
 
 // Version's maturity level.
