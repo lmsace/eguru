@@ -57,52 +57,44 @@
 }}
 <nav id="header" class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
-    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
-        <span class="navbar-toggler-icon"></span>
-        <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
-    </button>
-    <a href="{{{ config.wwwroot }}}/?redirect=0" class="navbar-brand {{# logo }}has-logo{{/ logo }}
-                {{^ logo }}
-                    hidden-sm-down
-                {{/ logo }}
-                    ">
-                {{# logo }}
-                    <span class="logo">
-                        <img src="{{logo}}" alt="{{sitename}}">
-                    </span>
-                {{/ logo }}
-                {{^ logo }}
-                    <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
-                {{/ logo }}
-    </a>
+    <div class="container-fluid">
+        <div class="header-menubar">
+            <div class="navbar">
+                <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+                </button>
 
-    {{#primarymoremenu}}
-        <div class="primary-navigation">
-            {{> core/moremenu}}
+                {{#primarymoremenu}}
+                    <div class="primary-navigation">
+                        {{> core/moremenu}}
+                    </div>
+                {{/primarymoremenu}}
+
+                <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+                    <!-- page_heading_menu -->
+                    {{{ output.page_heading_menu }}}
+                </ul>
+
+                <div id="usernavigation" class="navbar-nav ml-auto">
+                    {{# output.search_box }}
+                        {{{ output.search_box }}}
+                        <div class="divider border-left h-75 align-self-center mx-1"></div>
+                    {{/output.search_box}}
+                    {{#langmenu}}
+                        {{> theme_boost/language_menu }}
+                        <div class="divider border-left h-75 align-self-center mx-1"></div>
+                    {{/langmenu}}
+                    {{{ output.navbar_plugin_output }}}
+                    <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                        {{#usermenu}}
+                            {{> core/user_menu }}
+                        {{/usermenu}}
+                    </div>
+                    {{{ output.edit_switch }}}
+                </div>
+            </div>
         </div>
-    {{/primarymoremenu}}
-
-    <ul class="navbar-nav d-none d-md-flex my-1 px-1">
-        <!-- page_heading_menu -->
-        {{{ output.page_heading_menu }}}
-    </ul>
-
-    <div id="usernavigation" class="navbar-nav ml-auto">
-        {{# output.search_box }}
-            {{{ output.search_box }}}
-            <div class="divider border-left h-75 align-self-center mx-1"></div>
-        {{/output.search_box}}
-        {{#langmenu}}
-            {{> theme_boost/language_menu }}
-            <div class="divider border-left h-75 align-self-center mx-1"></div>
-        {{/langmenu}}
-        {{{ output.navbar_plugin_output }}}
-        <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
-            {{#usermenu}}
-                {{> core/user_menu }}
-            {{/usermenu}}
-        </div>
-        {{{ output.edit_switch }}}
     </div>
 </nav>
 
