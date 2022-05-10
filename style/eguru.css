@@ -1280,6 +1280,182 @@ tr.discussion .btn i.icon {
 .form-select select.form-control {
     height: auto;
 }
+.langimport select.form-control {
+    height: auto;
+}
+.mod-indent-outer {
+    display: block;
+}
+#page-mod-quiz-attempt .submitbtns {
+    text-align: right;
+}
+#page-mod-quiz-attempt .submitbtns .mod_quiz-next-nav {
+    float: none;
+}
+.userlist .initialbar {
+    margin-bottom: 20px;
+}
+.editor_atto_menu .dropdown-menu > li > a {
+    margin: 0;
+    display: block;
+}
+
+.list-group-item.active {
+    border-color: var(--color_secondary);
+    background-color: var(--color_secondary);
+}
+
+#page-content .card .tab-content {
+    border: 1px solid var(--color_pattens_blue);
+    padding: 15px;
+    margin-top: 0 !important;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+.userlist .initialbar .pagination .page-item.active .page-link {
+    color: var(--white);
+    background-color: var(--color_primary);
+    border-color: var(--color_primary);
+}
+.userlist .initialbar .pagination .page-item.active .page-link:hover {
+    color: var(--white);
+}
+.userlist .initialbar .pagination .page-item .page-link {
+    color: var(--color_primary);
+}
+.listitem .action-menu .dropdown-toggle i.icon {
+    margin-right: 0;
+}
+.action-menu .dropdown-toggle i.icon {
+    margin: 0;
+}
+.courses.category-browse {
+    margin-top: 15px;
+}
+.calendarwrapper {
+    overflow: auto;
+}
+.moodle-dialogue-base button.closebutton:active,
+button.closebutton:active {
+    background: none;
+}
+#page-wrapper {
+    height: auto;
+}
+.dropdown .dropdown-menu .dropdown-divider {
+    margin: 0;
+}
+.dropdown .dropdown-menu .dropdown-header {
+    color: var(--white);
+}
+.btn.btn-outline-secondary.dropdown-toggle:hover,
+.btn.btn-outline-secondary.dropdown-toggle:focus,
+.btn.btn-outline-secondary.dropdown-toggle:focus:active,
+.btn.btn-outline-secondary.dropdown-toggle:active {
+    color: var(--white);
+    background: var(--color_primary);
+    box-shadow: none;
+    outline: none;
+}
+button.close:hover,
+.moodle-dialogue-base button.closebutton:hover,
+button.close:focus,
+.moodle-dialogue-base button.closebutton:focus {
+    background: none;
+}
+.pagination .page-item .page-link:focus {
+    box-shadow: none;
+}
+.pagination .page-item .page-link i.icon {
+    line-height: 24px;
+}
+.page-item .page-link {
+    color: var(--color_primary);
+}
+.page-item.active .page-link {
+    border-color: var(--color_primary);
+    background: var(--color_primary);
+}
+.simplesearchform .btn {
+    padding: 9px 15px;
+}
+.simplesearchform .input-group {
+    margin: 0 auto;
+}
+.activity-navigation a.btn.btn-link {
+    color: var(--color_primary);
+}
+.activity-navigation a.btn.btn-link:hover {
+    color: var(--color_secondary);
+}
+.show > .btn-outline-secondary.dropdown-toggle {
+    background: var(--color_primary);
+}
+.switch input:checked + label:before {
+    background-color: var(--color_secondary);
+}
+.switch input:checked + label:after {
+    background-color: var(--color_primary);
+}
+.switch input:focus + label:before {
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
+}
+.switch input:checked:focus + label:before {
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
+}
+.recipienttable td.actions input.actionbutton {
+    height: auto;
+    line-height: normal;
+}
+.path-mod-quiz #header input[size] {
+    width: 100%;
+}
+#page-question-preview #previewcontrols input {
+    margin-top: 10px;
+}
+.coursecat-management-header > div > div {
+    display: inline-block !important;
+}
+.moodle-actionmenu.show[data-enhanced] .menu {
+    background: var(--color_blackcurrant_90_approx);
+    border: 0;
+    border-radius: 0;
+}
+.moodle-actionmenu.show[data-enhanced] .menu a {
+    color: var(--white);
+}
+.moodle-actionmenu.show[data-enhanced] .menu a:hover,
+.moodle-actionmenu.show[data-enhanced] .menu a:focus {
+    background: var(--color_secondary);
+    text-decoration: none;
+}
+.moodle-actionmenu.show[data-enhanced] .menu a:first-child {
+    border-radius: 0;
+}
+.moodle-actionmenu.show[data-enhanced] .menu a:last-child {
+    border-radius: 0;
+}
+.dropdown .dropdown-toggle:hover,
+.dropdown .dropdown-toggle:focus,
+.dropdown .dropdown-toggle:active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+    border-color: var(--color_primary);
+}
+.dropdown .dropdown-menu a {
+    color: var(--white);
+    background: var(--color_secondary);
+}
+.dropdown .dropdown-menu a:hover {
+    background: var(--color_primary);
+}
+.dropdown .dropdown-menu a:focus {
+    background: var(--color_primary);
+}
+.dir-rtl .progress-chart-container .no-progress .icon {
+    left: 70%;
+}
 
 @media (min-width: 1200px) {
     .form-buttons {
@@ -1431,6 +1607,11 @@ tr.discussion .btn i.icon {
         height: auto;
         margin-bottom: 10px;
     }
+    #participantsform .buttons .btn-group {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -1457,6 +1638,9 @@ tr.discussion .btn i.icon {
     }
     .dir-rtl .userprofile dl.list dd {
         text-align: right;
+    }
+    #page-my-index .tab-content .courses-view-course-item {
+        flex-basis: calc(50% - 34px);
     }
 }
 
@@ -1542,6 +1726,12 @@ tr.discussion .btn i.icon {
     .dir-rtl .mform .fpassword .unmask {
         margin: 0;
         display: block;
+    }
+    #page-my-index .tab-content .courses-view-course-item {
+        flex-basis: auto;
+    }
+    #page-header .card .card-body .flex-wrap .d-flex {
+        display: block !important;
     }
 }
 
@@ -2468,6 +2658,84 @@ div.dropdown-item:focus-within {
     border-top-color: var(--white);
 }
 
+/*Header message app*/
+.message-app .icon {
+    color: var(--color_primary);
+}
+.message-app .body-container .nav-pills .nav-link.active {
+    background-color: var(--color_primary);
+}
+.message-app .footer-container .text-center a {
+    color: var(--color_primary);
+}
+.message-app .footer-container .text-center a:hover {
+    color: var(--color_secondary);
+}
+.drawer .message-app .header-container .simplesearchform .input-group-append {
+    border-color: var(--color_celeste_approx);
+}
+.message-app a {
+    background: none;
+}
+.message-app .dropdown .dropdown-menu a.dropdown-item {
+    background: none;
+}
+.message-app .dropdown .dropdown-menu a.dropdown-item:hover {
+    background: var(--color_primary);
+}
+.message-app .dropdown .dropdown-menu a.dropdown-item:focus {
+    background: var(--color_primary);
+}
+.message-app .dropdown .dropdown-menu a.dropdown-item:active {
+    background: var(--color_primary);
+}
+.message-app .body-container .view-overview-body .section .badge {
+    background-color: var(--color_primary) !important;
+}
+.message-app .body-container .view-overview-body .section .btn.btn-link {
+    margin: 0;
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
+.message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before{
+    background-color: var(--color_primary);
+    border-color: var(--color_primary);
+    box-shadow: 0 0 0 0.2rem var(--color_primary);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
+    background-color: rgba(56, 39, 56, .25);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem var(--color_primary_approx_60);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:not(:disabled):active ~ .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+    border-color: var(--color_primary);
+    background-color: var(--color_primary);
+}
+.message-app .body-container .custom-control.custom-radio .custom-control-input:checked:focus ~ .custom-control-label:before {
+    background-color: var(--color_primary);
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
+}
+.header-main .message-app .header-container .input-group .input-group-prepend .input-group-text {
+    padding-right: 10px !important;
+}
+.header-main .message-app .header-container .badge {
+    background-color: var(--color_primary) !important;
+}
+.header-main .message-app img {
+    max-width: none;
+}
+.header-main .message-app .body-container .nav .nav-item a.nav-link.active {
+    color: var(--white);
+    background: var(--color_primary);
+}
+.header-main .message-app .body-container .view-conversation .btn-primary span,
+.header-main .message-app .body-container .view-conversation .btn-secondary span {
+    text-transform: initial;
+}
+
 @media (min-width: 992px) {
     .header-main .d-lg-block {
         display: inline-block;
@@ -2898,7 +3166,18 @@ div.dropdown-item:focus-within {
 .path-mod-forum .forumheaderlist tbody .discussion td {
     padding: 8px;
 }
-
+.path-mod-forum .subscriptionmode {
+    padding: 0.25rem 1.5rem;
+    display: block;
+    font-weight: normal;
+    color: var(--white);
+}
+.path-mod-forum .activesetting {
+    padding: 0.25rem 1.5rem;
+    display: block;
+    font-weight: normal;
+    color: var(--white);
+}
 .dir-rtl .forumpost .options .commands {
     text-align: left;
 }
@@ -3968,6 +4247,19 @@ div.dropdown-item:focus-within {
     margin-bottom: 5px;
     margin-right: 0;
 }
+.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover {
+    background: var(--color_primary);
+}
+.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover a {
+    background: var(--color_primary);
+}
+.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item .currentlink {
+    color: var(--white);
+}
 .dir-rtl .coursebox .content.content-block .summary {
     padding: 0;
 }
@@ -4355,8 +4647,91 @@ div.dropdown-item:focus-within {
 .block .block-controls .menubar .dropdown .dropdown-toggle i {
     margin: 0 0 0 5px;
 }
+.block_myoverview .content-centred .nav.nav-pills .nav-item .nav-link.active {
+    background-color: var(--color_primary);
+}
+.block-myoverview .list-group .list-group-item a.btn {
+    color: var(--color_mine_shaft_approx) !important;
+}
+.block-myoverview .dropdown-menu .dropdown-item:hover,
+.block-myoverview .dropdown-menu .dropdown-item:focus,
+.block-myoverview .dropdown-menu .dropdown-item.active {
+    color: var(--white);
+    background: var(--color_primary);
+}
+.block-myoverview .dropdown-menu .dropdown-item i.icon {
+    color: var(--white);
+}
+.block-region .block.card .card-body {
+    padding: 0 !important;
+}
+.block-recentlyaccessedcourses .card .card-body.course-info-container {
+    padding: 1.25rem !important;
+}
+.block_recentlyaccessedcourses .paging-bar-container {
+    margin-top: 0;
+}
+.block_recentlyaccessedcourses .paging-bar-container .pagination .page-item .page-link {
+    color: var(--color_primary);
+}
+#block-region-side-pre .block_globalsearch .searchform input[type="text"] {
+    display: inline-block;
+}
+#block-region-side-pre .block-starredcourses .card-body {
+    padding: 10px !important;
+}
+.block .card-body .content .block-myoverview .searchbar .searchinput {
+    height: 44px !important;
+}
+.block .card-body .content .block-myoverview .searchbar .input-group-append .input-group-text {
+    height: 100%;
+    color: var(--white);
+    border: 0;
+    padding: 0 10px;
+    background: var(--color_primary);
+}
+.block .card-body .content .block-myoverview .searchbar .searchinput:focus + .input-group-append .input-group-text {
+    color: var(--white);
+    background: var(--color_primary);
+}
+.block .card-body .content .block-myoverview .searchbar .input-group-append .input-group-text button {
+    height: 100%;
+    color: var(--white);
+    margin: 0;
+    background: none;
+}
+#page-my-index .block .block-cards .text-primary,
+.header-main .message-drawer .text-primary {
+    color: inherit !important;
+}
+.block-region .block .card-body .block-myoverview .card-title {
+    padding: 0;
+    background: none;
+    border: 0;
+    margin-right: 0 !important;
+}
+.block-region .block .card-body .block-myoverview .card-title a {
+    font-size: 16px;
+    color: var(--color_primary);
+}
 .jsenabled .block_navigation .block_tree .tree_item.emptybranch {
     background-position: 0 10px;
+}
+#region-main.has-blocks .dashboard-card-deck .dashboard-card .card-body .card-title {
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    margin-right: 0 !important;
+}
+#region-main.has-blocks .dashboard-card-deck .dashboard-card .card-body .card-title i.icon {
+    color: inherit;
+}
+#region-main .block-myoverview .dashboard-card-deck .dashboard-card .card-body {
+    padding: 10px !important;
+}
+#region-main .block-myoverview .dashboard-card-deck .dashboard-card .card-body .card-title {
+    padding: 0;
 }
 .dir-rtl .block .content .userpicture {
     margin-left: 5px;
@@ -4401,6 +4776,15 @@ div.dropdown-item:focus-within {
 }
 .dir-rtl .block .block-controls .menubar .dropdown .dropdown-toggle i {
     margin: 0 5px 0 0;
+}
+
+@media (max-width: 575px) {
+    .dir-rtl .block-timeline .dropdown-menu {
+        right: auto;
+    }
+    .dir-rtl .block-myoverview .paged-content-page-container .dropdown-menu.dropdown-menu-right.show {
+        right: auto;
+    }
 }
 
 /*Footer*/
@@ -4565,6 +4949,9 @@ footer .helplink {
 }
 #footer .footer-foot p a:hover {
     color: var(--color_blackcurrant_approx);
+}
+.footer-bottom p {
+    text-align: center;
 }
 .dir-rtl #footer .footer-contact p i {
     margin-right: 0;
@@ -4939,46 +5326,6 @@ form#coursesearch {
         overflow: visible;
     }
 }
-.moodle-actionmenu.show[data-enhanced] .menu {
-    background: var(--color_blackcurrant_90_approx);
-    border: 0;
-    border-radius: 0;
-}
-.moodle-actionmenu.show[data-enhanced] .menu a {
-    color: var(--white);
-}
-.moodle-actionmenu.show[data-enhanced] .menu a:hover,
-.moodle-actionmenu.show[data-enhanced] .menu a:focus {
-    background: var(--color_secondary);
-    text-decoration: none;
-}
-.moodle-actionmenu.show[data-enhanced] .menu a:first-child {
-    border-radius: 0;
-}
-.moodle-actionmenu.show[data-enhanced] .menu a:last-child {
-    border-radius: 0;
-}
-.dropdown .dropdown-toggle:hover,
-.dropdown .dropdown-toggle:focus,
-.dropdown .dropdown-toggle:active,
-.btn-outline-secondary:not(:disabled):not(.disabled):active,
-.btn-outline-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-secondary.dropdown-toggle {
-    border-color: var(--color_primary);
-}
-.dropdown .dropdown-menu a {
-    color: var(--white);
-    background: var(--color_secondary);
-}
-.dropdown .dropdown-menu a:hover {
-    background: var(--color_primary);
-}
-.dropdown .dropdown-menu a:focus {
-    background: var(--color_primary);
-}
-.footer-bottom p {
-    text-align: center;
-}
 
 /*Theme setting*/
 #adminsettings h3 {
@@ -5046,375 +5393,7 @@ form#coursesearch {
     text-align: center;
 }
 
-/*new*/
-
-/*moodle-32 above */
-
-
-
-.langimport select.form-control {
-    height: auto;
-}
-.mod-indent-outer {
-    display: block;
-}
-.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover {
-    background: var(--color_primary);
-}
-.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item:hover a {
-    background: var(--color_primary);
-}
-.pagelayout-incourse #page .action-menu .menubar .dropdown .dropdown-menu .dropdown-item .currentlink {
-    color: var(--white);
-}
-#page-mod-quiz-attempt .submitbtns {
-    text-align: right;
-}
-#page-mod-quiz-attempt .submitbtns .mod_quiz-next-nav {
-    float: none;
-}
-.userlist .initialbar {
-    margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-    #participantsform .buttons .btn-group {
-        width: 100%;
-        float: left;
-        margin-bottom: 20px;
-    }
-}
-.editor_atto_menu .dropdown-menu > li > a {
-    margin: 0;
-    display: block;
-}
-.block_myoverview .content-centred .nav.nav-pills .nav-item .nav-link.active {
-    background-color: var(--color_primary);
-}
-.list-group-item.active {
-    border-color: var(--color_secondary);
-    background-color: var(--color_secondary);
-}
-.block-myoverview .list-group .list-group-item a.btn {
-    color: var(--color_mine_shaft_approx) !important;
-}
-.block .card-body .content .block-myoverview .searchbar .searchinput {
-    height: 44px !important;
-}
-.block .card-body .content .block-myoverview .searchbar .input-group-append .input-group-text {
-    height: 100%;
-    color: var(--white);
-    border: 0;
-    padding: 0 10px;
-    background: var(--color_primary);
-}
-.block .card-body .content .block-myoverview .searchbar .searchinput:focus + .input-group-append .input-group-text {
-    color: var(--white);
-    background: var(--color_primary);
-}
-.block .card-body .content .block-myoverview .searchbar .input-group-append .input-group-text button {
-    height: 100%;
-    color: var(--white);
-    margin: 0;
-    background: none;
-}
-#page-content .card .tab-content {
-    border: 1px solid var(--color_pattens_blue);
-    padding: 15px;
-    margin-top: 0 !important;
-    margin-bottom: 15px;
-    margin-left: 0;
-}
-.userlist .initialbar .pagination .page-item.active .page-link {
-    color: var(--white);
-    background-color: var(--color_primary);
-    border-color: var(--color_primary);
-}
-.userlist .initialbar .pagination .page-item.active .page-link:hover {
-    color: var(--white);
-}
-.userlist .initialbar .pagination .page-item .page-link {
-    color: var(--color_primary);
-}
-.listitem .action-menu .dropdown-toggle i.icon {
-    margin-right: 0;
-}
-.action-menu .dropdown-toggle i.icon {
-    margin: 0;
-}
-.courses.category-browse {
-    margin-top: 15px;
-}
-.path-mod-forum .subscriptionmode {
-    padding: 0.25rem 1.5rem;
-    display: block;
-    font-weight: normal;
-    color: var(--white);
-}
-.path-mod-forum .activesetting {
-    padding: 0.25rem 1.5rem;
-    display: block;
-    font-weight: normal;
-    color: var(--white);
-}
-.dir-rtl .progress-chart-container .no-progress .icon {
-    left: 70%;
-}
-.moodle-dialogue-base button.closebutton:active,
-button.closebutton:active {
-    background: none;
-}
-.calendarwrapper {
-    overflow: auto;
-}
-#page-my-index .block .block-cards .text-primary,
-.header-main .message-drawer .text-primary {
-    color: inherit !important;
-}
-
-@media (min-width: 576px) {
-    #page-my-index .tab-content .courses-view-course-item {
-        flex-basis: calc(50% - 34px);
-    }
-}
-
-@media (max-width: 575px) {
-    #page-my-index .tab-content .courses-view-course-item {
-        flex-basis: auto;
-    }
-}
-
-#page-wrapper {
-    height: auto;
-}
-.dropdown .dropdown-menu .dropdown-divider {
-    margin: 0;
-}
-.dropdown .dropdown-menu .dropdown-header {
-    color: var(--white);
-}
-.block-myoverview .dropdown-menu .dropdown-item:hover,
-.block-myoverview .dropdown-menu .dropdown-item:focus,
-.block-myoverview .dropdown-menu .dropdown-item.active {
-    color: var(--white);
-    background: var(--color_primary);
-}
-.block-myoverview .dropdown-menu .dropdown-item i.icon {
-    color: var(--white);
-}
-.btn.btn-outline-secondary.dropdown-toggle:hover,
-.btn.btn-outline-secondary.dropdown-toggle:focus,
-.btn.btn-outline-secondary.dropdown-toggle:focus:active,
-.btn.btn-outline-secondary.dropdown-toggle:active {
-    color: var(--white);
-    background: var(--color_primary);
-    box-shadow: none;
-    outline: none;
-}
-button.close:hover,
-.moodle-dialogue-base button.closebutton:hover,
-button.close:focus,
-.moodle-dialogue-base button.closebutton:focus {
-    background: none;
-}
-.pagination .page-item .page-link:focus {
-    box-shadow: none;
-}
-.pagination .page-item .page-link i.icon {
-    line-height: 24px;
-}
-.page-item .page-link {
-    color: var(--color_primary);
-}
-.page-item.active .page-link {
-    border-color: var(--color_primary);
-    background: var(--color_primary);
-}
-.simplesearchform .btn {
-    padding: 9px 15px;
-}
-.simplesearchform .input-group {
-    margin: 0 auto;
-}
-.activity-navigation a.btn.btn-link {
-    color: var(--color_primary);
-}
-.activity-navigation a.btn.btn-link:hover {
-    color: var(--color_secondary);
-}
-.block-region .block .card-body .block-myoverview .card-title {
-    padding: 0;
-    background: none;
-    border: 0;
-    margin-right: 0 !important;
-}
-.block-region .block .card-body .block-myoverview .card-title a {
-    font-size: 16px;
-    color: var(--color_primary);
-}
-
-@media (max-width: 575px) {
-    .dir-rtl .block-timeline .dropdown-menu {
-        right: auto;
-    }
-}
-.show > .btn-outline-secondary.dropdown-toggle {
-    background: var(--color_primary);
-}
-
-@media (max-width: 600px) {
-    #page-header .card .card-body .flex-wrap .d-flex {
-        display: block !important;
-    }
-}
-.message-app .icon {
-    color: var(--color_primary);
-}
-.message-app .body-container .nav-pills .nav-link.active {
-    background-color: var(--color_primary);
-}
-.message-app .footer-container .text-center a {
-    color: var(--color_primary);
-}
-.message-app .footer-container .text-center a:hover {
-    color: var(--color_secondary);
-}
-.drawer .message-app .header-container .simplesearchform .input-group-append {
-    border-color: var(--color_celeste_approx);
-}
-.message-app a {
-    background: none;
-}
-.message-app .dropdown .dropdown-menu a.dropdown-item {
-    background: none;
-}
-.message-app .dropdown .dropdown-menu a.dropdown-item:hover {
-    background: var(--color_primary);
-}
-.message-app .dropdown .dropdown-menu a.dropdown-item:focus {
-    background: var(--color_primary);
-}
-.message-app .dropdown .dropdown-menu a.dropdown-item:active {
-    background: var(--color_primary);
-}
-.block-region .block.card .card-body {
-    padding: 0 !important;
-}
-.block-recentlyaccessedcourses .card .card-body.course-info-container {
-    padding: 1.25rem !important;
-}
-.header-main .message-app .header-container .input-group .input-group-prepend .input-group-text {
-    padding-right: 10px !important;
-}
-.header-main .message-app .header-container .badge {
-    background-color: var(--color_primary) !important;
-}
-.header-main .message-app img {
-    max-width: none;
-}
-.message-app .body-container .view-overview-body .section .badge {
-    background-color: var(--color_primary) !important;
-}
-.message-app .body-container .view-overview-body .section .btn.btn-link {
-    margin: 0;
-}
-.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
-.message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before{
-    background-color: var(--color_primary);
-    border-color: var(--color_primary);
-    box-shadow: 0 0 0 0.2rem var(--color_primary);
-}
-.message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
-    background-color: rgba(56, 39, 56, .25);
-}
-.message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 0.2rem var(--color_primary_approx_60);
-}
-.message-app .body-container .custom-control.custom-radio .custom-control-input:not(:disabled):active ~ .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
-    border-color: var(--color_primary);
-    background-color: var(--color_primary);
-}
-.message-app .body-container .custom-control.custom-radio .custom-control-input:checked:focus ~ .custom-control-label:before {
-    background-color: var(--color_primary);
-    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
-}
-.switch input:checked + label:before {
-    background-color: var(--color_secondary);
-}
-.switch input:checked + label:after {
-    background-color: var(--color_primary);
-}
-.switch input:focus + label:before {
-    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
-}
-.switch input:checked:focus + label:before {
-    box-shadow: 0 0 0 1px var(--white), 0 0 0 0.2rem rgba(56, 39, 56, .25);
-}
-.header-main .message-app .body-container .nav .nav-item a.nav-link.active {
-    color: var(--white);
-    background: var(--color_primary);
-}
-.header-main .message-app .body-container .view-conversation .btn-primary span,
-.header-main .message-app .body-container .view-conversation .btn-secondary span {
-    text-transform: initial;
-}
-#region-main.has-blocks .dashboard-card-deck .dashboard-card .card-body .card-title {
-    font-size: 16px;
-    width: 100%;
-    border: 0;
-    padding: 10px;
-    margin-right: 0 !important;
-}
-#region-main.has-blocks .dashboard-card-deck .dashboard-card .card-body .card-title i.icon {
-    color: inherit;
-}
-#region-main .block-myoverview .dashboard-card-deck .dashboard-card .card-body {
-    padding: 10px !important;
-}
-#region-main .block-myoverview .dashboard-card-deck .dashboard-card .card-body .card-title {
-    padding: 0;
-}
-#block-region-side-pre .block_globalsearch .searchform input[type="text"] {
-    display: inline-block;
-}
-#block-region-side-pre .block-starredcourses .card-body {
-    padding: 10px !important;
-}
-
-@media (max-width: 575px) {
-    .dir-rtl .block-myoverview .paged-content-page-container .dropdown-menu.dropdown-menu-right.show {
-        right: auto;
-    }
-}
-.recipienttable td.actions input.actionbutton {
-    height: auto;
-    line-height: normal;
-}
-.path-mod-quiz #header input[size] {
-    width: 100%;
-}
-#page-question-preview #previewcontrols input {
-    margin-top: 10px;
-}
-.block_recentlyaccessedcourses .paging-bar-container {
-    margin-top: 0;
-}
-.block_recentlyaccessedcourses .paging-bar-container .pagination .page-item .page-link {
-    color: var(--color_primary);
-}
-
-.coursecat-management-header > div > div {
-    display: inline-block !important;
-}
-
-/*Incoruse page*/
+/*Drawer*/
 
 .main-inner .drawer-left-toggle button,
 .main-inner .drawer-right-toggle button {
@@ -5434,7 +5413,6 @@ button.close:focus,
     width: 40px;
     height: auto;
     color: var(--color_primary);
-    /* background: var(--color_primary); */
     padding: 0;
     background: none;
     border-radius: 50%;
