@@ -4530,6 +4530,9 @@ div.dropdown-item:focus-within {
 .block .maincalendar .calendarwrapper .calendar-controls h4 {
     font-size: 18px;
 }
+.maincalendar .calendarmonth td.today .day-number-circle {
+    background-color: var(--color_primary);
+}
 .block .bottom span.footer-link:after {
     color: var(--color_primary);
 }
@@ -4672,8 +4675,11 @@ div.dropdown-item:focus-within {
     color: var(--color_primary);
 }
 .block_settings .footer {
-    padding: 10px 15px 0;
+    padding: 10px 0 0;
     margin-bottom: 0;
+}
+.block_settings .footer .simplesearchform .input-group input.form-control {
+    border-radius: 5px;
 }
 .block_settings .footer .adminsearchform div > input[type="submit"] {
     margin-left: 0;
@@ -4695,7 +4701,7 @@ div.dropdown-item:focus-within {
     border: 1px solid var(--color_snuff_approx);
 }
 .block-region .block .card-body .card-text .block_tree_box {
-    padding-top: 0 !important;
+    padding: 0 !important;
 }
 .block-region .block .card-body .card-title {
     font-size: 18px;
@@ -5503,6 +5509,9 @@ form#coursesearch {
     background: var(--color_primary);
     box-shadow: 1px 5px 5px var(--color_primary_20_approx);
 }
+.drawer .drawercontent {
+    overflow: visible;
+}
 .drawer .drawercontent .courseindex .courseindex-section .courseindex-item:hover {
     background: none;
     border-color: transparent;
@@ -5555,6 +5564,7 @@ form#coursesearch {
 .simplesearchform .simplesearchform .input-group-append .btn {
     color: var(--color_primary);
     padding: 0;
+    border: 0;
     background: none;
 }
 .moremenu .nav-tabs .nav-item .nav-link {
