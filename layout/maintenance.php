@@ -35,6 +35,7 @@ $templatecontext = [
     'output' => $OUTPUT,
     "copyright_footer" => $copyrightfooter,
     "logourl" => $logourl,
+    'maintenancefooter' => true
 ];
 
 echo $OUTPUT->render_from_template('theme_eguru/maintenance', $templatecontext);

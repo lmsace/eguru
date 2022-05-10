@@ -83,7 +83,7 @@ if ($PAGE->has_secondary_navigation()) {
 }
 
 
-$primary = new core\navigation\output\primary($PAGE);
+$primary = new \theme_eguru\navigation\primary($PAGE);
 $renderer = $PAGE->get_renderer('core');
 $primarymenu = $primary->export_for_template($renderer);
 
