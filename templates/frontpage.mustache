@@ -174,7 +174,9 @@
 </body>
 </html>
 {{#js}}
-require(['jquery'], function($) {
+require(['jquery', 'theme_boost/loader', 'theme_boost/drawer'], function($, Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
     if ($('body').hasClass('dir-rtl') ) {
         var rtl = true;
     } else {
@@ -182,4 +184,5 @@ require(['jquery'], function($) {
     }
     $("#promatedcourse-carousel .carousel-item:nth-child(1)").addClass("active");
 });
+
 {{/js}}
