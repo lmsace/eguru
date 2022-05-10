@@ -1491,6 +1491,9 @@ body.limitedwidth #page.drawers .main-inner,
     padding: 0;
     margin: 0;
 }
+body.limitedwidth #page.drawers .main-inner #page-content {
+    padding: 0 !important;
+}
 #page.drawers .main-inner #page-content div[role="main"] {
     padding: 0;
 }
@@ -3853,7 +3856,6 @@ div.dropdown-item:focus-within {
 /*Promoted courses*/
 .custom-courses-list {
     padding: 40px 0 35px;
-    margin: 0 0 30px;
     background: var(--mercury);
 }
 .custom-courses-list .container-fluid {
@@ -4689,8 +4691,11 @@ div.dropdown-item:focus-within {
 }
 
 .block-region .block .card-body {
-    padding: 0;
+    padding: 0 !important;
     border: 1px solid var(--color_snuff_approx);
+}
+.block-region .block .card-body .card-text .block_tree_box {
+    padding-top: 0 !important;
 }
 .block-region .block .card-body .card-title {
     font-size: 18px;
@@ -4747,9 +4752,6 @@ div.dropdown-item:focus-within {
 }
 .block-myoverview .dropdown-menu .dropdown-item i.icon {
     color: var(--white);
-}
-.block-region .block.card .card-body {
-    padding: 0 !important;
 }
 .block-recentlyaccessedcourses .card .card-body.course-info-container {
     padding: 1.25rem !important;
@@ -4874,19 +4876,16 @@ div.dropdown-item:focus-within {
 }
 
 /*Footer*/
-footer {
-    padding: 0 15px;
-}
-footer .purgecaches {
-    margin-bottom: 0;
-    float: left;
-}
-footer .helplink {
-    margin-bottom: 0;
-    float: right;
-}
 #footer {
     padding: 0 !important;
+}
+#page-footer .footer-content-debugging {
+    text-align: center;
+}
+#page-footer .footer-content-debugging .purgecaches {
+    padding: 5px 0;
+    margin-right: 10px;
+    display: inline-block;
 }
 #footer .footer-main {
     background: var(--color_secondary);
@@ -4969,14 +4968,17 @@ footer .helplink {
     color: var(--white);
     background: var(--color_blackcurrant_approx);
 }
+#footer .social-media > ul > li > a > span {
+    display: inline-block;
+}
 #footer .social-media > ul > li > a > .media-icon {
     width: 36px;
     height: 36px;
     font-size: 17px;
+    text-align: center;
     background: var(--white);
     border-radius: 18px;
-    display: block;
-    text-align: center;
+    margin-right: 10px;
 }
 #footer .social-media > ul > li > a > .media-icon > i {
     line-height: 36px;
@@ -5049,21 +5051,7 @@ footer .helplink {
 
 @media (min-width: 768px) {
     #footer .social-media > ul > li > a {
-        padding-left: 42px;
         position: relative;
-    }
-    #footer .social-media > ul > li > a > .media-icon {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .dir-rtl #footer .social-media > ul > li > a {
-        padding-right: 42px;
-        padding-left: 0;
-    }
-    .dir-rtl #footer .social-media > ul > li > a > .media-icon {
-        left: auto;
-        right: 0;
     }
 }
 
