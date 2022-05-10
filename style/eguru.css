@@ -442,6 +442,27 @@ input[type="reset"][disabled] {
 input[type="submit"][disabled]:hover {
     color: var(--white);
 }
+.custom-switch .custom-control-label:before {
+    border-color: var(--white);
+    background: var(--white);
+}
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+    border-color: var(--white);
+    background: var(--white);
+}
+.custom-control-input:checked ~ .custom-control-label:before {
+    background: var(--color_secondary);
+    border-color: var(--color_secondary);
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label:before {
+    border-color: var(--white);
+}
+.custom-control-input:focus ~ .custom-control-label:before {
+    box-shadow: none;
+}
+.custom-switch .custom-control-label:after {
+    background-color: var(--color_secondary);
+}
 table {
     margin-top: 10px;
 }
@@ -1194,7 +1215,7 @@ tr.discussion .btn i.icon {
     display: none;
 }
 .pagelayout-frontpage #page {
-    margin-top: auto;
+    margin-top: 0;
 }
 .has-blocks .card form .box ul li {
     list-style: none;
@@ -1950,6 +1971,9 @@ button.close:focus,
 .header-menubar {
     width: 100%;
     background: var(--color_primary);
+}
+.header-menubar .navbar .langmenu .dropdown .dropdown-toggle {
+    color: var(--white);
 }
 .header-menubar .navbar .primary-navigation .moremenu ul li a {
     padding: 11px 15px;
