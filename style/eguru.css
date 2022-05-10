@@ -513,6 +513,9 @@ table#tag-management-list td input[type="text"] {
     height: 40px;
     box-sizing: border-box;
 }
+.moremenu .nav-link[data-toggle="tab"]::after {
+    display: none;
+}
 .form-buttons,
 #fitem_id_submitbutton,
 #fgroup_id_buttonar {
@@ -1948,12 +1951,27 @@ button.close:focus,
     width: 100%;
     background: var(--color_primary);
 }
+.header-menubar .navbar .primary-navigation .moremenu ul li a {
+    padding: 11px 15px;
+    border: 0;
+}
 .header-menubar .navbar {
     width: 100%;
     max-height: none;
     margin-bottom: 0;
     padding: 0;
     box-shadow: none;
+}
+.header-menubar .navbar .navbar-nav .usermenu .dropdown a {
+    color: var(--white);
+    padding: 7px 10px;
+}
+.header-menubar .navbar .navbar-nav .editmode-switch-form {
+    margin-bottom: 0;
+}
+.header-menubar .navbar .navbar-nav .editmode-switch-form .input-group label {
+    color: var(--white);
+    margin-bottom: 0;
 }
 .header-menubar .navbar .navbar-nav .simplesearchform {
     height: 100%;
@@ -2193,9 +2211,9 @@ button.close:focus,
     display: flex;
     align-items: center;
 }
-.header-menubar .dropdown-menu {
+/* .header-menubar .dropdown-menu {
     background: var(--color_blackcurrant_approx);
-}
+} */ /* new */
 .header-menubar .dropdown-menu > li > a:hover {
     background: var(--color_secondary);
 }
@@ -2507,6 +2525,10 @@ div.dropdown-item:focus-within {
     float: left;
     margin-right: 10px;
 }
+#header .popover-region .popover-region-toggle i.icon {
+    font-weight: normal;
+    color: var(--white);
+}
 #header nav.nav a.nav-link {
     color: var(--color_primary);
     margin-top: 5px;
@@ -2516,7 +2538,7 @@ div.dropdown-item:focus-within {
 }
 .header-main {
     background: var(--color_secondary);
-    margin-top: 51px;
+    margin-top: 60px;
 }
 .header-main .search-input-wrapper {
     height: 100%;
