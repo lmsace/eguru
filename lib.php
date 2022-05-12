@@ -26,9 +26,6 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-
 
 /**
  * Page init functions runs every time page loads.
@@ -239,10 +236,9 @@ function theme_eguru_get_html_for_settings(renderer_base $output, moodle_page $p
 
 /**
  * Loads the CSS Styles and put the font path
- *
+ * @param string $css
  * @return string $fontwww
  */
-
 function theme_eguru_set_fontwww($css) {
     global $CFG, $PAGE;
     if (empty($CFG->themewww)) {
@@ -436,7 +432,7 @@ function theme_eguru_strip_html_tags( $text ) {
  *
  * @param string $str
  * @param integer $n
- * @param char $end_char
+ * @param string $endchar
  * @return string $out
  */
 function theme_eguru_course_trim_char($str, $n = 500, $endchar = '&#8230;') {
@@ -475,6 +471,12 @@ function theme_eguru_lang($key = '') {
     }
 }
 
+/**
+ * Get the theme pattern color.
+ * @param string $css
+ * @param string $type
+ * @return string
+ */
 function theme_eguru_get_pattern_color( $css, $type='') {
     global $OUTPUT , $CFG;
 
@@ -574,9 +576,9 @@ function theme_eguru_get_pattern_color( $css, $type='') {
 
 /**
  * Function returns the rgb format with the combination of passed color hex and opacity.
- * @param type|string $hexa
- * @param type|int $opacity
- * @return type|string
+ * @param string $hexa
+ * @param int $opacity
+ * @return string
  */
 function theme_eguru_get_hexa($hexa, $opacity) {
     if (!empty($hexa)) {

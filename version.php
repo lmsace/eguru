@@ -40,7 +40,7 @@ $plugin->release = 'v3.11';
 
 // Requires this Moodle version.
 $plugin->requires  = 2021051700;
-					
+
 // Full name of the plugin (used for diagnostics).
 $plugin->component = 'theme_eguru';
 

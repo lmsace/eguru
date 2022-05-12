@@ -21,6 +21,7 @@
  * @copyright 2021 Bas Brands
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+defined('MOODLE_INTERNAL') || die();
 
 $logo = theme_eguru_get_logo_url();
 $surl = new moodle_url('/course/search.php');

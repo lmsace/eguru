@@ -29,8 +29,6 @@
  * return string $content
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * marketingspot
  * @return string

@@ -23,8 +23,6 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * slideshow
  * @return string
@@ -33,7 +31,7 @@ function theme_eguru_frontpage_slideshow() {
     global $PAGE;
     $slidetoggle = theme_eguru_get_setting("toggleslideshow");
     if (!$slidetoggle) {
-      return '';
+        return '';
     }
     $numberofslides = theme_eguru_get_setting('numberofslides');
     $slideimage = '';
@@ -49,13 +47,15 @@ function theme_eguru_frontpage_slideshow() {
 
             $content = html_writer::start_tag('div', array('class' => 'homepage-carousel'));
 
-            $content .= html_writer::start_tag('div', array('id' => 'home-page-carousel', 'class' => 'carousel slide', 'data-ride' => 'carousel'));
+            $content .= html_writer::start_tag('div', array('id' => 'home-page-carousel',
+              'class' => 'carousel slide', 'data-ride' => 'carousel'));
 
             $content .= html_writer::start_tag('ol', array('class' => 'carousel-indicators'));
 
             for ($s = 0; $s < $numberofslides; $s++):
                 $clstxt = ($s == "0") ? ' class="active"' : '';
-                $content .= html_writer::start_tag('li', array('data-target' => '#home-page-carousel', 'data-slide-to' => $s.$clstxt));
+                $content .= html_writer::start_tag('li', array('data-target' => '#home-page-carousel',
+                  'data-slide-to' => $s.$clstxt));
                 $content .= html_writer::end_tag('li');
             endfor;
 
@@ -111,17 +111,18 @@ function theme_eguru_frontpage_slideshow() {
                 }
             endfor;
             if ($numberofslides > 1) {
-                $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev', 'href' => '#home-page-carousel', '
-                  data-slide' => 'prev'));
+                $content .= html_writer::start_tag('a', array('class' => 'left carousel-control carousel-control-prev',
+                  'href' => '#home-page-carousel', 'data-slide' => 'prev'));
 
                 $content .= '<span class="carousel-control-prev-icon"></span>';
                 $content .= html_writer::end_tag('a');
 
                 $content .= html_writer::start_tag('a', array('
-                    class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel', 'data-slide' => 'next'));
+                    class' => 'right carousel-control carousel-control-next', 'href' => '#home-page-carousel',
+                      'data-slide' => 'next'));
                 $content .= '<span class="carousel-control-next-icon"></span>';
                 $content .= html_writer::end_tag('a');
-              }
+            }
 
             $content .= html_writer::end_tag('div');
             $content .= html_writer::end_tag('div');
@@ -193,7 +194,7 @@ function theme_eguru_frontpage_slideshow() {
 }
 </style>
 
-<?php
+            <?php
 
         }
     }
