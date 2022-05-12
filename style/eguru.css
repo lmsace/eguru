@@ -648,7 +648,6 @@ table#tag-management-list td input[type="text"] {
     border: 0;
     border-radius: 0;
     margin: 0;
-    box-shadow: none;
     background: var(--color_secondary);
     box-shadow: 2px 5px 5px var(--black_20);
 }
@@ -2657,7 +2656,7 @@ div.dropdown-item:focus-within {
     margin: 0;
     border: 0;
 }
-#header > .divider  {
+#header > .divider {
     display: none;
 }
 #header .popover-region {
@@ -2856,7 +2855,7 @@ div.dropdown-item:focus-within {
 .message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
 .message-app .body-container .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
 .message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before{
+.message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before {
     background-color: var(--color_primary);
     border-color: var(--color_primary);
     box-shadow: 0 0 0 0.2rem var(--color_primary);
@@ -2867,8 +2866,10 @@ div.dropdown-item:focus-within {
 .message-app .body-container .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem var(--color_primary_approx_60);
 }
-.message-app .body-container .custom-control.custom-radio .custom-control-input:not(:disabled):active ~ .custom-control-label:before,
-.message-app .body-container .custom-control.custom-switch .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+.message-app .body-container .custom-control.custom-radio
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before,
+.message-app .body-container .custom-control.custom-switch
+.custom-control-input:not(:disabled):active ~ .custom-control-label:before {
     border-color: var(--color_primary);
     background-color: var(--color_primary);
 }
@@ -4894,7 +4895,8 @@ div.dropdown-item:focus-within {
 .block-region .block.block_online_users .card-body .card-text .info {
     margin-bottom: 10px;
 }
-.block-region .block .card-body .card-text .block-timeline .tab-content .tab-pane .list-group-flush .list-group-item h6.event-action {
+.block-region .block .card-body .card-text .block-timeline .tab-content
+.tab-pane .list-group-flush .list-group-item h6.event-action {
     padding-left: 0;
 }
 .block .card-body .block-controls .menubar .dropdown a.dropdown-toggle {
@@ -5060,7 +5062,8 @@ div.dropdown-item:focus-within {
 }
 
 @media (min-width: 576px) {
-    .pagelayout-mycourses .block-region .block.block_myoverview .card-body .card-text .block-myoverview > hr + div > div .dropdown .btn {
+    .pagelayout-mycourses .block-region .block.block_myoverview .card-body .card-text
+    .block-myoverview > hr + div > div .dropdown .btn {
         font-size: 16px;
     }
     .block-region .block.block_myoverview .card-body .card-text .block-myoverview > hr + div > div .dropdown .btn {
@@ -5429,7 +5432,6 @@ div.dropdown-item:focus-within {
     }
 }
 
-
 /*Categories*/
 #frontpage-category-names {
     border: 1px solid var(--color_snuff_approx);
@@ -5443,8 +5445,6 @@ div.dropdown-item:focus-within {
     border-bottom: 1px solid var(--color_snuff_approx);
     margin: 0;
 }
-
-
 
 /*Search*/
 #page-site-index .singlebutton div {
@@ -5815,7 +5815,7 @@ form#coursesearch {
     }
 }
 
-@media(max-width: 575px) {
+@media (max-width: 575px) {
     #page-admin-search #page-content #region-main .simplesearchform {
         width: auto;
     }
@@ -5826,7 +5826,7 @@ form#coursesearch {
 .path-admin-setting #page-wrapper #page #page-content #region-main {
     padding: 0 15px;
 }
-.path-admin-setting #page-wrapper #page #page-content .settingsform > h2{
+.path-admin-setting #page-wrapper #page #page-content .settingsform > h2 {
     margin: 20px 0;
 }
 .path-admin-setting #page-wrapper #page #page-content .settingsform .nav-tabs {
