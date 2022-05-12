@@ -103,7 +103,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
                     $imgurl = $noimgurl;
                 }
 
-                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt=""></a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
+                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox">
+                <div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt="">
+                </a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a>
+                </h5></div></div></div>';
                 $content .= $rowcontent;
             }
             $content .= '</div>';
@@ -159,64 +162,61 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (empty($rcourseids)) {
             return false;
         }
-
-       // $fcourseids = array_chunk($rcourseids, 6);
         $fcourseids = $rcourseids;
         $totalfcourse = count($fcourseids);
         $promotedtitle = theme_eguru_get_setting('promotedtitle', 'format_html');
         $promotedtitle = theme_eguru_lang($promotedtitle);
 
-        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container"><div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="clearfix"></div></div> <div class="row"> <div class="promoted_courses col-md-12" data-crow="'.$totalfcourse.'">';
+        $featuredheader = '<div class="custom-courses-list" id="Promoted-Courses"><div class="container">
+        <div class="titlebar with-felements"><h2>'.$promotedtitle.'</h2><div class="clearfix"></div>
+        </div> <div class="row"> <div class="promoted_courses col-md-12" data-crow="'.$totalfcourse.'">';
 
         $featuredfooter = ' </div></div></div></div>';
 
         if (!empty($fcourseids)) {
-           /* foreach ($fcourseids as $courseids) {
-                $rowcontent = '<div><div class="row">';*/
-                $rowcontent = '';
-                foreach ($fcourseids as $courseid) {
-                    $course = get_course($courseid);
-                    $no = get_config('theme_eguru', 'patternselect');
-                    $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
+            $rowcontent = '';
+            foreach ($fcourseids as $courseid) {
+                $course = get_course($courseid);
+                $no = get_config('theme_eguru', 'patternselect');
+                $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
 
-                    $noimgurl = $this->output->image_url($nimgp, 'theme');
+                $noimgurl = $this->output->image_url($nimgp, 'theme');
 
-                    $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
+                $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
-                    if ($course instanceof stdClass) {
-                        $course = new core_course_list_element($course);
-                    }
+                if ($course instanceof stdClass) {
+                    $course = new core_course_list_element($course);
+                }
 
-                    $imgurl = '';
+                $imgurl = '';
 
-                    $summary = theme_eguru_strip_html_tags($course->summary);
-                    $summary = theme_eguru_course_trim_char($summary, 75);
+                $summary = theme_eguru_strip_html_tags($course->summary);
+                $summary = theme_eguru_course_trim_char($summary, 75);
 
-                    $context = context_course::instance($course->id);
-                    $nostudents = count_role_users(5, $context);
+                $context = context_course::instance($course->id);
+                $nostudents = count_role_users(5, $context);
 
-                    foreach ($course->get_course_overviewfiles() as $file) {
-                        $isimage = $file->is_valid_image();
-                        $imgurl = file_encode_url("$CFG->wwwroot/pluginfile.php",
-                        '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
-                        $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
-                        if (!$isimage) {
-                            $imgurl = $noimgurl;
-                        }
-                    }
-                    if (empty($imgurl)) {
+                foreach ($course->get_course_overviewfiles() as $file) {
+                    $isimage = $file->is_valid_image();
+                    $imgurl = file_encode_url("$CFG->wwwroot/pluginfile.php",
+                    '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
+                    $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
+                    if (!$isimage) {
                         $imgurl = $noimgurl;
                     }
-                    $coursehtml = '<div class="col-md-3"><div class="course-box"><div class="thumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div><div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
-
-                    $rowcontent .= $coursehtml;
                 }
-               // $rowcontent .= '</div></div>';
-                $featuredcontent .= $rowcontent;
-            //}
+                if (empty($imgurl)) {
+                    $imgurl = $noimgurl;
+                }
+                $coursehtml = '<div class="col-md-3"><div class="course-box"><div class="thumb">
+                <a href="'.$courseurl.'"><img src="'.$imgurl.'" width="135" height="135" alt=""></a></div>
+                <div class="info"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
+
+                $rowcontent .= $coursehtml;
+            }
+            $featuredcontent .= $rowcontent;
         }
         $featuredcourses = $featuredheader.$featuredcontent.$featuredfooter;
-      
         return $featuredcourses;
     }
 
@@ -224,7 +224,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Displays one course in the list of courses.
      *
      * This is an internal function, to display an information about just one course
-     * please use {@link core_course_renderer::course_info_box()}
+     * please use {@see core_course_renderer::course_info_box()}
      *
      * @param coursecat_helper $chelper various display options
      * @param course_in_list|stdClass $course
@@ -234,7 +234,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
         global $CFG;
-        
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }

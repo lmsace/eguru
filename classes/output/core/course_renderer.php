@@ -106,7 +106,10 @@ class course_renderer extends \core_course_renderer {
                     $imgurl = $noimgurl;
                 }
 
-                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb"><a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt=""></a></div><div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5></div></div></div>';
+                $rowcontent .= '<div class="col-md-3 col-sm-6"><div class="fp-coursebox"><div class="fp-coursethumb">
+                <a href="'.$courseurl.'"><img src="'.$imgurl.'" width="243" height="165" alt=""></a></div>
+                <div class="fp-courseinfo"><h5><a href="'.$courseurl.'">'.$course->get_formatted_name().'</a></h5>
+                </div></div></div>';
                 $content .= $rowcontent;
             }
             $content .= '</div>';
@@ -171,48 +174,48 @@ class course_renderer extends \core_course_renderer {
 
         if (!empty($fcourseids)) {
 
-                $rowcontent = '';
-                $blocks = [];
-                $i = 0;
-                foreach ($fcourseids as $courseid) {
-                    $info = [];
-                    $course = get_course($courseid);
-                    $no = get_config('theme_eguru', 'patternselect');
-                    $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
-                    $noimgurl = $this->output->image_url($nimgp, 'theme');
-                    $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
+            $rowcontent = '';
+            $blocks = [];
+            $i = 0;
+            foreach ($fcourseids as $courseid) {
+                $info = [];
+                $course = get_course($courseid);
+                $no = get_config('theme_eguru', 'patternselect');
+                $nimgp = (empty($no)||$no == "default") ? 'default/no-image' : 'cs0'.$no.'/no-image';
+                $noimgurl = $this->output->image_url($nimgp, 'theme');
+                $courseurl = new moodle_url('/course/view.php', array('id' => $courseid ));
 
-                    if ($course instanceof stdClass) {
-                        $course = new core_course_list_element($course);
-                    }
+                if ($course instanceof stdClass) {
+                    $course = new core_course_list_element($course);
+                }
 
-                    $imgurl = '';
+                $imgurl = '';
 
-                    $summary = theme_eguru_strip_html_tags($course->summary);
-                    $summary = theme_eguru_course_trim_char($summary, 75);
+                $summary = theme_eguru_strip_html_tags($course->summary);
+                $summary = theme_eguru_course_trim_char($summary, 75);
 
-                    $context = context_course::instance($course->id);
-                    $nostudents = count_role_users(5, $context);
+                $context = context_course::instance($course->id);
+                $nostudents = count_role_users(5, $context);
 
-                    foreach ($course->get_course_overviewfiles() as $file) {
-                        $isimage = $file->is_valid_image();
-                        $imgurl = file_encode_url("$CFG->wwwroot/pluginfile.php",
-                        '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
-                        $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
-                        if (!$isimage) {
-                            $imgurl = $noimgurl;
-                        }
-                    }
-                    if (empty($imgurl)) {
+                foreach ($course->get_course_overviewfiles() as $file) {
+                    $isimage = $file->is_valid_image();
+                    $imgurl = file_encode_url("$CFG->wwwroot/pluginfile.php",
+                    '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
+                    $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
+                    if (!$isimage) {
                         $imgurl = $noimgurl;
                     }
-                    $info['courseurl'] = $courseurl;
-                    $info['imgurl'] = $imgurl;
-                    $info['coursename'] = $course->get_formatted_name();
-                    $info['active'] = ($i == 1) ? true : false;
-                    $blocks[] = $info;
-                    $i++;
                 }
+                if (empty($imgurl)) {
+                    $imgurl = $noimgurl;
+                }
+                $info['courseurl'] = $courseurl;
+                $info['imgurl'] = $imgurl;
+                $info['coursename'] = $course->get_formatted_name();
+                $info['active'] = ($i == 1) ? true : false;
+                $blocks[] = $info;
+                $i++;
+            }
         }
         $template['courses'] = array_chunk($blocks, 5);
         $template['promatedcourse'] = true;
@@ -224,7 +227,7 @@ class course_renderer extends \core_course_renderer {
      * Displays one course in the list of courses.
      *
      * This is an internal function, to display an information about just one course
-     * please use {@link core_course_renderer::course_info_box()}
+     * please use {@see core_course_renderer::course_info_box()}
      *
      * @param coursecat_helper $chelper various display options
      * @param course_in_list|stdClass $course
@@ -234,7 +237,6 @@ class course_renderer extends \core_course_renderer {
      */
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
         global $CFG;
-        
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }
@@ -305,7 +307,7 @@ class course_renderer extends \core_course_renderer {
         return $content;
     }
 
-     /**
+    /**
      * Outputs contents for frontpage as configured in $CFG->frontpage or $CFG->frontpageloggedin
      *
      * @return string

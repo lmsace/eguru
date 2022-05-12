@@ -117,12 +117,6 @@ $string['medianame1'] = 'فيس بوك';
 $string['medianame2'] = 'تغريد';
 $string['medianame3'] = 'جوجل بلس';
 $string['medianame4'] = 'بينتيريست';
-
-/*$string['mediaicon1'] = 'fa-facebook-f';
-$string['mediaicon2'] = 'fa-twitter';
-$string['mediaicon3'] = 'fa-google-plus';
-$string['mediaicon4'] = 'fa-pinterest-p';*/
-
 $string['default_color'] = 'نظام الألوان الافتراضي';
 $string['color_schemes_heading'] = 'أنظمة الألوان';
 $string['promotedtitledefault'] = 'دورات الترويج';

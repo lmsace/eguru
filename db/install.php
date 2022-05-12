@@ -15,20 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    theme_enlight
+ * Theme Installation.
+ * @package    theme_eguru
  * @copyright  2015 onwards LMSACE Dev Team (http://www.lmsace.com)
- * @authors    LMSACE Dev Team
+ * @author    LMSACE Dev Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-defined('MOODLE_INTERNAL') || die();
 
 /**
  * Theme_eguru install function.
  *
  * @return void
  */
-
 function xmldb_theme_eguru_install() {
     global $CFG;
 
