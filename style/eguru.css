@@ -102,6 +102,10 @@ a:not([class]):focus,
     background: none;
     box-shadow: none;
 }
+[role="button"],
+a.dropdown-toggle {
+    border: 0;
+}
 body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -227,6 +231,8 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
+    max-width: 210px;
+    width: 100%;
     height: 40px;
     font-size: 16px;
     line-height: 30px;
@@ -237,8 +243,6 @@ input[type="color"],
     border-radius: 0;
     border-color: var(--color_celeste_approx);
     box-shadow: none;
-    width: 100%;
-    max-width: 210px;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -284,7 +288,6 @@ button {
     background: var(--color_celeste_approx);
     padding: 0 18px;
     border: 0;
-    margin-left: 5px;
     border-radius: 0;
     box-shadow: none;
     text-transform: uppercase;
@@ -608,10 +611,10 @@ table#tag-management-list td input[type="text"] {
 #region-main div[role="main"] .pull-left + .no-overflow {
     overflow: visible;
 }
-#region-main .singlebutton .btn {
+/* #region-main .singlebutton .btn {
     background-color: var(--mercury);
     border-color: var(--gray);
-}
+} */
 #region-main .singlebutton.enrolusersbutton .btn {
     background-color: var(--color_primary);
     border-color: var(--color_primary);
@@ -1039,14 +1042,7 @@ input[type="checkbox"] + label {
 .userselector .form-inline .collapsibleregioninner .form-check {
     margin-bottom: 10px;
 }
-.mform .form-inline .form-control {
-    height: auto;
-}
-.mform .form-inline input.form-control {
-    height: 32px;
-}
 .mform .form-inline .form-group.fitem input.form-control {
-    height: 40px;
     margin-bottom: 0;
 }
 .felement.fstatic {
@@ -1222,6 +1218,9 @@ tr.discussion .btn i.icon {
     overflow: visible;
     padding: 0;
     margin-top: 0;
+}
+.pagelayout-frontpage #page.drawers div[role="main"] {
+    padding: 0;
 }
 .format-site .secondary-navigation {
     padding: 0;
@@ -1524,9 +1523,6 @@ body.limitedwidth #page.drawers .main-inner #page-content {
 body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
     padding: 0;
 }
-#page.drawers .main-inner #page-content div[role="main"] {
-    padding: 0;
-}
 .dir-rtl .progress-chart-container .no-progress .icon {
     left: 70%;
 }
@@ -1553,6 +1549,13 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
 }
 .tertiary-navigation .navitem.dropdown .dropdown-toggle:hover {
     color: var(--white);
+}
+.header-maxwidth,
+.secondary-navigation {
+    max-width: none;
+}
+.dir-rtl .dropdown-menu {
+    right: auto;
 }
 
 @media (min-width: 1200px) {
@@ -1671,6 +1674,9 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
     .header-maxwidth {
         padding: 0 15px;
     }
+    .secondary-navigation {
+        margin: 15px;
+    }
     body #region-main .mform:not(.unresponsive) .fitem .fitemtitle {
         margin-top: 0;
         margin-bottom: 0;
@@ -1708,6 +1714,13 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
         width: 100%;
         float: left;
         margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .mform fieldset .form-inline input.form-control {
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -2049,6 +2062,10 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
     width: 100%;
     height: 100%;
     display: flex;
+}
+.header-menubar .navbar-nav .langmenu .dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
 }
 .header-menubar .navbar-nav .divider {
     display: none;
@@ -3354,6 +3371,9 @@ div.dropdown-item:focus-within {
 }
 
 /*Site Announcement*/
+#site-news-forum .forumpost .body-content-container .content-alignment-container .post-actions a.btn {
+    border: 0;
+}
 #site-news-forum {
     border: 1px solid var(--color_snuff_approx);
     margin: 15px;
@@ -3445,9 +3465,16 @@ div.dropdown-item:focus-within {
 #page-site-index .singlebutton.forumaddnew input[type="submit"] {
     margin: 0;
 }
+.dir-rtl #site-news-forum .forumpost .picture img.userpicture {
+    margin: 0;
+}
 
 /*Login*/
-.loginbox .signupform {
+.path-login .login-wrapper {
+    margin-top: 50px;
+}
+
+/* .loginbox .signupform {
     text-align: left;
 }
 .loginbox .signuppanel .subcontent ol li {
@@ -3917,7 +3944,7 @@ div.dropdown-item:focus-within {
     #page-login-index .card .card-block .custom-login form .form-fields {
         width: 100%;
     }
-}
+} */
 
 /*Promoted courses*/
 .custom-courses-list {
@@ -4029,7 +4056,6 @@ div.dropdown-item:focus-within {
     padding: 0 0 18px;
 }
 .titlebar.with-felements h2 {
-    float: left;
     margin: 0 0 30px 0;
 }
 .titlebar.with-felements .carousel .carousel-item.carousel-item-left,
@@ -4041,13 +4067,31 @@ div.dropdown-item:focus-within {
     width: 100%;
 }
 .titlebar.with-felements .carousel .carousel-control {
-    width: auto;
-    height: auto;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: var(--black_20);
     padding: 10px;
     top: 50%;
     bottom: auto;
+}
+.titlebar.with-felements .carousel .carousel-control span {
+    display: none;
+}
+.titlebar.with-felements .carousel .carousel-control:before {
+    content: '\f104';
+    font-family: var(--font_1);
+    font-size: 24px;
+    color: var(--white);
+}
+.titlebar.with-felements .carousel .carousel-control.carousel-control-next:before {
+    content: '\f105';
+}
+.dir-rtl .titlebar.with-felements .carousel .carousel-control:before {
+    content: '\f105';
+}
+.dir-rtl .titlebar.with-felements .carousel .carousel-control.carousel-control-next:before {
+    content: '\f104';
 }
 .titlebar.with-felements .slidenav {
     float: right;
@@ -4240,6 +4284,7 @@ div.dropdown-item:focus-within {
 }
 .coursebox > .info .enrolmenticons {
     margin: 0 5px;
+    display: inline-block;
 }
 .coursebox > .info > .coursename {
     float: left;
@@ -4372,6 +4417,8 @@ div.dropdown-item:focus-within {
 .course_category_tree .category > .info > .categoryname {
     font-size: 18px;
     line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: left center;
     padding: 12px 25px;
     margin: 0;
 }
@@ -4467,7 +4514,7 @@ div.dropdown-item:focus-within {
 }
 .dir-rtl .course_category_tree.frontpage-category-names .category > .info > .categoryname:before {
     float: right;
-    content: "\f137";
+    /* content: "\f137"; */
     margin: 0 0 0 10px;
 }
 .dir-rtl .course_category_tree.frontpage-category-names .category.with_children.collapsed > .info > .categoryname {
@@ -4482,6 +4529,10 @@ div.dropdown-item:focus-within {
 .dir-rtl #frontpage-course-list .courses.frontpage-course-list-all .fp-coursebox .fp-courseinfo .readmore > a > .fa {
     margin-right: 5px;
     margin-left: 0;
+}
+.dir-rtl .course_category_tree .category > .info > .categoryname {
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 @media (min-width: 992px) {
@@ -4576,6 +4627,9 @@ div.dropdown-item:focus-within {
     }
     .dir-rtl .coursebox .content .coursefile {
         right: 0;
+    }
+    #course-category-listings .listing-actions > .moodle-actionmenu .menubar .dropdown .dropdown-menu {
+        right: auto;
     }
 }
 
@@ -5200,9 +5254,6 @@ div.dropdown-item:focus-within {
     margin-right: 0;
     margin-left: 4px;
 }
-.dir-rtl #site-news-forum .forumpost .picture img.userpicture {
-    margin: 0;
-}
 
 @media (min-width: 768px) {
     #footer .social-media > ul > li > a {
@@ -5667,6 +5718,10 @@ form#coursesearch {
 .drawer .drawercontent .courseindex .courseindex-section .courseindex-item:hover {
     background: none;
     border-color: transparent;
+}
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item.pageitem {
+    color: var(--white);
+    background: var(--color_primary);
 }
 .drawer .drawercontent .courseindex .courseindex-section .courseindex-item:hover a {
     color: var(--color_primary);

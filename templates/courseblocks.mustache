@@ -8,12 +8,14 @@
                     {{#courses}}
                     <div class="carousel-item">
                         {{#.}}
-                        <div class="course-box">
-                            <div class="thumb">
-                                <a href="{{courseurl}}"><img src="{{imgurl}}" width="135" height="135" alt=""></a>
-                            </div>
-                            <div class="info">
-                                <h5><a href="{{courseurl}}"> {{coursename}} </a></h5>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <div class="course-box">
+                                <div class="thumb">
+                                    <a href="{{courseurl}}"><img src="{{imgurl}}" width="135" height="135" alt=""></a>
+                                </div>
+                                <div class="info">
+                                    <h5><a href="{{courseurl}}"> {{coursename}} </a></h5>
+                                </div>
                             </div>
                         </div>
                         {{/.}}
