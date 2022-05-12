@@ -31,7 +31,10 @@ defined('MOODLE_INTERNAL') || die();
  */
 function theme_eguru_frontpage_slideshow() {
     global $PAGE;
-
+    $slidetoggle = theme_eguru_get_setting("toggleslideshow");
+    if (!$slidetoggle) {
+      return '';
+    }
     $numberofslides = theme_eguru_get_setting('numberofslides');
     $slideimage = '';
     $visableslide = 0;
