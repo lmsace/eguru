@@ -37,7 +37,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{{headerlayout}}}
+   {{>theme_eguru/header}}
 
     <div id="page" class="container-fluid mt-0">
         <div id="page-content" class="row">
@@ -54,5 +54,11 @@
             </div>
         </div>
     </div>
+    {{> theme_eguru/footer}}
 </div>
-
+{{#js}}
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+{{/js}}
