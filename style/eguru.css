@@ -2382,6 +2382,12 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
 .header-menubar-inner div[data-region="drawer-toggle"] button.btn.is-active > span:nth-child(3) {
     margin-top: 5px;
 }
+#header .navbar-nav .editmode-switch-form .input-group .custom-control .custom-control-input~.custom-control-label:before {
+    background: var(--white);
+}
+#header .navbar-nav .editmode-switch-form .input-group .custom-control .custom-control-input~.custom-control-label:after {
+    background-color: var(--color_primary);
+}
 .header-menubar-inner .custom-menu {
     float: right;
 }
@@ -2390,9 +2396,6 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
     display: flex;
     align-items: center;
 }
-/* .header-menubar .dropdown-menu {
-    background: var(--color_blackcurrant_approx);
-} */ /* new */
 .header-menubar .dropdown-menu > li > a:hover {
     background: var(--color_secondary);
 }
