@@ -24,16 +24,13 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
+require_once(dirname(__FILE__) .'/includes/themedata.php');
 
 $bodyattributes = $OUTPUT->body_attributes();
-require_once(dirname(__FILE__) .'/includes/header.php');
-$templatecontext = [
+$templatecontext += [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
-    'headerlayout' => $headerlayout,
 ];
 
 echo $OUTPUT->render_from_template('theme_eguru/login', $templatecontext);
-require_once(dirname(__FILE__) .'/includes/footer.php');
-echo $footerlayout;
