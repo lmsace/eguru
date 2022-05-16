@@ -455,10 +455,6 @@ input[type="submit"][disabled]:hover {
     border-color: var(--white);
     background: var(--white);
 }
-.custom-switch .custom-control-label:after,
-.custom-switch .custom-control-input:checked ~ .custom-control-label:after {
-    background-color: var(--color_secondary);
-}
 .custom-control.custom-radio .custom-control-input:focus ~ .custom-control-label::before,
 .custom-control.custom-switch .custom-control-input:focus ~ .custom-control-label::before,
 .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
