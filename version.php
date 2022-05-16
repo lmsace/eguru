@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die;
 $plugin->version   = 2022051600;
 
 
-// Version's maturity level.
+// Version maturity level.
 $plugin->maturity = MATURITY_STABLE;
 
 // Plugin release version.
