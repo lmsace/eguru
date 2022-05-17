@@ -4830,6 +4830,13 @@ div.dropdown-item:focus-within {
 .footer-bottom p {
     text-align: center;
 }
+button.btn-footer-popover,
+button.btn-footer-popover:hover,
+button.btn-footer-popover:focus,
+button.btn-footer-popover:active {
+    color: var(--white);
+    background: var(--color_primary) !important;
+}
 .dir-rtl #footer .footer-contact p i {
     margin-right: 0;
     margin-left: 4px;
