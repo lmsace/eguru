@@ -115,7 +115,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $coursehtml = $header.$content.$footer;
         echo $coursehtml;
 
-        if (!$totalcount && !$this->page->user_is_editing() && has_capability('moodle/course:create', context_system::instance())) {
+        if (!$totalcount && !$this->page->user_is_editing() && has_capability('moodle/course:create', \context_system::instance())) {
             // Print link to create a new course, for the 1st available category.
             echo $this->add_new_course_button();
         }
