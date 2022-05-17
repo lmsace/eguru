@@ -451,7 +451,7 @@ input[type="submit"][disabled]:hover {
 [role="treeitem"][aria-expanded="true"]:focus > *:first-child {
     box-shadow: none;
 }
-.custom-switch .custom-control-label:before, {
+.custom-switch .custom-control-label:before {
     border-color: var(--white);
     background: var(--white);
 }
