@@ -98,7 +98,6 @@ $templatecontext += [
     'bodyattributes' => $bodyattributes,
     'courseindexopen' => $courseindexopen,
     'blockdraweropen' => $blockdraweropen,
-    'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'courseindex' => $courseindex,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'primarymoremenu' => $primarymenu['moremenu'],

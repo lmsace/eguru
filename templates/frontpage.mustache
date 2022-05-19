@@ -89,10 +89,8 @@
             {{$closebuttontext}}{{#str}}closeblockdrawer, core{{/str}}{{/closebuttontext}}
         {{/ theme_boost/drawer}}
     {{/hasblocks}}
-    {{#promotedcourses}} {{{promotedcourses}}} {{/promotedcourses}}
-    {{#marketingspot}} {{{marketingspot}}} {{/marketingspot}}
-    {{#slideshow}} {{{slideshow}}} {{/slideshow}}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+        {{#slideshow}} {{{slideshow}}} {{/slideshow}}
         <div id="topofscroll" class="main-inner">
             <div class="drawer-toggles d-flex">
                 {{#courseindex}}
