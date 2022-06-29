@@ -37,6 +37,7 @@ use coursecat_helper;
 use stdClass;
 use context_course;
 use core_course_list_element;
+use context_system;
 
 /**
  * This class has function for core course renderer
