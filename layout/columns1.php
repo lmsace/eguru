@@ -31,4 +31,4 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes
 ];
 
-echo $OUTPUT->render_from_template('theme_enlightlite/columns1', $templatecontext);
+echo $OUTPUT->render_from_template('theme_eguru/columns1', $templatecontext);
