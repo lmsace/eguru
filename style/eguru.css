@@ -639,6 +639,9 @@ table#tag-management-list td input[type="text"] {
 .mform .fdescription.required {
     color: var(--color_tapa_approx);
 }
+#region-main {
+    padding: 0 10px;
+}
 #region-main .mform:not(.unresponsive) .fitem .fitemtitle label {
     font-weight: normal;
 }
@@ -648,6 +651,9 @@ table#tag-management-list td input[type="text"] {
 #region-main .singlebutton.enrolusersbutton .btn {
     background-color: var(--color_primary);
     border-color: var(--color_primary);
+}
+.icons-collapse-expand .expanded-icon {
+    margin: 0 auto;
 }
 .form-item {
     margin-bottom: 30px;
@@ -1557,7 +1563,7 @@ body.limitedwidth #page.drawers .main-inner,
     max-width: none;
     height: auto;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 0;
 }
 body.limitedwidth #page.drawers .main-inner #page-content {
     padding: 0 15px;
@@ -2156,7 +2162,7 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
     margin-bottom: 0;
 }
 .header-menubar .navbar-nav .editmode-switch-form .input-group label {
-    color: var(--white);
+    color: var(--white) !important;
     margin-bottom: 0;
 }
 .header-menubar .navbar-nav .simplesearchform {
