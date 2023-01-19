@@ -639,7 +639,7 @@ table#tag-management-list td input[type="text"] {
 .mform .fdescription.required {
     color: var(--color_tapa_approx);
 }
-#region-main {
+body:not(.pagelayout-frontpage) #region-main {
     padding: 0 10px;
 }
 #region-main .mform:not(.unresponsive) .fitem .fitemtitle label {
