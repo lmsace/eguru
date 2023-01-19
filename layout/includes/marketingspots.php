@@ -38,7 +38,7 @@ function eguru_marketingspot() {
     global $PAGE;
 
     $content = html_writer::start_tag('div', array('class' => 'custom-site-expo'));
-    $content .= html_writer::start_tag('div', array('class' => 'container'));
+    $content .= html_writer::start_tag('div', array('class' => 'container-fluid'));
     $content .= html_writer::start_tag('div', array('class' => 'row'));
 
     (int) $msp = 0;
