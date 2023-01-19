@@ -1582,6 +1582,10 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner #page-content {
 .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label:after {
     border-radius: 5px;
 }
+.activity-add .pluscontainer,
+.block-add .pluscontainer {
+    border-color: var(--color_primary);
+}
 .activity-add:hover,
 .block-add:hover {
     background: none;
